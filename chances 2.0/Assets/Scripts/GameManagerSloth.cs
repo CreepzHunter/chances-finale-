@@ -73,7 +73,6 @@ public class GameManagerSloth : MonoBehaviour
         }
 
         hasDied = true;
-        check = false;
 
         slothBoss.SetActive(false);
         slothDead.SetActive(true);
