@@ -10,6 +10,7 @@ public class Finish : MonoBehaviour
     // public GameObject slothLifeBar;
 
     // Component references
+    public GameManagerSloth gameManagerSloth;
     public Movement playerMovement;
     public HealthSystem enemyHealth;
     public Enemy enemyController;
@@ -66,6 +67,7 @@ public class Finish : MonoBehaviour
             Destroy(item);
         });
 
+        gameManagerSloth.check = false;
         gameManager.ReturnAll();
         gameManager.SlothEnable();
 

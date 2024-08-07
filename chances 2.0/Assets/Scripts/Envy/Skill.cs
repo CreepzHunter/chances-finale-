@@ -8,7 +8,6 @@ public class Skill : MonoBehaviour
 {
     public CameraSwitch cameraSwitch;
     public HealthSystem healthSystem;
-    public StartBlinkingAnim startBlinking;
 
     [SerializeField] private GameObject playerBack;
     [SerializeField] private GameObject playerSkill;
@@ -32,7 +31,6 @@ public class Skill : MonoBehaviour
             enemyLife.SetActive(false);
 
             Invoke("AnimatePlayer", 2.0f);
-            startBlinking.StartBlinking();
 
             Invoke("ReturnAll", 2.3f);
         }

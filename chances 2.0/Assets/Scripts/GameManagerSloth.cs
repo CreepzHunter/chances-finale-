@@ -46,6 +46,16 @@ public class GameManagerSloth : MonoBehaviour
 
             Invoke("DisableDeath", 0.9f);
         }
+        if(cockroachLife.health == 0)
+        {
+            ckenemy.SetActive(false);
+            ckIdleenmy.ToList().ForEach(i =>
+            {
+                i.SetActive(false);
+
+            });
+
+        }
 
     }
 
@@ -63,6 +73,7 @@ public class GameManagerSloth : MonoBehaviour
         }
 
         hasDied = true;
+        check = false;
 
         slothBoss.SetActive(false);
         slothDead.SetActive(true);
@@ -119,6 +130,7 @@ public class GameManagerSloth : MonoBehaviour
     public void ReturnAll()
     {
         cameraSwitch.FightScene();
+        slothAttack.SetActive(false);
 
         InitialLoc();
         timeCodeGO.SetActive(false);

@@ -56,7 +56,7 @@ public class GameManagerEnvyNew : MonoBehaviour
         hasDied = true;
 
 
-        // eenemyIdle.SetActive(false);
+        eenemyIdle.SetActive(false);
         eenemyLife.SetActive(false);
 
         eenemyDeath.SetActive(true);

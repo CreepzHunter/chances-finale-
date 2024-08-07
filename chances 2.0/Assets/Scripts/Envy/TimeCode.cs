@@ -8,8 +8,10 @@ public class TimeCode : MonoBehaviour
 {
     public TextMeshProUGUI countdownText;
     public HealthSystemPlayer healthSystemPlayer;
+    public HealthSystem enemyHealthSystem;
     public GameManagerEnvyNew gameManagerEnvy;
     public GameManagerSloth gameManagerSloth;
+    public Enemy enemy;
     public Image bar;
     public float initialCountdownDuration = 30f; // Initial countdown duration
     public float countdownTimer;
@@ -42,13 +44,36 @@ public class TimeCode : MonoBehaviour
         {
             int random0to10 = Random.Range(0, 11);
             healthSystemPlayer.TakeDamage(random0to10);
+
+            if (gameManagerEnvy != null) { 
+            
             gameManagerEnvy.ReturnAll();
 
+            }
             loseIndicator = true;
             hideGameplay.SetActive(false);
+            if(gameManagerSloth != null)
+            {
+                gameManagerSloth.ReturnAll();
 
-            gameManagerSloth.ReturnAll();
-            gameManagerSloth.check = false;
+                if (enemyHealthSystem.health >= 66)
+                {
+                    countdownTimer = 20.0f;
+                }
+                else if (enemyHealthSystem.health < 66 && enemyHealthSystem.health >= 33)
+                {
+                    countdownTimer = 15f;
+
+                }
+                else if (enemyHealthSystem.health < 33 && enemyHealthSystem.health > 1)
+                {
+                    countdownTimer = 30f;
+                }
+                loseIndicator = false;
+                gameManagerSloth.check = false;
+                enemy.OriginalColor();
+
+            }
 
             gameplays.ToList().ForEach(gameplay =>
             {
