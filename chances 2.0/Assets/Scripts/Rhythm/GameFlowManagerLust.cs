@@ -44,7 +44,6 @@ public class GameFlowManagerLust : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("word: ");
         if (lustLife.health == 0)
         {
             //dead here
@@ -59,6 +58,18 @@ public class GameFlowManagerLust : MonoBehaviour
 
         HideAttack();
 
+        AttackGameplay();
+
+        playerBack.SetActive(false);
+        playerFront.SetActive(true);
+
+        Invoke("AnimateAttack", 1.5f);
+        Invoke("SlothCam", 2.5f);
+        musicAnalyzer.Play();
+
+    }
+    public void AttackGameplay()
+    {
         if (lustLife.health >= 66)
         {
             levels[0].SetActive(true);
@@ -77,14 +88,10 @@ public class GameFlowManagerLust : MonoBehaviour
 
         }
 
-
-
-        playerBack.SetActive(false);
-        playerFront.SetActive(true);
-
         Invoke("AnimateAttack", 1.5f);
         Invoke("SlothCam", 2.5f);
         musicAnalyzer.Play();
+
 
     }
 

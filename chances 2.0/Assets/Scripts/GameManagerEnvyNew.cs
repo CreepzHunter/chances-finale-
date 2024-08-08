@@ -131,7 +131,7 @@ public class GameManagerEnvyNew : MonoBehaviour
         eenemyDeath.SetActive(false);
     }
 
-    private void EnvyAttack()
+    public void EnvyAttack()
     {
         eenemyIdle.SetActive(false);
         eenemyAttack.SetActive(true);
