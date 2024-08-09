@@ -1420,6 +1420,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d724b1583570ac04194d9008eb53146f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &189463430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1984781303461891015, guid: 64e1eb7c5e1176948bb7bc3efb9b92cc, type: 3}
+  m_PrefabInstance: {fileID: 17397266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &218551877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3113,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7224181499785018736, guid: 64e1eb7c5e1176948bb7bc3efb9b92cc, type: 3}
   m_PrefabInstance: {fileID: 17397266}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 189463430}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94850d3a9f4c0bf49a8f6a58f890ee75, type: 3}
@@ -7949,22 +7954,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde6f3cb18ff65d4eb97ba938a2dc31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraSwitch: {fileID: 371858614}
+  healthSystem: {fileID: 784717279}
+  cockroachLife: {fileID: 0}
+  startBlinking: {fileID: 0}
+  gameManagerSloth: {fileID: 0}
   gameManagerEnvyNew: {fileID: 0}
   gameFlowManagerLust: {fileID: 707973093}
-  cameraSwitch: {fileID: 371858614}
   skillManager: {fileID: 655586300}
-  healthSystem: {fileID: 784717279}
   playerBack: {fileID: 734983625}
   playerSkill: {fileID: 1621899823}
   enemyLife: {fileID: 1656028737}
+  ckenemyLife: {fileID: 0}
   BtnsToShow:
   - {fileID: 707973085}
   - {fileID: 1663513772}
   - {fileID: 1144241251}
+  - {fileID: 189463430}
   ToHide:
   - {fileID: 707973085}
   - {fileID: 1663513772}
   - {fileID: 1144241251}
+  - {fileID: 189463430}
 --- !u!114 &1663513775
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class Skill : MonoBehaviour
     public StartBlinkingAnim startBlinking;
     public GameManagerSloth gameManagerSloth;
     public GameManagerEnvyNew gameManagerEnvyNew;
+    public GameFlowManagerLust gameFlowManagerLust;
     public SkillManager skillManager;
 
     [SerializeField] private GameObject playerBack;
@@ -55,7 +56,10 @@ public class Skill : MonoBehaviour
         playerBack.SetActive(true);
         playerSkill.SetActive(false);
         //enemyLife.SetActive(true);
-
+        if(gameFlowManagerLust != null)
+        {
+            gameFlowManagerLust.StartGame();
+        }
         if(gameManagerEnvyNew != null)
         {
             gameManagerEnvyNew.EAnimatePlayer();
