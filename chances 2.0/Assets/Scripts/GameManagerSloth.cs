@@ -46,17 +46,19 @@ public class GameManagerSloth : MonoBehaviour
 
             Invoke("DisableDeath", 0.9f);
         }
-        if(cockroachLife.health == 0)
+        if (cockroachLife.health == 0)
         {
-            ckenemy.SetActive(false);
-            ckIdleenmy.ToList().ForEach(i =>
+            ckIdleenmy.ToList().ForEach(ck =>
             {
-                i.SetActive(false);
-
+                ck.SetActive(false);
             });
 
+            ckAttackenemy.ToList().ForEach(ck =>
+            {
+                ck.SetActive(false);
+            });
+            BtnsToShow[4].SetActive(false);
         }
-
     }
 
     private void DisableDeath()
@@ -89,7 +91,6 @@ public class GameManagerSloth : MonoBehaviour
             cameraSwitch.PlayerView();
             HideAttack();
 
-            cockroachLife.TakeDamage(20f);
             playerBack.SetActive(false);
             playerFront.SetActive(true);
             ckenemyLife.SetActive(false);
@@ -129,10 +130,10 @@ public class GameManagerSloth : MonoBehaviour
     public void ReturnAll()
     {
         cameraSwitch.FightScene();
-        slothAttack.SetActive(false);
 
         InitialLoc();
         timeCodeGO.SetActive(false);
+        
         BtnsToShow.ToList().ForEach(button =>
         {
             button.SetActive(true);
@@ -150,8 +151,11 @@ public class GameManagerSloth : MonoBehaviour
 
     #region Cockroach
 
-    private void AnimateCKAttack()
+    public void AnimateCKAttack()
     {
+
+        cockroachLife.TakeDamage(20f);
+
         cameraSwitch.FightScene();
 
         playerBack.SetActive(true);
@@ -200,7 +204,7 @@ public class GameManagerSloth : MonoBehaviour
 
     #region Sloth Actions
 
-    private void AnimateAttack()
+    public void AnimateAttack()
     {
         cameraSwitch.FightScene();
 
@@ -217,7 +221,7 @@ public class GameManagerSloth : MonoBehaviour
 
     }
 
-    private void SlothAttack()
+    public void SlothAttack()
     {
         SlothActivate();
 
@@ -241,8 +245,10 @@ public class GameManagerSloth : MonoBehaviour
     {
         Invoke("SlothCam", 0.3f);
         check = true;
+       
 
         slothIdle.SetActive(true);
+        HideAttack() ;  
 
 
         AttackLocSloth();
@@ -273,6 +279,7 @@ public class GameManagerSloth : MonoBehaviour
     private void SlothCam()
     {
         cameraSwitch.SlothGame();
+        slothAttack.SetActive(false);
     }
 
     public void AttackLocSloth()

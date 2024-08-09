@@ -6,45 +6,41 @@ using System.Linq;
 
 public class Skill : MonoBehaviour
 {
-    public GameManagerEnvyNew gameManagerEnvyNew;
-    public GameFlowManagerLust gameFlowManagerLust;
     public CameraSwitch cameraSwitch;
-    public SkillManager skillManager;
     public HealthSystem healthSystem;
+    public HealthSystem cockroachLife;
+    public StartBlinkingAnim startBlinking;
+    public GameManagerSloth gameManagerSloth;
+    public GameManagerEnvyNew gameManagerEnvyNew;
+    public SkillManager skillManager;
 
     [SerializeField] private GameObject playerBack;
     [SerializeField] private GameObject playerSkill;
     [SerializeField] private GameObject enemyLife;
+    [SerializeField] private GameObject ckenemyLife;
     public GameObject[] BtnsToShow;
     public GameObject[] ToHide;
 
 
     public void OnClickSkill()
     {
-        if (healthSystem.health != 0 && skillManager.diamond != 0)
+        if (healthSystem.health != 0)
         {
             cameraSwitch.PlayerView();
 
             HideAttack();
 
             skillManager.diamond--;
+
             playerBack.SetActive(false);
             playerSkill.SetActive(true);
             enemyLife.SetActive(false);
 
             Invoke("AnimatePlayer", 2.0f);
-            if(gameManagerEnvyNew != null)
-            {
-            gameManagerEnvyNew.EnvyAttack();
-            }
-            if(gameFlowManagerLust != null)
-            {
-            gameFlowManagerLust.AttackGameplay();
+           
+            //startBlinking.StartBlinking();
 
-            }
-
-
-            // Invoke("ReturnAll", 2.3f);
+            //Invoke("ReturnAll", 2.2f);
         }
         else if (healthSystem.health <= 0)
         {
@@ -52,16 +48,41 @@ public class Skill : MonoBehaviour
         }
     }
 
+
     private void AnimatePlayer()
     {
         cameraSwitch.FightScene();
         playerBack.SetActive(true);
         playerSkill.SetActive(false);
-        enemyLife.SetActive(true);
+        //enemyLife.SetActive(true);
+
+        if(gameManagerEnvyNew != null)
+        {
+            gameManagerEnvyNew.EAnimatePlayer();
+            //Invoke("gameManagerEnvyNew.EAnimatePlayer", 2.0f);
+
+            gameManagerEnvyNew.EnvyAttack();
+            //Invoke(" gameManagerEnvyNew.EnvyAttack", 3f);
+        }
+
+        if (gameManagerSloth != null)
+        {
+            if (cockroachLife.health != 0)
+            {
+                gameManagerSloth.AnimateCKAttack();
+            }
+            else
+            {
+                gameManagerSloth.AnimateAttack();
+                gameManagerSloth.SlothAttack();
+            }
+        }
+       
     }
 
     public void ReturnAll()
     {
+        ckenemyLife.SetActive(true);
 
         BtnsToShow.ToList().ForEach(button =>
         {
@@ -72,8 +93,8 @@ public class Skill : MonoBehaviour
     private void HideAttack()
     {
         ToHide.ToList().ForEach(objToHide =>
-        {
-            objToHide.SetActive(false);
-        });
+         {
+             objToHide.SetActive(false);
+         });
     }
 }

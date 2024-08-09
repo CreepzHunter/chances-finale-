@@ -56,7 +56,7 @@ public class GameManagerEnvyNew : MonoBehaviour
         hasDied = true;
 
 
-        eenemyIdle.SetActive(false);
+        // eenemyIdle.SetActive(false);
         eenemyLife.SetActive(false);
 
         eenemyDeath.SetActive(true);
@@ -143,7 +143,7 @@ public class GameManagerEnvyNew : MonoBehaviour
         HideAttack();
     }
 
-    private void EAnimatePlayer()
+    public void EAnimatePlayer()
     {
         cameraSwitch.FightScene();
         playerBack.SetActive(true);

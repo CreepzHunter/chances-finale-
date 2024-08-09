@@ -143,10 +143,9 @@ public class GameManagerRhythm : MonoBehaviour
         {
 
             stopGame = true;
-            activeMusicAnalyzer.shouldStop= true;
             Debug.Log("Game over = 5 misses!");
             gameFlowManagerLust.LoseLevel();
-            activeMusicAnalyzer.shouldStop=true;
+            activeMusicAnalyzer.Reset();
 
 
         }

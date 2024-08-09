@@ -24,7 +24,6 @@ public class Enemy : MonoBehaviour
     public Movement playerMovement3;
     public GameManagerSloth gameManagerSloth;
     public HealthSystem healthSystem;
-    
     //parent's Vector3(2.25,-1.29797363,-3.72000003)
     public Vector3 initialStartLocation1 = new Vector3(0.23f, 3.53f, 0f);
     public Vector3 initialStartLocation2 = new Vector3(1.67299998f, 1.95099998f, 0f);
@@ -146,12 +145,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void OriginalColor()
-    {
-        spriteRenderer.color = initialColor;
-
-
-    }
 
     public void Move1()
     {
