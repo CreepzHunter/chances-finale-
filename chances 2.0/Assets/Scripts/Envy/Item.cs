@@ -11,6 +11,9 @@ public class Item : MonoBehaviour
     public HealthSystem EnvyLife;
     public HealthSystemPlayer healthSystemPlayer;
     public SkillManager skillManager;
+    public GameManagerEnvyNew gameManagerEnvyNew;
+    public GameManagerSloth gameManagerSloth;
+    public HealthSystem cockroachLife;
     public Button[] buttons;
 
     // Inventory counts
@@ -23,52 +26,64 @@ public class Item : MonoBehaviour
 
     [SerializeField] private GameObject playerBack;
     [SerializeField] private GameObject playerItem;
-    [SerializeField] private GameObject enemyLife;
-    [SerializeField] private GameObject item;
+    [SerializeField] private GameObject inventory;
     [SerializeField] private GameObject back;
 
-    public GameObject[] BtnsToShow;
+    public GameObject[] btnsToShow;
     public GameObject[] ToHide;
 
     public void OnClickItem()
     {
         if (EnvyLife.health != 0)
         {
-            cameraSwitch.PlayerView();
 
-            HideAttack();
+            Invoke("Inventory", 0.4f);
 
-            playerBack.SetActive(false);
-            playerItem.SetActive(true);
-            enemyLife.SetActive(false);
-
-            Invoke("AnimatePlayer", 1.2f);
-            Invoke("ReturnAll", 1.5f);
+            // Invoke("AnimatePlayer", 1.2f);
+            // Invoke("ReturnAll", 1.5f);
         }
     }
 
     #region skill animation
     private void AnimatePlayer()
     {
-        Invoke("Inventory", 0.4f);
+        cameraSwitch.PlayerView();
+
+        HideAttack();
+
+        playerBack.SetActive(false);
+        playerItem.SetActive(true);
+    }
+    private void ReturnAnimate()
+    {
         cameraSwitch.FightScene();
         playerBack.SetActive(true);
         playerItem.SetActive(false);
-        enemyLife.SetActive(true);
     }
 
     private void Inventory()
     {
-        item.SetActive(true);
+        inventory.SetActive(true);
         back.SetActive(true);
     }
 
     public void ReturnAll()
     {
-        BtnsToShow.ToList().ForEach(button =>
+        btnsToShow.ToList().ForEach(button =>
         {
             button.SetActive(true);
         });
+    }
+    private void DoneItem()
+    {
+        ToHide.ToList().ForEach(button =>
+        {
+            button.SetActive(false);
+        });
+        AnimatePlayer();
+        Invoke("ReturnAnimate", 1.2f);
+        Invoke("EnemyTurnGameplay", 1.5f);
+        //Invoke("ReturnAll", 1.5f);
     }
 
     private void HideAttack()
@@ -78,6 +93,31 @@ public class Item : MonoBehaviour
             objToHide.SetActive(false);
         });
     }
+    #endregion
+
+    #region attack
+    private void EnemyTurnGameplay()
+    {
+        if (gameManagerEnvyNew != null)
+        {
+            gameManagerEnvyNew.EAnimatePlayer();
+
+            gameManagerEnvyNew.EnvyAttack();
+        }
+        if (gameManagerSloth != null)
+        {
+            if (cockroachLife.health != 0)
+            {
+                gameManagerSloth.AnimateCKAttack();
+            }
+            else
+            {
+                gameManagerSloth.AnimateAttack();
+                gameManagerSloth.SlothAttack();
+            }
+        }
+    }
+
     #endregion
 
     #region inventory system
@@ -112,6 +152,7 @@ public class Item : MonoBehaviour
             skillManager.diamond += 1;
             smallBottleCount--;
             UpdateButtonStates();
+            DoneItem();
             Debug.Log("Used Small Bottle. Remaining: " + smallBottleCount);
         }
     }
@@ -123,6 +164,7 @@ public class Item : MonoBehaviour
             skillManager.diamond += 2;
             midBottleCount--;
             UpdateButtonStates();
+            DoneItem();
             Debug.Log("Used Mid Bottle. Remaining: " + midBottleCount);
         }
     }
@@ -134,6 +176,7 @@ public class Item : MonoBehaviour
             skillManager.diamond += 2;
             healthSystemPlayer.Heal(5);
             largeBottleCount--;
+            DoneItem();
             UpdateButtonStates();
             Debug.Log("Used Large Bottle. Remaining: " + largeBottleCount);
         }
@@ -145,6 +188,7 @@ public class Item : MonoBehaviour
         {
             healthSystemPlayer.Heal(5);
             appleCount--;
+            DoneItem();
             UpdateButtonStates();
             Debug.Log("Ate Apple. Remaining: " + appleCount);
         }
@@ -156,6 +200,7 @@ public class Item : MonoBehaviour
         {
             healthSystemPlayer.Heal(10);
             chocolateCount--;
+            DoneItem();
             UpdateButtonStates();
             Debug.Log("Ate Chocolate. Remaining: " + chocolateCount);
         }
@@ -167,6 +212,7 @@ public class Item : MonoBehaviour
         {
             healthSystemPlayer.Heal(20);
             medkitCount--;
+            DoneItem();
             UpdateButtonStates();
             Debug.Log("Used Medkit. Remaining: " + medkitCount);
         }

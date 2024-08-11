@@ -40,22 +40,22 @@ public class TimeCode : MonoBehaviour
         //lose
         if (countdownTimer == 0 && !loseIndicator)
         {
-            int random0to10 = Random.Range(0, 11);
-            healthSystemPlayer.TakeDamage(random0to10);
+            int rndm = Random.Range(10, 25);
+            healthSystemPlayer.TakeDamage(rndm);
             if (gameManagerEnvy != null)
             {
-                gameManagerEnvy.ReturnAll();    
+                gameManagerEnvy.ReturnAll();
             }
 
             loseIndicator = true;
             hideGameplay.SetActive(false);
 
-            if(gameManagerSloth != null) 
+            if (gameManagerSloth != null)
             {
                 gameManagerSloth.ReturnAll();
                 gameManagerSloth.check = false;
             }
-           
+
 
             gameplays.ToList().ForEach(gameplay =>
             {
