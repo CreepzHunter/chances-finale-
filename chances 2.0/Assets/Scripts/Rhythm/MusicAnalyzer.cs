@@ -88,14 +88,9 @@ public class MusicAnalyzer : MonoBehaviour
         {
             if (healthSystem.health > 0)
             {
-                Reset();
-
-                disableRhythmHealth.DisableRhythm();
-                audioSource.time = 0f;
-                gameFlowManagerLust.LoseLevel();
+                Fail();
             }
 
-            shouldStop = true;
         }
         else
         {
@@ -107,6 +102,15 @@ public class MusicAnalyzer : MonoBehaviour
                 InstantiateArrow();
             }
         }
+    }
+
+    public void Fail()
+    {
+        Reset();
+        disableRhythmHealth.DisableRhythm();
+        audioSource.time = 0f;
+        gameFlowManagerLust.LoseLevel();
+        shouldStop = true;
     }
 
     void InstantiateArrow()

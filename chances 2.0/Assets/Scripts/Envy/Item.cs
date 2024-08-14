@@ -13,6 +13,7 @@ public class Item : MonoBehaviour
     public SkillManager skillManager;
     public GameManagerEnvyNew gameManagerEnvyNew;
     public GameManagerSloth gameManagerSloth;
+    public GameFlowManagerLust gameFlowManagerLust;
     public HealthSystem cockroachLife;
     public Button[] buttons;
 
@@ -36,7 +37,7 @@ public class Item : MonoBehaviour
     {
         if (EnvyLife.health != 0)
         {
-
+            HideAttack();
             Invoke("Inventory", 0.4f);
 
             // Invoke("AnimatePlayer", 1.2f);
@@ -115,6 +116,11 @@ public class Item : MonoBehaviour
                 gameManagerSloth.AnimateAttack();
                 gameManagerSloth.SlothAttack();
             }
+        }
+        if (gameFlowManagerLust != null)
+        {
+            gameFlowManagerLust.PlayGame();
+            Debug.Log("played game lust");
         }
     }
 

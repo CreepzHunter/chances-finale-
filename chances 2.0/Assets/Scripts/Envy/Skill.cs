@@ -58,7 +58,7 @@ public class Skill : MonoBehaviour
         //enemyLife.SetActive(true);
         if(gameFlowManagerLust != null)
         {
-            gameFlowManagerLust.StartGame();
+            gameFlowManagerLust.PlayGame();
         }
         if(gameManagerEnvyNew != null)
         {

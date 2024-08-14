@@ -142,11 +142,12 @@ public class GameManagerRhythm : MonoBehaviour
         if (consecutiveMissCount >= 5 && !stopGame)
         {
 
-            stopGame = true;
-            Debug.Log("Game over = 5 misses!");
+            // stopGame = true;
             gameFlowManagerLust.LoseLevel();
-            activeMusicAnalyzer.Reset();
-            activeMusicAnalyzer.shouldStop = true;
+            activeMusicAnalyzer.Fail();
+            consecutiveMissCount = 0;
+            // activeMusicAnalyzer.Reset();
+            // activeMusicAnalyzer.shouldStop = true;
 
 
         }
