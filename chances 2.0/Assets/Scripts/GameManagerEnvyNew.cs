@@ -154,7 +154,6 @@ public class GameManagerEnvyNew : MonoBehaviour
             playerLife.SetActive(true);
 
         }
-
         eenemyLife.SetActive(true);
     }
 

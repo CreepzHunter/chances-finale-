@@ -9,7 +9,10 @@ public class GameManagerSloth : MonoBehaviour
     public HealthSystem cockroachLife;
     public HealthSystemPlayer healthSystemPlayer;
     public CameraSwitch cameraSwitch;
+    public SkillOption skillOption;
     public TimeCode timeCode;
+    public Finish finish;
+    public Enemy enemy;
     [SerializeField] private GameObject timeCodeGO;
     [SerializeField] private GameObject playerBack;
     [SerializeField] private GameObject playerFront;
@@ -59,6 +62,7 @@ public class GameManagerSloth : MonoBehaviour
             });
             BtnsToShow[4].SetActive(false);
         }
+
     }
 
     private void DisableDeath()
@@ -130,13 +134,15 @@ public class GameManagerSloth : MonoBehaviour
     public void ReturnAll()
     {
         cameraSwitch.FightScene();
-
+        timeCode.countdownTimer = timeCode.initialCountdownDuration;
         InitialLoc();
         timeCodeGO.SetActive(false);
-        
-        BtnsToShow.ToList().ForEach(button =>
+        enemy.ResetLocation();
+        enemy.SetEnemyStateAsleep();
+
+        BtnsToShow.ToList().ForEach(x =>
         {
-            button.SetActive(true);
+            x.SetActive(true);
         });
     }
     private void HideAttack()
@@ -153,27 +159,48 @@ public class GameManagerSloth : MonoBehaviour
 
     public void AnimateCKAttack()
     {
-
-        cockroachLife.TakeDamage(20f);
-
+        int rndatt = Random.Range(10, 20);
+        cockroachLife.TakeDamage(rndatt);
+        if (skillOption.attack == true)//activate more damage when skill
+        {
+            cockroachLife.TakeDamage(25f);
+            skillOption.attack = false;
+        }
         cameraSwitch.FightScene();
 
         playerBack.SetActive(true);
         playerFront.SetActive(false);
 
-        AttackCk();
-        Invoke("DisableAttackCk", 1.0f);
+        AttackCk();//Animation Attack Cockroach
+        Invoke("DisableAttackCk", 1.0f);//DisableAnimation Attack Cockroach
 
-        ReturnAll();
         int random0to10 = Random.Range(0, 6);
-        healthSystemPlayer.TakeDamage(random0to10);
+
+        if (skillOption.shield == false)//immune damage if shielded
+        {
+            healthSystemPlayer.TakeDamage(random0to10);
+        }
+        else if (skillOption.shield == true)
+        {
+            skillOption.shield = false;
+        }
 
         ckenemyLife.SetActive(true);
         senemyLife.SetActive(true);
+
+        ReturnAll();
+        Invoke("DelayHide", 1f);
+    }
+
+    private void DelayHide()
+    {
+        skillOption.HideShield();
+
     }
 
     private void AttackCk()
     {
+
         ckIdleenmy.ToList().ForEach(ck =>
         {
             ck.SetActive(false);
@@ -245,14 +272,19 @@ public class GameManagerSloth : MonoBehaviour
     {
         Invoke("SlothCam", 0.3f);
         check = true;
-       
+
 
         slothIdle.SetActive(true);
-        HideAttack() ;  
+        HideAttack();
 
 
         AttackLocSloth();
 
+        LevelChecker();
+    }
+
+    private void LevelChecker()
+    {
         // Check life to know what level you should be at
         if (slothLife.health >= 66)
         {
@@ -264,14 +296,14 @@ public class GameManagerSloth : MonoBehaviour
         {
             slothGameplay[1].SetActive(true);
             timeCodeGO.SetActive(true);
-            timeCode.initialCountdownDuration = 15f;
+            timeCode.initialCountdownDuration = 35f;
 
         }
         else if (slothLife.health < 33 && slothLife.health > 1)
         {
             slothGameplay[2].SetActive(true);
             timeCodeGO.SetActive(true);
-            timeCode.initialCountdownDuration = 30f;
+            timeCode.initialCountdownDuration = 50f;
         }
 
     }

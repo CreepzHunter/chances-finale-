@@ -12,8 +12,6 @@ public class DisableRhythmHealth : MonoBehaviour
 
     public void EnableRhythm()
     {
-        Debug.Log("Enabled.");
-
         gameObject.SetActive(true);
     }
 

@@ -7,7 +7,9 @@ using System.Linq;
 public class TimeCode : MonoBehaviour
 {
     public TextMeshProUGUI countdownText;
+    public SkillOption skillOption;
     public HealthSystemPlayer healthSystemPlayer;
+    public GameManager gameManager;
     public GameManagerEnvyNew gameManagerEnvy;
     public GameManagerSloth gameManagerSloth;
     public Image bar;
@@ -38,18 +40,33 @@ public class TimeCode : MonoBehaviour
         bar.fillAmount = countdownTimer / currentCountdownDuration;
 
         //lose
-        if (countdownTimer == 0 && !loseIndicator)
+        if (countdownTimer == 0)
         {
+
+            //Player Life Damage
             int rndm = Random.Range(10, 25);
-            healthSystemPlayer.TakeDamage(rndm);
+
+            skillOption.HideShield();
+            //Shield
+            if (skillOption.shield == false)
+            {
+                healthSystemPlayer.TakeDamage(rndm);
+            }
+            else if (skillOption.shield == true)
+            {
+                skillOption.shield = false;
+            }
+            //Envy
             if (gameManagerEnvy != null)
             {
                 gameManagerEnvy.ReturnAll();
+                gameManager.ClearPuzzles();
+                gameManager.ResetGame();
             }
 
-            loseIndicator = true;
             hideGameplay.SetActive(false);
 
+            //Sloth
             if (gameManagerSloth != null)
             {
                 gameManagerSloth.ReturnAll();
@@ -61,6 +78,8 @@ public class TimeCode : MonoBehaviour
             {
                 gameplay.SetActive(false);
             });
+
+            ResetTimer();
         }
 
 

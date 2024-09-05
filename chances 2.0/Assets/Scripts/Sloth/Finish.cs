@@ -7,7 +7,6 @@ public class Finish : MonoBehaviour
 {
     // GameObject references
     public GameObject slothCharacter;
-    // public GameObject slothLifeBar;
 
     // Component references
     public Movement playerMovement;
@@ -15,6 +14,8 @@ public class Finish : MonoBehaviour
     public Enemy enemyController;
     public CameraSwitch cameraController;
     public GameManagerSloth gameManager;
+    public SkillOption skillOption;
+
     public GameObject[] boxHide;
 
     public GameObject[] destroyBoxAfterWin;
@@ -22,11 +23,15 @@ public class Finish : MonoBehaviour
 
     private void Start()
     {
+        StartingLocation();
+    }
+
+    public void StartingLocation()
+    {
         startLocation = enemyController.initialStartLocation1;
         startLocation = enemyController.initialStartLocation2;
         startLocation = enemyController.initialStartLocation3;
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -38,8 +43,14 @@ public class Finish : MonoBehaviour
     private void HandlePlayerCollision()
     {
         // Deal damage to the enemy
-        enemyHealth.TakeDamage(35f);
-
+        enemyHealth.TakeDamage(15);
+        int rndatt = Random.Range(5, 15);
+        enemyHealth.TakeDamage(rndatt);
+        if (skillOption.attack == true)//activate more damage when skill
+        {
+            enemyHealth.TakeDamage(25f);
+            skillOption.attack = false;
+        }
         // Disable sloth-related GameObjects
         slothCharacter.SetActive(false);
         // slothLifeBar.SetActive(false);
@@ -52,6 +63,7 @@ public class Finish : MonoBehaviour
         enemyController.Move1();
         enemyController.Move2();
         enemyController.Move3();
+        enemyController.ResetLocation();
 
         gameManager.slothGameplay.ToList().ForEach(button =>
          {

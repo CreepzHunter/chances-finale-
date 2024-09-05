@@ -143,9 +143,8 @@ public class GameManagerRhythm : MonoBehaviour
         {
 
             // stopGame = true;
-            gameFlowManagerLust.LoseLevel();
-            activeMusicAnalyzer.Fail();
             consecutiveMissCount = 0;
+            gameFlowManagerLust.LoseLevel();
             // activeMusicAnalyzer.Reset();
             // activeMusicAnalyzer.shouldStop = true;
 

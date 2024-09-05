@@ -81,14 +81,13 @@ public class MusicAnalyzer : MonoBehaviour
         float clipLength = audioSource.clip.length;
 
 
-
-        Debug.Log("current time: " + currentTime + " | clip length: " + clipLength);
-
         if (currentTime >= clipLength - 0.5f)
         {
             if (healthSystem.health > 0)
             {
                 Fail();
+                gameFlowManagerLust.LoseLevel();
+
             }
 
         }
@@ -106,11 +105,7 @@ public class MusicAnalyzer : MonoBehaviour
 
     public void Fail()
     {
-        Reset();
         disableRhythmHealth.DisableRhythm();
-        audioSource.time = 0f;
-        gameFlowManagerLust.LoseLevel();
-        shouldStop = true;
     }
 
     void InstantiateArrow()
@@ -162,7 +157,7 @@ public class MusicAnalyzer : MonoBehaviour
             Renderer renderer = child.GetComponent<Renderer>();
             if (renderer != null)
             {
-                StartCoroutine(FadeOutAndDestroy(renderer.gameObject, 0.3f));
+                StartCoroutine(FadeOutAndDestroy(renderer.gameObject, 0.5f));
             }
             else
             {

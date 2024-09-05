@@ -59,8 +59,31 @@ public class Enemy : MonoBehaviour
         currentState = EnemyState.Asleep;
         timer = initialAwakeningTime;
 
-
-
+    }
+    public void ResetLocation()
+    {
+        if (gameplay[0].activeSelf)
+        {
+            key[0].SetActive(true);
+            doorClose[0].SetActive(true);
+            doorOpen[0].SetActive(false);
+            playerMovement1.transform.localPosition = initialStartLocation1;
+        }
+        else if (gameplay[1].activeSelf)
+        {
+            key[1].SetActive(true);
+            doorB.SetActive(true);
+            doorClose[1].SetActive(true);
+            doorOpen[1].SetActive(false);
+            playerMovement2.transform.localPosition = initialStartLocation2;
+        }
+        else if (gameplay[2].activeSelf)
+        {
+            key[2].SetActive(true);
+            doorClose[2].SetActive(true);
+            doorOpen[2].SetActive(false);
+            playerMovement3.transform.localPosition = initialStartLocation3;
+        }
     }
     public void SetEnemyStateAsleep()
     {

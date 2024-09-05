@@ -7,6 +7,7 @@ using System.Threading;
 
 public class GameManager : MonoBehaviour
 {
+    public SkillOption skillOption;
     public GameObject youWin;
     public GameObject youLose;
     public GameObject WholeGame;
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        timeCode.loseIndicator = false;
 
         AddListeners();
         AddGamePuzzles();
@@ -197,26 +199,46 @@ public class GameManager : MonoBehaviour
 
         timeCode.ResetTimer();
         Shuffle(gamePuzzles);
+
+        skillOption.attack = false;
+        skillOption.shield = false;
     }
 
+    public void ClearPuzzles()
+    {
+        gamePuzzles.Clear();
+        btns.Clear();
+
+        addButtons.GenerateButtons();
+
+    }
     public void CheckTheGameFinished()
     {
         countCorrectGuesses++;
 
         if (countCorrectGuesses == gameGuesses)
         {
+            skillOption.HideShield();
+
             gameManagerEnvy.check = true;
 
-            enemyLife.TakeDamage(20);
+            enemyLife.TakeDamage(20f);
 
+            if (skillOption != null)
+            {
+                if (skillOption.attack == true)
+                {
+                    enemyLife.TakeDamage(20f);
+                    skillOption.attack = false;
+                }
+            }
 
             Invoke("CallReturn", 1f);
 
 
             EnemyLife.SetActive(false);
 
-            gamePuzzles.Clear();
-            btns.Clear();
+            ClearPuzzles();
 
             if (enemyLife.health <= 0)
             {
@@ -230,8 +252,6 @@ public class GameManager : MonoBehaviour
             }
 
             LevelUpProgression();
-
-            addButtons.GenerateButtons();
 
 
             toShow.ToList().ForEach(button =>

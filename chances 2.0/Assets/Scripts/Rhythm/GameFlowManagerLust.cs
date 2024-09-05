@@ -18,7 +18,7 @@ public class GameFlowManagerLust : MonoBehaviour
     [SerializeField] private GameObject lustAttack;
     [SerializeField] private GameObject lustDead;
 
-
+    public SkillOption skillOption;
     public HealthSystemPlayer healthSystemPlayer;
     public HealthSystem lustLife;
     public HealthSystem gameplayLife;
@@ -72,7 +72,7 @@ public class GameFlowManagerLust : MonoBehaviour
     public void PlayGame()
     {
         Invoke("AnimateAttack", 1f);
-        Invoke("SlothCam", 1.8f);
+        Invoke("SlothCam", 1.1f);
 
         if (lustLife.health >= 66)
         {
@@ -98,10 +98,23 @@ public class GameFlowManagerLust : MonoBehaviour
     public void WinLevel()
     {
         musicAnalyzer.StopMusicAnalyzer();
+        musicAnalyzer.Reset();
+        musicAnalyzer.shouldStop = true;
+
         gameManagerRhythm.currentScore = 0;
         gameManagerRhythm.currMultiplier = 1;
 
-        lustLife.TakeDamage(35f);
+        int rndatt = Random.Range(15, 35);
+        if (skillOption.attack == true)//activate more damage when skill
+        {
+            Debug.Log("Did the skill damage work?");
+            skillOption.attack = false;
+            lustLife.TakeDamage(rndatt);
+        }
+        int random0to10 = Random.Range(10, 20);
+
+        lustLife.TakeDamage(random0to10);
+
 
         if (beatScroller.musicAnalyzer1GO.activeSelf)
         {
@@ -122,13 +135,29 @@ public class GameFlowManagerLust : MonoBehaviour
 
     public void LoseLevel()
     {
-
         musicAnalyzer.StopMusicAnalyzer();
+        musicAnalyzer.Reset();
+        musicAnalyzer.shouldStop = true;
+
         gameManagerRhythm.currentScore = 0;
         gameManagerRhythm.currMultiplier = 1;
 
-        int random0to10 = Random.Range(0, 13);
-        healthSystemPlayer.TakeDamage(random0to10);
+
+        int random0to10 = Random.Range(10, 20);
+
+        if (skillOption.shield == false)//immune damage if shielded
+        {
+            healthSystemPlayer.TakeDamage(random0to10);
+            Debug.Log("Damage: " + random0to10);
+
+        }
+        else if (skillOption.shield == true)
+        {
+            skillOption.shield = false;
+            Debug.Log("Did this run ");
+
+        }
+
 
         Invoke("ReturnAll", 1f);
     }
@@ -150,7 +179,7 @@ public class GameFlowManagerLust : MonoBehaviour
     {
         cameraSwitch.LustGameplay();
         gameLife.EnableRhythm();
-
+        HideAttack();
     }
 
 
