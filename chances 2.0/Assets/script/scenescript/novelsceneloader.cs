@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,24 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class novelsceneloader : MonoBehaviour
 {
-    public int sceneBuildIdIndex;
-    public int sceneNumber;
+    public int SceneNumber;
 
-    public bool isNextScene = true;
+    private scenestarter scene;
 
-    [SerializeField]
-    public sceneinfo sceneinfo;
-
-    private void OnMouseDown()
+    void Start()
     {
-        Debug.Log("Enter next scene");
-        sceneinfo.isNextScene = isNextScene;
-        SceneManager.LoadScene(sceneBuildIdIndex, LoadSceneMode.Single);
+        scene = FindObjectOfType<scenestarter>();
     }
 
-    public void sceneLoader()
+
+
+    public void NextScene()
     {
-        Debug.Log("Enter next scene");
-        SceneManager.LoadScene(sceneNumber, LoadSceneMode.Single);
+        scene.objectTrue();
+        Debug.Log("scene is next");
+        StartCoroutine(scenechanger());
+    }
+
+    IEnumerator scenechanger()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneNumber);
     }
 }

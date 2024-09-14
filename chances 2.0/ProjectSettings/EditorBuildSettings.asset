@@ -9,6 +9,33 @@ EditorBuildSettings:
     path: Assets/Scenes/1.gameplay.unity
     guid: 76991280587bba04691e3964ce62b07f
   - enabled: 1
-    path: Assets/Scenes/school.unity
-    guid: 25c6eeac6d0bcb14b8f6d28ff9884b25
+    path: Assets/Scenes/VN Scenes/1.heaven.unity
+    guid: e7bc7a0ce0a0c4843b19421205075f82
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/2.room.unity
+    guid: c1ee92ab40003434289f3d929bbe7f1f
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/3.Market.unity
+    guid: 1ff6f04cf56ac564faa33ace4efa4e5e
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/4.schoolHallway.unity
+    guid: f541a11d14b8aad438fa1ddee096c188
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/5.stage.unity
+    guid: b5d6758505d4af64e88dd036e8d0b835
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/6.Kitchen.unity
+    guid: 0b7e8c00c2b4de44e8a544bb3db0d0ee
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/7.bar.unity
+    guid: 4154fc72540a9c34bad6a170fe6b1630
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/8.officehallway.unity
+    guid: 97a17caab499b6243989d9fedf1f4edc
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/9.office.unity
+    guid: 77897f9331e53b94baaf01207e65198c
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/10.pres office.unity
+    guid: 866d428a94efef24690c7518ed16ea27
   m_configObjects: {}

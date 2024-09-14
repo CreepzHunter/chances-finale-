@@ -7,6 +7,7 @@ TagManager:
   - switch
   - Activator
   - Box1
+  - GM
   layers:
   - Default
   - TransparentFX

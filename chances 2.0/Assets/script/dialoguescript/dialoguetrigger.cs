@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class dialoguetrigger : MonoBehaviour
 {
     public Message[] messages;
     public Actor[] actors;
+    
 
     public void StartDialogue() 
     {
@@ -16,6 +18,7 @@ public class dialoguetrigger : MonoBehaviour
 [System.Serializable]
 public class Message {
     public int ActorID;
+    public Sprite iconID;
     public string message;
 }
 

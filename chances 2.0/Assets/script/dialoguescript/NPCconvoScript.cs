@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCconvoScript : MonoBehaviour
 {
-    public GameObject message;
+    public GameObject button;
     
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-                message.SetActive(true);
+                button.SetActive(true);
         }
     }
 
@@ -18,7 +19,7 @@ public class NPCconvoScript : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            message.SetActive(false);
+            button.SetActive(false);
         }
     }
 }

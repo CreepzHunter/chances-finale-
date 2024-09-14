@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class dialogueManager : MonoBehaviour
 {
+    public Image ActorIcons;
     public TMP_Text ActorName;
     public TMP_Text ActorMessage;
     public RectTransform backgroundbox;
@@ -14,13 +15,15 @@ public class dialogueManager : MonoBehaviour
 
     Message[] currentMessages;
     Actor[] currentActors;
+    //Sprite[] currentIcons;
     int activeMessage = 0;
     public static bool IsActive = false;
 
-    public novelscene novel;
+    //public novelscene novel;
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
+        //currentIcons = icons;
         currentActors = actors;
         currentMessages = messages;
         activeMessage = 0;
@@ -32,12 +35,37 @@ public class dialogueManager : MonoBehaviour
 
     void DisplayMessage()
     {
-        Message messageToDisplay = currentMessages[activeMessage];
-        ActorMessage.text = messageToDisplay.message;
-        Actor actorToDipslay = currentActors[messageToDisplay.ActorID];
-        ActorName.text = actorToDipslay.name;
+        if (activeMessage < currentMessages.Length)
+        {
+            Message messageToDisplay = currentMessages[activeMessage];
 
-        menu.SetActive(false);
+            if (messageToDisplay.ActorID >= 0 && messageToDisplay.ActorID < currentActors.Length)
+            {
+                Actor actorToDisplay = currentActors[messageToDisplay.ActorID];
+                ActorName.text = actorToDisplay.name;
+            }
+            else
+            {
+                Debug.LogError("ActorID is out of bounds.");
+                return; // Early exit if ActorID is invalid
+            }
+
+            ActorMessage.text = messageToDisplay.message;
+
+            // Make sure iconID is within bounds
+            if (messageToDisplay.iconID != null)
+            {
+                ActorIcons.sprite = messageToDisplay.iconID;  // Assign the sprite directly from the Message's iconID
+            }
+            else
+            {
+                Debug.LogError("iconID is null.");
+                return; // Early exit if iconID is invalid
+            }
+
+
+            menu.SetActive(false);
+        }
     }
 
     public void NextMessage()
