@@ -64,6 +64,7 @@ public class GameManagerGreedPride : MonoBehaviour
 
     public void EnemyAnimAttack()
     {
+        cameraSwitch.EnemyPosition();
         enemyAnimations[0].SetActive(false);
         enemyAnimations[3].SetActive(false);
 
@@ -74,7 +75,7 @@ public class GameManagerGreedPride : MonoBehaviour
 
     public void PlayGame()
     {
-        cameraSwitch.LustGameplay();
+        cameraSwitch.PrideLustCameraMiniGame();
         game.SetActive(true);
     }
 

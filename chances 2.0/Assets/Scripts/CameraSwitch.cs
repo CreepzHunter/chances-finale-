@@ -22,6 +22,10 @@ public class CameraSwitch : MonoBehaviour
     private Vector3 lustGaemplayPos = new Vector3(0.38f, 4.30f, -22.07f);
     private Quaternion lustGaemplayRot = new Quaternion(0.00f, 0.00f, 0.00f, -1.00f);
 
+    // New PrideLustCameraMiniGame position and rotation
+    private Vector3 prideLustPosition = new Vector3(-3.1500000953674318f, 2.049999952316284f, -13.8100004196167f);
+    private Quaternion prideLustRotation = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
+
     public float transitionDuration = .3f;
 
     void Awake()
@@ -35,6 +39,7 @@ public class CameraSwitch : MonoBehaviour
     {
         MoveCamera(initialPosition, initialRotation);
     }
+
     public void LustGameplay()
     {
         MoveCamera(lustGaemplayPos, lustGaemplayRot);
@@ -49,9 +54,16 @@ public class CameraSwitch : MonoBehaviour
     {
         MoveCamera(otherPosition, otherRotation);
     }
+
     public void EnemyPosition()
     {
         MoveCamera(enemyPosition, enemyRotation);
+    }
+
+    // New method for PrideLustCameraMiniGame
+    public void PrideLustCameraMiniGame()
+    {
+        MoveCamera(prideLustPosition, prideLustRotation);
     }
 
     void MoveCamera(Vector3 targetPosition, Quaternion targetRotation)
