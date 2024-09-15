@@ -178,9 +178,72 @@ MonoBehaviour:
   messages:
   - ActorID: 0
     iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
-    message: I'm Awake??
+    message: there's no one here.....
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: oh
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: if it isn't kuya ezekiel
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: w- who are you?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: it's been so long kuya
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: yes, ever since childhood kuya
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: childhood? we never me-
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: aaaaaaaaarrrrrrggggggghhhhhh!!!!!
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: what is happening!? my head hurts!
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: it seems kuya does not remember us
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: it seems so my dear sister
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: w-why do both of you look so familiar?
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: aarrrgghhhh!!! crap!!!
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: i'll give you a word kuya to remember us
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: that is right kuya im sure you'll remember this word
+  - ActorID: 3
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: ready?
+  - ActorID: 3
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: ANNA!
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: raaaaaaaaaaggggggghhhhhhhhhh!!!
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: let us fight sister
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: hehehehe take the lead sister
+  - ActorID: 3
+    iconID: {fileID: 21300000, guid: 145ceb77c8d3a174790497ec835eee56, type: 3}
+    message: raaaaaaaaaaaaggggghhhhhhhh!!!!!
   actors:
   - name: Ezekiel
+  - name: mara
+  - name: clara
+  - name: mara & clara
 --- !u!114 &17203355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,7 +967,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEAVE ROOM
+  m_text: RAAGGGHH!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1400,7 +1463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45bcf6b0aa164748ab55efbcfe99ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumber: 0
+  SceneNumber: 15
 --- !u!114 &1675956014
 MonoBehaviour:
   m_ObjectHideFlags: 0

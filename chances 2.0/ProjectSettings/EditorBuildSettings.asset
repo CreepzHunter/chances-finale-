@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/mainmenu.unity
+    guid: 4562118d80a976c46968856850b30d63
+  - enabled: 1
     path: Assets/Scenes/1.gameplay.unity
     guid: 76991280587bba04691e3964ce62b07f
   - enabled: 1
@@ -38,4 +41,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VN Scenes/10.pres office.unity
     guid: 866d428a94efef24690c7518ed16ea27
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/1 - Envy Battle.unity
+    guid: 9d285b5c180450548a750f5b3089fd12
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/2 - Sloth Battle.unity
+    guid: 76c10e08e0b95d54dbb3ecfebf40d152
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/3 - Lust Battle.unity
+    guid: 55049b1a46223b541908d6a87f32dfe6
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/Greed & Pride Test.unity
+    guid: 978292e9814a92940b9a37fb2d0d4d51
   m_configObjects: {}

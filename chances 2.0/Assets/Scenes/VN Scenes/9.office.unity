@@ -178,9 +178,78 @@ MonoBehaviour:
   messages:
   - ActorID: 0
     iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
-    message: I'm Awake??
+    message: uhhh... kuya george?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: of it isn't ezekiel
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: come sit next to me im too lazy to stand up
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: you are the same as always george lazy yet cunning
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: heh that's me ezekiel
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: i still dont appreciate the way you did to me last school event before
+      you graduate george
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: 'past is past ezekiel im sure you''ll forget it '
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: do it......
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: huh!?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: something wrong ezekiel? you look very pale
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: well no worries im too tired to check up on you
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: uurrrrggghhhh..... *inhale*..... *exhale*......
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: i know you're lazy george but i don't think you're this incompetent
+      before
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: '*groan* so this is how you treat your kuya now ezekiel'
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: hhhmmmm.....
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: calling me lazy is ok but incompetent?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: heh... are you holding grudge because of that situation that happened
+      last school year's event?
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: grudge-
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: so thats how it goes ezekiel..... Guards
+  - ActorID: 3
+    iconID: {fileID: 21300000, guid: d06b7b60c6b84f640b4782f3a5f5935b, type: 3}
+    message: the guards came from the entrance and block the only way to escape
+  - ActorID: 3
+    iconID: {fileID: 21300000, guid: d06b7b60c6b84f640b4782f3a5f5935b, type: 3}
+    message: george and the guards began to transform
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: dd939be73cacbe047b4b80376bf3c7f1, type: 3}
+    message: RAAAAAAAAAAAAAGGGGGGHHHHHHHHHH!!!
   actors:
   - name: Ezekiel
+  - name: george
+  - name: a deep whisper
+  - name: narrator
 --- !u!114 &17203355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +548,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Office
+  m_text: George...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -904,7 +973,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEAVE ROOM
+  m_text: CRAP!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1400,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45bcf6b0aa164748ab55efbcfe99ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumber: 0
+  SceneNumber: 13
 --- !u!114 &1675956014
 MonoBehaviour:
   m_ObjectHideFlags: 0

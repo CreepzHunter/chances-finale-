@@ -178,9 +178,35 @@ MonoBehaviour:
   messages:
   - ActorID: 0
     iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
-    message: I'm Awake??
+    message: ARGH!!!
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: '*pants*'
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: It was all just a dream......
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 37a2050b3d4d97f46ae0e592240e9ef8, type: 3}
+    message: '*RING* *RING*'
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 37a2050b3d4d97f46ae0e592240e9ef8, type: 3}
+    message: 'Graduation day notification: All students must be at the campus before
+      9.'
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: Todays the graduation day. I should prepare myself and make breakfast
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: oh.
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: mom already prepared my uniform and breakfast before she left for work
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: I should visit mom before i head to the school
   actors:
   - name: Ezekiel
+  - name: Phone alarm
 --- !u!114 &17203355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1395,7 +1421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45bcf6b0aa164748ab55efbcfe99ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumber: 0
+  SceneNumber: 1
 --- !u!114 &1675956014
 MonoBehaviour:
   m_ObjectHideFlags: 0

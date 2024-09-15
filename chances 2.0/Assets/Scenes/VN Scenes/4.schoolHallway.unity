@@ -178,9 +178,32 @@ MonoBehaviour:
   messages:
   - ActorID: 0
     iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
-    message: I'm Awake??
+    message: '*pant* *pant* there''s a lot of people here....'
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: i'll be careful around or else this curse will trigger again and see
+      people's darkest desire......
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: d06b7b60c6b84f640b4782f3a5f5935b, type: 3}
+    message: attention graduating students, parents, and guest
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: d06b7b60c6b84f640b4782f3a5f5935b, type: 3}
+    message: please proceed to the colloseum right now
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: d06b7b60c6b84f640b4782f3a5f5935b, type: 3}
+    message: the graduation ceremony will start around 30 minutes.
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: i should head to the colloseum right now
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: hopefully mom will arrive before event starts
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: and hopefully this curse does not trigger while the event is on going.....
   actors:
   - name: Ezekiel
+  - name: ANNOUNCEMENT
 --- !u!114 &17203355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,7 +927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEAVE ROOM
+  m_text: Colloseum
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -931,8 +954,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
-  m_fontSizeBase: 21
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1298,7 +1321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45bcf6b0aa164748ab55efbcfe99ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumber: 5
+  SceneNumber: 6
 --- !u!114 &1675956014
 MonoBehaviour:
   m_ObjectHideFlags: 0

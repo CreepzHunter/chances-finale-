@@ -178,9 +178,81 @@ MonoBehaviour:
   messages:
   - ActorID: 0
     iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
-    message: I'm Awake??
+    message: the scent seems to lead here
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: oh, a familiar guest is here
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: Vorax!?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: hehehehehe.... hello Ezekiel it seems you've lose some weight and healhier
+      than before
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: what happen to you? why have you become so-
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: fat?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: well definetly am now ezekiel
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: aren't you suppossed to be a healthy maniac? critiziscing people for
+      their appearance?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: all those healthy routine and well balance diet have become more boring
+      to me ezekiel
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: 'hehehehe.... well ezekiel let me explain it to you '
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: my satisfaction for healthy foods was not enough so i tried something
+      that abids my healthy self
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: 'and eating those non healthy food have made me obsess more '
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: and those sweet cravings as it enters my mouth..... hehehehehehehe
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: uuhhhhh vorax are you ok?
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: the scent has becoming stronger
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: and it's heading towards vo-
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: hey ezekiel..... do you have more food that i can eat?
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: I do-
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: OH!? well, i guess i'll make you into food ezekiel
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: one juicy food...... hehehe....
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: '!?'
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: huhuhuhu.... HAHAHAHAHAHAHAHA
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: cbd614c33d6be234aa702d8db069ce68, type: 3}
+    message: raAAAAAAAAAAAAAAAAAAAAGGGGGGGGHHHHHHHHH!!!!!!!
   actors:
   - name: Ezekiel
+  - name: vorax
+  - name: Ezekiel thought
 --- !u!114 &17203355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,7 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEAVE ROOM
+  m_text: Vorax!?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1400,7 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45bcf6b0aa164748ab55efbcfe99ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumber: 0
+  SceneNumber: 1
 --- !u!114 &1675956014
 MonoBehaviour:
   m_ObjectHideFlags: 0

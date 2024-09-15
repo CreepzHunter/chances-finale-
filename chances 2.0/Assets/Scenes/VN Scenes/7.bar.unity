@@ -178,9 +178,107 @@ MonoBehaviour:
   messages:
   - ActorID: 0
     iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
-    message: I'm Awake??
+    message: A bar!?
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: the scent seems to around here i wonder where it is
+  - ActorID: 2
+    iconID: {fileID: 21300000, guid: d06b7b60c6b84f640b4782f3a5f5935b, type: 3}
+    message: Ezekiel keeps on searching where the scent leads to.
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: '*bump*'
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: oh, im sorry
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: are you ok?
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: hahaha... i'm ok how about yo-
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: L-lucy!?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: Ezekiel? is that you? you look fit and thin than before
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: uuhhhh.. yeah....
+  - ActorID: 3
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: why is my ex here!?
+  - ActorID: 3
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: wait it couldn't be....
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: hey lucy.....
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: yes?
+  - ActorID: 3
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: the scent is strong around her.....
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: why are you here lucy?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: oh.... *smirks*
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: do you remember why we break up?
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: aurgh.... you cheated with somebody else....
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: and you know the reason why we break up?
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: I- i have no idea why.....
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: after spending time together from freshmen up to 3rd year, it made me
+      realize that you can't fill this emptiness inside me ezekiel
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: you're way too passive and nonchalant so i found someone who can fill
+      this emptiness inside of me
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: ......
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: heh. it's still unfortunate after we broke and spend time with the other
+      guy, he still can't fill me with satisfaction so i left him and find more who
+      can fill this emptiness in me
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: so i tried going to bars and clubs and hehehehehehe.....
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: Lucy!!
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: you are possessed! i know you cheated me during our relationship but
+      you are never this kind of person before
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: you won't understand Ezekiel.....
+  - ActorID: 0
+    iconID: {fileID: 21300000, guid: 95f3f3310683e974985b978e1454d2db, type: 3}
+    message: huh?
+  - ActorID: 1
+    iconID: {fileID: 21300000, guid: 8c85ec00cbac22f48b5343edb8c11a88, type: 3}
+    message: RAAAAAAAAAAAAAAAAAAAAGGGGGGGGGGHHHHHHHHHHHH!!!!!!!!!!
   actors:
   - name: Ezekiel
+  - name: Lucy
+  - name: Narrator
+  - name: Ezekiel's thought
 --- !u!114 &17203355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,7 +1104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEAVE ROOM
+  m_text: L-lucy?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1033,8 +1131,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
-  m_fontSizeBase: 21
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1400,7 +1498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45bcf6b0aa164748ab55efbcfe99ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumber: 0
+  SceneNumber: 14
 --- !u!114 &1675956014
 MonoBehaviour:
   m_ObjectHideFlags: 0
