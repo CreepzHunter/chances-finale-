@@ -14,6 +14,7 @@ public class Item : MonoBehaviour
     public GameManagerEnvyNew gameManagerEnvyNew;
     public GameManagerSloth gameManagerSloth;
     public GameFlowManagerLust gameFlowManagerLust;
+    public GameManagerGreedPride gameManagerGreedPride;
     public HealthSystem cockroachLife;
     public Button[] buttons;
 
@@ -120,7 +121,10 @@ public class Item : MonoBehaviour
         if (gameFlowManagerLust != null)
         {
             gameFlowManagerLust.PlayGame();
-            Debug.Log("played game lust");
+        }
+        if (gameManagerGreedPride != null)
+        {
+            gameManagerGreedPride.ReturnAnimation();
         }
     }
 

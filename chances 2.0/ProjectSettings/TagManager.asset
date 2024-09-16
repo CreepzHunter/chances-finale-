@@ -8,6 +8,7 @@ TagManager:
   - Activator
   - Box1
   - GM
+  - Arrow
   layers:
   - Default
   - TransparentFX

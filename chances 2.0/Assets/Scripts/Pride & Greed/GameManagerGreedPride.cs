@@ -11,6 +11,7 @@ public class GameManagerGreedPride : MonoBehaviour
     public CameraSwitch cameraSwitch;
     public SkillOption skillOption;
     public TimeCode timeCode;
+    public ObjectSpawner2D objectSpawner;
 
 
     [SerializeField] private GameObject playerLife;
@@ -23,9 +24,7 @@ public class GameManagerGreedPride : MonoBehaviour
     public bool check = false;
     public GameObject[] playerAnimations;
     public GameObject[] enemyAnimations;
-    public GameObject[] mainButtons;
-
-
+    public GameObject[] mainUIs;
 
 
     public void OnClickAttack()
@@ -33,7 +32,6 @@ public class GameManagerGreedPride : MonoBehaviour
 
         if (GreedLife.health != 0)
         {
-            Debug.Log("attack ");
 
             cameraSwitch.PlayerView();
             HideAttack();
@@ -58,6 +56,7 @@ public class GameManagerGreedPride : MonoBehaviour
 
         EnemyAnimAttack();
 
+
         //play game
         Invoke("PlayGame", 1.3f);
     }
@@ -72,27 +71,69 @@ public class GameManagerGreedPride : MonoBehaviour
         enemyAnimations[4].SetActive(true);
     }
 
+    public void ReturnEnemyAnim()
+    {
+        enemyAnimations[0].SetActive(true);
+        enemyAnimations[3].SetActive(true);
+
+        enemyAnimations[1].SetActive(false);
+        enemyAnimations[4].SetActive(false);
+    }
+
+    public void EnemyTakeDamage()
+    {
+        int damage = Random.Range(25, 35);
+        GreedLife.TakeDamage(15);
+
+        if (skillOption.attack == true)//activate more damage when skill
+        {
+            GreedLife.TakeDamage(damage);
+            skillOption.attack = false;
+        }
+
+
+    }
+    public void PlayerTakeDamage()
+    {
+        int damage = Random.Range(10, 20);
+        if (skillOption.shield == false)//immune damage if shielded
+        {
+            healthSystemPlayer.TakeDamage(damage);
+
+        }
+        else if (skillOption.shield == true)
+        {
+            skillOption.shield = false;
+        }
+    }
+
 
     public void PlayGame()
     {
         cameraSwitch.PrideLustCameraMiniGame();
         game.SetActive(true);
+        objectSpawner.SpawnRoutineCour();
+        ReturnEnemyAnim();
     }
 
     #region Basics
     public void ReturnAll()
     {
+        skillOption.HideShield();
         cameraSwitch.FightScene();
+        game.SetActive(false);
+
+
         timeCode.countdownTimer = timeCode.initialCountdownDuration;
 
-        mainButtons.ToList().ForEach(x =>
+        mainUIs.ToList().ForEach(x =>
         {
             x.SetActive(true);
         });
     }
     private void HideAttack()
     {
-        mainButtons.ToList().ForEach(objToHide =>
+        mainUIs.ToList().ForEach(objToHide =>
          {
              objToHide.SetActive(false);
          });

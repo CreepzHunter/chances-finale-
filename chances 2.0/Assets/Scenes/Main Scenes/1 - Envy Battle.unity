@@ -6084,10 +6084,12 @@ MonoBehaviour:
   - {fileID: 193692308}
   - {fileID: 228190574}
   - {fileID: 707218186}
+  - {fileID: 220651679}
   ToHide:
   - {fileID: 656989136}
   - {fileID: 707344370}
   - {fileID: 619560303}
+  - {fileID: 228190574}
 --- !u!1 &707218186
 GameObject:
   m_ObjectHideFlags: 0
@@ -8226,6 +8228,8 @@ MonoBehaviour:
   gameManager: {fileID: 799387572}
   gameManagerEnvy: {fileID: 656989144}
   gameManagerSloth: {fileID: 0}
+  gameManagerGreedPride: {fileID: 0}
+  miniGameLife: {fileID: 0}
   bar: {fileID: 1846704054}
   initialCountdownDuration: 20
   countdownTimer: 0
@@ -8233,7 +8237,8 @@ MonoBehaviour:
   lose: {fileID: 1978682101}
   hideGameplay: {fileID: 1460271172}
   loseIndicator: 0
-  gameplays: []
+  gameplays:
+  - {fileID: 220651679}
 --- !u!222 &1668989416
 CanvasRenderer:
   m_ObjectHideFlags: 0

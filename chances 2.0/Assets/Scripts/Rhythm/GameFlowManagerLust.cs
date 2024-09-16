@@ -186,6 +186,7 @@ public class GameFlowManagerLust : MonoBehaviour
     #region Basics
     public void ReturnAll()
     {
+        skillOption.HideShield();
         gameplayLife.health = 100;
         gameManagerRhythm.stopGame = false;
         gameManagerRhythm.hasWon = false;

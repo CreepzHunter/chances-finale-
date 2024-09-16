@@ -13,6 +13,7 @@ public class Skill : MonoBehaviour
     public GameManagerSloth gameManagerSloth;
     public GameManagerEnvyNew gameManagerEnvyNew;
     public GameFlowManagerLust gameFlowManagerLust;
+    public GameManagerGreedPride gameManagerGreedPride;
     public SkillManager skillManager;
 
     [SerializeField] private GameObject playerBack;
@@ -103,6 +104,11 @@ public class Skill : MonoBehaviour
             }
         }
 
+        if (gameManagerGreedPride != null)
+        {
+            gameManagerGreedPride.ReturnAnimation();
+        }
+
     }
 
     public void SkillShield()
@@ -134,6 +140,11 @@ public class Skill : MonoBehaviour
                 gameManagerSloth.SlothAttack();
             }
         }
+        if (gameManagerGreedPride != null)
+        {
+            gameManagerGreedPride.ReturnAnimation();
+        }
+
     }
 
     public void ReturnAll()
