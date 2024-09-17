@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameFlowManagerLust : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class GameFlowManagerLust : MonoBehaviour
     public BeatScroller beatScroller;
     private MusicAnalyzer musicAnalyzer;
     private int currentLevel = 0;
+    public GameObject gameover;
 
     void Start()
     {
@@ -49,7 +51,21 @@ public class GameFlowManagerLust : MonoBehaviour
             //dead here
             lustIdle.SetActive(false);
             lustDead.SetActive(true);
+
+            Invoke("LoadOverWorld", 0.8f);
+
         }
+        //player dead
+        if (healthSystemPlayer.health == 0)
+        {
+            gameover.SetActive(true);
+            Invoke("LoadOverWorld", 1.06f);
+        }
+
+    }
+    private void LoadOverWorld()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void StartGame()

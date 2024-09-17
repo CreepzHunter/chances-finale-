@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManagerSloth : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class GameManagerSloth : MonoBehaviour
     public GameObject[] BtnsToShow;
     public GameObject[] ToHide;
     private Vector3 initialLocation = new Vector3(-957.249023f, -534.539001f, 3.22000003f);
+    public GameObject gameover;
 
     void Awake()
     {
@@ -45,9 +47,11 @@ public class GameManagerSloth : MonoBehaviour
 
         if (slothLife.health <= 0 && !hasDied)
         {
-            SlothDone();
+            slothIdle.SetActive(false);
+            slothDead.SetActive(true);
 
-            Invoke("DisableDeath", 0.9f);
+            Invoke("LoadOverWorld", 0.8f);
+
         }
         if (cockroachLife.health == 0)
         {
@@ -62,8 +66,20 @@ public class GameManagerSloth : MonoBehaviour
             });
             BtnsToShow[4].SetActive(false);
         }
+        //player dead
+        if (healthSystemPlayer.health == 0)
+        {
+            gameover.SetActive(true);
+            Invoke("LoadOverWorld", 1.06f);
+        }
 
     }
+
+    private void LoadOverWorld()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 
     private void DisableDeath()
     {
@@ -72,11 +88,6 @@ public class GameManagerSloth : MonoBehaviour
 
     public void SlothDone()
     {
-
-        if (slothLife.health >= 0)
-        {
-            slothBoss.SetActive(true);
-        }
 
         hasDied = true;
 

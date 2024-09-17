@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 
 public class GameManagerGreedPride : MonoBehaviour
@@ -25,8 +26,32 @@ public class GameManagerGreedPride : MonoBehaviour
     public GameObject[] playerAnimations;
     public GameObject[] enemyAnimations;
     public GameObject[] mainUIs;
+    public GameObject gameover;
 
+    public void Update()
+    {
+        if (GreedLife.health == 0)
+        {
+            enemyAnimations[0].SetActive(false);
+            enemyAnimations[3].SetActive(false);
+            enemyAnimations[2].SetActive(true);
+            enemyAnimations[5].SetActive(true);
 
+            Invoke("LoadOverWorld", 0.8f);
+        }
+        //player dead
+        if (healthSystemPlayer.health == 0)
+        {
+            gameover.SetActive(true);
+            Invoke("LoadOverWorld", 1.06f);
+        }
+
+    }
+
+    private void LoadOverWorld()
+    {
+        SceneManager.LoadScene(1);
+    }
     public void OnClickAttack()
     {
 

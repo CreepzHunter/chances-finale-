@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManagerEnvyNew : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class GameManagerEnvyNew : MonoBehaviour
 
     public GameObject[] BtnsToShow;
     public GameObject[] ToHide;
+    public GameObject gameover;
 
 
     void Update()
@@ -35,12 +37,21 @@ public class GameManagerEnvyNew : MonoBehaviour
         {
             hasDied = true;
             EnvyDone();
-        }
 
+            Invoke("LoadOverWorld", 0.8f);
+
+        }
+        //player ded
         if (healthSystemPlayer.health == 0)
         {
-            //dead
+            gameover.SetActive(true);
+            Invoke("LoadOverWorld", 1.06f);
         }
+    }
+
+    private void LoadOverWorld()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void EnvyDone()
@@ -51,14 +62,13 @@ public class GameManagerEnvyNew : MonoBehaviour
             envyBoss.SetActive(true);
         }
 
-        Debug.Log("s  up");
 
         hasDied = true;
 
 
         // eenemyIdle.SetActive(false);
         eenemyLife.SetActive(false);
-
+        eenemyIdle.SetActive(false);
         eenemyDeath.SetActive(true);
 
         Invoke("EDeathAnim", 1.5f);
@@ -68,7 +78,6 @@ public class GameManagerEnvyNew : MonoBehaviour
 
     public void OnClickAttack()
     {
-        Debug.Log("Life" + envyLife.health);
         if (envyLife.health != 0)
         {
             cameraSwitch.PlayerView();
