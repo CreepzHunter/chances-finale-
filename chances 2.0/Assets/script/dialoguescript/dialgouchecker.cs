@@ -5,16 +5,23 @@ using UnityEngine;
 public class dialgouchecker : MonoBehaviour
 {
     public dialoguetrigger trigger;
+    public Animator anim;
+    public GameObject screen;
 
-    private void OnMouseDown()
-    {
-        Debug.Log("enter message");
-        trigger.StartDialogue();
-    }
 
-    public void novelbutton()
+    /*public void convoTrigger()
     {
-        Debug.Log("enter novel message");
         trigger.StartDialogue();
+        StartCoroutine(Stopper());
+    }*/
+
+    IEnumerator Stopper()
+    {
+        yield return new WaitForSeconds(2f);
+
+        anim.SetTrigger("default");
+        trigger.StartDialogue();
+        screen.SetActive(false);
+
     }
 }

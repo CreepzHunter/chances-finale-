@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scenes/Greed & Pride Test.unity
     guid: 978292e9814a92940b9a37fb2d0d4d51
+  - enabled: 1
+    path: Assets/Scenes/VN Scenes/11.forest.unity
+    guid: 25229456abbf00f42b2284b6446eef5a
   m_configObjects: {}

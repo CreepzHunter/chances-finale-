@@ -9,6 +9,7 @@ TagManager:
   - Box1
   - GM
   - Arrow
+  - audio
   layers:
   - Default
   - TransparentFX
