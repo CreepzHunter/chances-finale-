@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameFlowManagerLust : MonoBehaviour
 {
+    public GameObject[] videos;
     public GameObject[] levels;
     public GameObject[] gameButton;
     public GameObject[] returnAll;
@@ -70,46 +71,59 @@ public class GameFlowManagerLust : MonoBehaviour
 
     public void StartGame()
     {
-        cameraSwitch.PlayerView();
+        // cameraSwitch.PlayerView();
 
         HideAttack();
 
+        videos[0].SetActive(true);
+        // playerBack.SetActive(false);
+        // playerFront.SetActive(true);
 
-        playerBack.SetActive(false);
-        playerFront.SetActive(true);
+        Invoke("AnimateAttack", 3.8f);
+        Invoke("SlothCam", 4f);
 
-        Invoke("AnimateAttack", 1.5f);
-        Invoke("SlothCam", 1.8f);
-        PlayGame();
-        musicAnalyzer.Play();
 
     }
 
     public void PlayGame()
     {
-        Invoke("AnimateAttack", 1f);
-        Invoke("SlothCam", 1.1f);
+        // Invoke("AnimateAttack", 1f);
+        // Invoke("SlothCam", 1.1f);
+        int number = Random.Range(0, 2);
 
-        if (lustLife.health >= 66)
+        if (number == 0)
         {
-            levels[0].SetActive(true);
-            musicAnalyzer = levels[0].GetComponent<MusicAnalyzer>();
+            // damage enemy
+            lustLife.TakeDamage(22f);
+            ReturnAll();
         }
-        else if (lustLife.health < 66 && lustLife.health >= 33)
+        else if (number == 1)
         {
-            levels[1].SetActive(true);
-            musicAnalyzer = levels[1].GetComponent<MusicAnalyzer>();
+            if (lustLife.health >= 66)
+            {
+                levels[0].SetActive(true);
+                musicAnalyzer = levels[0].GetComponent<MusicAnalyzer>();
+            }
+            else if (lustLife.health < 66 && lustLife.health >= 33)
+            {
+                levels[1].SetActive(true);
+                musicAnalyzer = levels[1].GetComponent<MusicAnalyzer>();
+
+            }
+            else if (lustLife.health < 33 && lustLife.health >= 1)
+            {
+                levels[2].SetActive(true);
+                musicAnalyzer = levels[2].GetComponent<MusicAnalyzer>();
+
+            }
+            cameraSwitch.LustGameplay();
+
+            SlothCam();
 
         }
-        else if (lustLife.health < 33 && lustLife.health >= 1)
-        {
-            levels[2].SetActive(true);
-            musicAnalyzer = levels[2].GetComponent<MusicAnalyzer>();
-
-        }
-
-        musicAnalyzer.Play();
     }
+
+
 
     public void WinLevel()
     {
@@ -180,22 +194,31 @@ public class GameFlowManagerLust : MonoBehaviour
 
     private void AnimateAttack()
     {
-        cameraSwitch.EnemyPosition();
+        // cameraSwitch.EnemyPosition();
 
         //enemy attack animation
-        lustIdle.SetActive(false);
-        lustAttack.SetActive(true);
+        // lustIdle.SetActive(false);
+        // lustAttack.SetActive(true);
 
-        playerBack.SetActive(true);
-        playerFront.SetActive(false);
-
+        videos[0].SetActive(false);
+        // playerBack.SetActive(true);
+        // playerFront.SetActive(false);
     }
 
     private void SlothCam()
     {
+        videos[1].SetActive(true);
+        Invoke("DelayLustAnim", 3f);
         cameraSwitch.LustGameplay();
         gameLife.EnableRhythm();
         HideAttack();
+
+        PlayGame();
+        // musicAnalyzer.Play();
+    }
+    private void DelayLustAnim()
+    {
+        videos[1].SetActive(false);
     }
 
 

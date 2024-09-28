@@ -11,6 +11,7 @@ public class GameManagerEnvyNew : MonoBehaviour
     public HealthSystemPlayer healthSystemPlayer;
     public CameraSwitch cameraSwitch;
     public TimeCode timeCode;
+    public SkillOption skillOption;
     [SerializeField] private GameObject playerBack;
     [SerializeField] private GameObject playerFront;
     //EnvySection
@@ -23,11 +24,15 @@ public class GameManagerEnvyNew : MonoBehaviour
     [SerializeField] private GameObject playerLife;
     //SlothSection
 
+
     private bool hasDied = false;
     public bool check = false;
 
-    public GameObject[] BtnsToShow;
-    public GameObject[] ToHide;
+    [SerializeField]
+    private GameObject[] PVids
+;
+    [SerializeField] private GameObject[] Animations;
+    [SerializeField] private GameObject[] Buttons;
     public GameObject gameover;
 
 
@@ -80,22 +85,21 @@ public class GameManagerEnvyNew : MonoBehaviour
     {
         if (envyLife.health != 0)
         {
-            cameraSwitch.PlayerView();
+            // cameraSwitch.PlayerView();
 
             HideAttack();
             timeCode.loseIndicator = false;
 
+            PVids[0].SetActive(true);
+            // playerBack.SetActive(false);
+            // playerFront.SetActive(true);
+            // playerLife.SetActive(false);
+            // eenemyLife.SetActive(false);
 
-            playerBack.SetActive(false);
-            playerFront.SetActive(true);
-            playerLife.SetActive(false);
-            eenemyLife.SetActive(false);
 
+            Invoke("EAnimatePlayer", 3.8f);
 
-            Invoke("EAnimatePlayer", 2.0f);
-            gameManager1.StartBlinking();
-
-            Invoke("EnvyAttack", 3f);
+            Invoke("EnvyAttack", 4.3f);
         }
 
     }
@@ -119,14 +123,14 @@ public class GameManagerEnvyNew : MonoBehaviour
             timeCode.countdownTimer = 10f;
         }
 
-        BtnsToShow.ToList().ForEach(button =>
+        Buttons.ToList().ForEach(button =>
         {
             button.SetActive(true);
         });
     }
     private void HideAttack()
     {
-        ToHide.ToList().ForEach(objToHide =>
+        Buttons.ToList().ForEach(objToHide =>
          {
              objToHide.SetActive(false);
          });
@@ -142,19 +146,36 @@ public class GameManagerEnvyNew : MonoBehaviour
 
     public void EnvyAttack()
     {
-        eenemyIdle.SetActive(false);
-        eenemyAttack.SetActive(true);
+        // eenemyIdle.SetActive(false);
+        // eenemyAttack.SetActive(true);
 
-        Invoke("EnvyShow", 1f);
+        // damage enemy 1 or play game 2
+        int number = Random.Range(0, 2);
 
+        if (number == 0)
+        {
+            // damage enemy
+            envyLife.TakeDamage(22f);
+            ReturnAll();
+        }
+        else if (number == 1)
+        {
+            Invoke("EnvyShow", 1f);
+            HideAttack();
+        }
 
-
-        HideAttack();
     }
 
     public void EAnimatePlayer()
     {
-        cameraSwitch.FightScene();
+        PVids[0].SetActive(false);
+
+        if (skillOption.shield == false)
+        {
+            gameManager1.StartBlinking();
+        }
+
+        // cameraSwitch.FightScene();
         playerBack.SetActive(true);
         playerFront.SetActive(false);
         if (envyLife.health != 0)

@@ -22,6 +22,7 @@ public class Skill : MonoBehaviour
     [SerializeField] private GameObject enemyLife;
     [SerializeField] private GameObject ckenemyLife;
     [SerializeField] private GameObject skillOpt;
+    public GameObject[] PSkills;
     public GameObject[] BtnsToShow;
     public GameObject[] ToHide;
 
@@ -50,10 +51,12 @@ public class Skill : MonoBehaviour
 
     public void AnimateSkill()
     {
-        cameraSwitch.PlayerView();
+        // cameraSwitch.PlayerView();
 
-        playerBack.SetActive(false);
-        playerSkill.SetActive(true);
+        // playerBack.SetActive(false);
+        // playerSkill.SetActive(true);
+
+        PSkills[0].SetActive(true);
         enemyLife.SetActive(false);
 
         ToHide[3].SetActive(false);
@@ -61,10 +64,13 @@ public class Skill : MonoBehaviour
     }
     public void AnimateShield()
     {
-        cameraSwitch.PlayerView();
+        // cameraSwitch.PlayerView();
 
-        playerBack.SetActive(false);
-        playerShield.SetActive(true);
+        // playerBack.SetActive(false);
+        // playerShield.SetActive(true);
+
+        PSkills[1].SetActive(true);
+
         enemyLife.SetActive(false);
 
         ToHide[3].SetActive(false);
@@ -72,9 +78,10 @@ public class Skill : MonoBehaviour
     }
     public void SkillAttack()
     {
-        cameraSwitch.FightScene();
+        // cameraSwitch.FightScene();
         playerBack.SetActive(true);
-        playerSkill.SetActive(false);
+        // playerSkill.SetActive(false);
+        PSkills[0].SetActive(false);
 
         enemyLife.SetActive(true);
         if (gameFlowManagerLust != null)
@@ -113,9 +120,12 @@ public class Skill : MonoBehaviour
 
     public void SkillShield()
     {
-        cameraSwitch.FightScene();
+        // cameraSwitch.FightScene();
         playerBack.SetActive(true);
-        playerShield.SetActive(false);
+        // playerShield.SetActive(false);
+
+        PSkills[1].SetActive(false);
+
         enemyLife.SetActive(true);
 
         if (gameFlowManagerLust != null)

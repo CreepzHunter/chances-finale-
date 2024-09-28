@@ -296,7 +296,7 @@ public class GameManager : MonoBehaviour
     public void StartBlinking()
     {
         InvokeRepeating("Blink", 0f, 0.1f);
-        Invoke("StopBlinking", 2.7f);
+        Invoke("StopBlinking", 1f);
     }
 
     public void StopBlinking()

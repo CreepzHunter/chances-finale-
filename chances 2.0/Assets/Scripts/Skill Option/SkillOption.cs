@@ -8,6 +8,8 @@ public class SkillOption : MonoBehaviour
     public Skill skill;
     public bool attack = false;
     public bool shield = false;
+    public float timeDelaySkill = 1f;
+    public float timeDelayShield = 1f;
 
     [SerializeField] private GameObject[] shieldIcon;
     public void SkillAttackButton()
@@ -16,7 +18,7 @@ public class SkillOption : MonoBehaviour
 
         skill.AnimateSkill();
 
-        Invoke("DelaySkill", 2.0f);
+        Invoke("DelaySkill", timeDelaySkill);
     }
 
     public void SkillShieldButton()
@@ -28,7 +30,7 @@ public class SkillOption : MonoBehaviour
         {
             elements.SetActive(true);
         });
-        Invoke("DelayShield", 1.1f);
+        Invoke("DelayShield", timeDelayShield);
 
     }
 

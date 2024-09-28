@@ -18,6 +18,7 @@ public class Item : MonoBehaviour
     public HealthSystem cockroachLife;
     public Button[] buttons;
 
+
     // Inventory counts
     private int smallBottleCount = 3;  // Example count, set based on your needs
     private int midBottleCount = 2;
