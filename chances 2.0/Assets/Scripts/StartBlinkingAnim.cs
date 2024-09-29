@@ -31,31 +31,22 @@ public class StartBlinkingAnim : MonoBehaviour
 
     public void StartBlinking(int index)
     {
-        StartCoroutine(BlinkRoutine(index));
-    }
-
-    private IEnumerator BlinkRoutine(int index)
-    {
-        float blinkDuration = 1.2f;
-        float blinkInterval = 0.1f;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < blinkDuration)
-        {
-            Blink(index);
-            elapsedTime += blinkInterval;
-            yield return new WaitForSeconds(blinkInterval);
-        }
-
-        StopBlinking(index);
+        InvokeRepeating("Blink_" + index, 0f, 0.1f);
+        Invoke("StopBlinking_" + index, 1f);
     }
 
     void StopBlinking(int index)
     {
-        if (spriteRenderers[index] != null)
-        {
-            spriteRenderers[index].color = origColor;
-            isRed[index] = false;
-        }
+        CancelInvoke("Blink_" + index);
+        spriteRenderers[index].color = origColor;
     }
+
+    // Separate Blink and StopBlinking per object
+    void Blink_0() { Blink(0); }
+    void Blink_1() { Blink(1); }
+    void Blink_2() { Blink(2); }
+
+    void StopBlinking_0() { StopBlinking(0); }
+    void StopBlinking_1() { StopBlinking(1); }
+    void StopBlinking_2() { StopBlinking(2); }
 }

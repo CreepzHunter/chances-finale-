@@ -3471,8 +3471,8 @@ MonoBehaviour:
   skill: {fileID: 266689930}
   attack: 0
   shield: 0
-  timeDelaySkill: 1
-  timeDelayShield: 1
+  timeDelaySkill: 6
+  timeDelayShield: 3
   shieldIcon:
   - {fileID: 1110547451}
   - {fileID: 607718461}
@@ -3929,7 +3929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 612147114}
-  health: 0
+  health: 100
 --- !u!222 &612147116
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -103,6 +103,7 @@ public class Skill : MonoBehaviour
             if (cockroachLife.health != 0)
             {
                 gameManagerSloth.AnimateCKAttack();
+                // Invoke("DelayAnimCK", 3f);
             }
             else
             {
@@ -114,6 +115,11 @@ public class Skill : MonoBehaviour
         {
             gameManagerGreedPride.ReturnAnimation();
         }
+
+    }
+
+    private void DelayAnimCK()
+    {
 
     }
 

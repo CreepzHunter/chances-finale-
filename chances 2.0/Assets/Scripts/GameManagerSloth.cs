@@ -115,11 +115,12 @@ public class GameManagerSloth : MonoBehaviour
             playerBack.SetActive(false);
             playerFront.SetActive(true);
 
-            Invoke("AnimateCKAttack", 2.0f);
+            Invoke("AnimateCKAttack", 2.5f);
         }
 
         else
         {
+
             ckenemyLife.SetActive(false);
             ckenemy.SetActive(false);
 
@@ -135,9 +136,8 @@ public class GameManagerSloth : MonoBehaviour
                 {
                     // damage enemy
                     slothLife.TakeDamage(22f);
+                    Invoke("DisableVidAttackAnim", 3f);
 
-                    startBlinkingAnim.StartBlinking(0);
-                    Invoke("ReturnAll", 1f);
                 }
                 else if (number == 1)
                 {
@@ -146,6 +146,16 @@ public class GameManagerSloth : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void DisableVidAttackAnim()
+    {
+        videos[0].SetActive(false);
+        startBlinkingAnim.StartBlinking(0);
+
+        Invoke("ReturnAll", 1f);
+
+
     }
 
     #region Basics
@@ -179,7 +189,7 @@ public class GameManagerSloth : MonoBehaviour
     {
         // Perform Cockroach Attack Animation
         AttackCk();
-        // cameraSwitch.EnemyPosition();
+        cameraSwitch.FightScene();
 
         // Deal normal damage to the cockroach
         int normalDamage = Random.Range(10, 20);
