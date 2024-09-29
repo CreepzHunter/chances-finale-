@@ -15,6 +15,7 @@ public class Finish : MonoBehaviour
     public CameraSwitch cameraController;
     public GameManagerSloth gameManager;
     public SkillOption skillOption;
+    public StartBlinkingAnim startBlinkingAnim;
 
     public GameObject[] boxHide;
 
@@ -55,6 +56,7 @@ public class Finish : MonoBehaviour
         slothCharacter.SetActive(false);
         // slothLifeBar.SetActive(false);
         gameManager.slothAttack.SetActive(false);
+        startBlinkingAnim.StartBlinking(0);
 
         // Reset game statea
         gameManager.check = false;

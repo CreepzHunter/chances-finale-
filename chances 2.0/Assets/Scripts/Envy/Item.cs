@@ -115,7 +115,6 @@ public class Item : MonoBehaviour
             }
             else
             {
-                gameManagerSloth.AnimateAttack();
                 gameManagerSloth.SlothAttack();
             }
         }

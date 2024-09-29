@@ -16,7 +16,7 @@ public class CameraSwitch : MonoBehaviour
     private Vector3 otherPosition = new Vector3(2.240000009536743f, -0.14000000059604646f, -17.030000686645509f);
     private Quaternion otherRotation = new Quaternion(-0.016535433009266855f, -0.009995606727898121f, 0.005415328312665224f, 0.9997986555099487f);
 
-    private Vector3 enemyPosition = new Vector3(2.71000004f, 6.25f, 1.76999998f);
+    private Vector3 enemyPosition = new Vector3(2.71000004f, 6f, 1.76999998f);
     private Quaternion enemyRotation = new Quaternion(0.23752692f, -0.03549642f, 0.00868592f, 0.97069335f);
 
     private Vector3 lustGaemplayPos = new Vector3(0.38f, 4.30f, -22.07f);

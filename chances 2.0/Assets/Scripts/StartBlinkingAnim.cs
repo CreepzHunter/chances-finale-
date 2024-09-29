@@ -4,33 +4,58 @@ using UnityEngine;
 
 public class StartBlinkingAnim : MonoBehaviour
 {
-
-    private bool isRed = false;
-    [SerializeField]
-    private GameObject boss;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private GameObject[] boss;
+    private SpriteRenderer[] spriteRenderers;
+    private bool[] isRed;
     private Color origColor = new Color(1f, 1f, 1f, 1f);
 
-    public void Awake()
+    private void Awake()
     {
+        spriteRenderers = new SpriteRenderer[boss.Length];
+        isRed = new bool[boss.Length];
 
-        SpriteRenderer spriteRenderer = boss.GetComponent<SpriteRenderer>();
-    }
-    void Blink()
-    {
-        spriteRenderer.color = isRed ? origColor : Color.red;
-        isRed = !isRed;
-    }
-
-    public void StartBlinking()
-    {
-        InvokeRepeating("Blink", 0f, 0.1f);
-        Invoke("StopBlinking", 2.7f);
+        for (int i = 0; i < boss.Length; i++)
+        {
+            spriteRenderers[i] = boss[i].GetComponent<SpriteRenderer>();
+        }
     }
 
-    public void StopBlinking()
+    void Blink(int index)
     {
-        CancelInvoke("Blink");
-        spriteRenderer.color = origColor;
+        if (spriteRenderers[index] != null)
+        {
+            spriteRenderers[index].color = isRed[index] ? origColor : Color.red;
+            isRed[index] = !isRed[index];
+        }
+    }
+
+    public void StartBlinking(int index)
+    {
+        StartCoroutine(BlinkRoutine(index));
+    }
+
+    private IEnumerator BlinkRoutine(int index)
+    {
+        float blinkDuration = 1.2f;
+        float blinkInterval = 0.1f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < blinkDuration)
+        {
+            Blink(index);
+            elapsedTime += blinkInterval;
+            yield return new WaitForSeconds(blinkInterval);
+        }
+
+        StopBlinking(index);
+    }
+
+    void StopBlinking(int index)
+    {
+        if (spriteRenderers[index] != null)
+        {
+            spriteRenderers[index].color = origColor;
+            isRed[index] = false;
+        }
     }
 }

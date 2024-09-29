@@ -23,6 +23,7 @@ public class GameManagerGreedPride : MonoBehaviour
     [SerializeField] private GameObject greedBoss;
     private bool hasDied = false;
     public bool check = false;
+    public GameObject[] playerVids;
     public GameObject[] playerAnimations;
     public GameObject[] enemyAnimations;
     public GameObject[] mainUIs;
@@ -58,32 +59,47 @@ public class GameManagerGreedPride : MonoBehaviour
         if (GreedLife.health != 0)
         {
 
-            cameraSwitch.PlayerView();
+            // cameraSwitch.PlayerView();
             HideAttack();
 
             playerLife.SetActive(false);
             senemyLife.SetActive(false);
             skillOptionContainer.SetActive(false);
 
-            playerAnimations[0].SetActive(false);
-            playerAnimations[1].SetActive(true);
+            // playerAnimations[0].SetActive(false);
+            // playerAnimations[1].SetActive(true);
+            // player animation
+            playerVids[0].SetActive(true);
 
             //return animation
-            Invoke("ReturnAnimation", 1f);
+            Invoke("ReturnAnimation", 3f);
         }
     }
 
     public void ReturnAnimation()
     {
-        cameraSwitch.FightScene();
-        playerAnimations[0].SetActive(true);
-        playerAnimations[1].SetActive(false);
+        // cameraSwitch.FightScene();
+        // playerAnimations[0].SetActive(true);
+        // playerAnimations[1].SetActive(false);
+        playerVids[0].SetActive(false);
 
         EnemyAnimAttack();
 
+        int number = Random.Range(0, 2);
+        Debug.Log("number: " + number);
 
-        //play game
-        Invoke("PlayGame", 1.3f);
+        if (number == 0)
+        {
+            // damage enemy
+            GreedLife.TakeDamage(22f);
+
+            Invoke("ReturnAll", 1f);
+        }
+        else if (number == 1)
+        {
+            Invoke("PlayGame", 1f);
+
+        }
     }
 
     public void EnemyAnimAttack()

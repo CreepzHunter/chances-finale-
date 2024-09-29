@@ -75,54 +75,67 @@ public class GameFlowManagerLust : MonoBehaviour
 
         HideAttack();
 
+        //animate player
         videos[0].SetActive(true);
-        // playerBack.SetActive(false);
-        // playerFront.SetActive(true);
 
-        Invoke("AnimateAttack", 3.8f);
-        Invoke("SlothCam", 4f);
+        Invoke("DisableAttackAnim", 3.8f);
 
-
-    }
-
-    public void PlayGame()
-    {
-        // Invoke("AnimateAttack", 1f);
-        // Invoke("SlothCam", 1.1f);
         int number = Random.Range(0, 2);
 
         if (number == 0)
         {
             // damage enemy
             lustLife.TakeDamage(22f);
-            ReturnAll();
+
+            Invoke("ReturnAll", 4f);
         }
         else if (number == 1)
         {
-            if (lustLife.health >= 66)
-            {
-                levels[0].SetActive(true);
-                musicAnalyzer = levels[0].GetComponent<MusicAnalyzer>();
-            }
-            else if (lustLife.health < 66 && lustLife.health >= 33)
-            {
-                levels[1].SetActive(true);
-                musicAnalyzer = levels[1].GetComponent<MusicAnalyzer>();
-
-            }
-            else if (lustLife.health < 33 && lustLife.health >= 1)
-            {
-                levels[2].SetActive(true);
-                musicAnalyzer = levels[2].GetComponent<MusicAnalyzer>();
-
-            }
-            cameraSwitch.LustGameplay();
-
-            SlothCam();
+            Invoke("PlayGame", 4f);
 
         }
     }
 
+
+    public void PlayGame()
+    {
+        if (lustLife.health >= 66)
+        {
+            levels[0].SetActive(true);
+            musicAnalyzer = levels[0].GetComponent<MusicAnalyzer>();
+        }
+        else if (lustLife.health < 66 && lustLife.health >= 33)
+        {
+            levels[1].SetActive(true);
+            musicAnalyzer = levels[1].GetComponent<MusicAnalyzer>();
+
+        }
+        else if (lustLife.health < 33 && lustLife.health >= 1)
+        {
+            levels[2].SetActive(true);
+            musicAnalyzer = levels[2].GetComponent<MusicAnalyzer>();
+
+        }
+        cameraSwitch.LustGameplay();
+
+        SlothCam();
+
+    }
+
+    private void SlothCam()
+    {
+        //enemy attack
+        videos[1].SetActive(true);
+        Invoke("DelayLustAnim", 3f);
+        gameLife.EnableRhythm();
+        HideAttack();
+
+        musicAnalyzer.Play();
+    }
+    private void DelayLustAnim()
+    {
+        videos[1].SetActive(false);
+    }
 
 
     public void WinLevel()
@@ -192,44 +205,19 @@ public class GameFlowManagerLust : MonoBehaviour
         Invoke("ReturnAll", 1f);
     }
 
-    private void AnimateAttack()
-    {
-        // cameraSwitch.EnemyPosition();
 
-        //enemy attack animation
-        // lustIdle.SetActive(false);
-        // lustAttack.SetActive(true);
-
-        videos[0].SetActive(false);
-        // playerBack.SetActive(true);
-        // playerFront.SetActive(false);
-    }
-
-    private void SlothCam()
-    {
-        videos[1].SetActive(true);
-        Invoke("DelayLustAnim", 3f);
-        cameraSwitch.LustGameplay();
-        gameLife.EnableRhythm();
-        HideAttack();
-
-        PlayGame();
-        // musicAnalyzer.Play();
-    }
-    private void DelayLustAnim()
-    {
-        videos[1].SetActive(false);
-    }
 
 
     #region Basics
     public void ReturnAll()
     {
+
         skillOption.HideShield();
         gameplayLife.health = 100;
         gameManagerRhythm.stopGame = false;
         gameManagerRhythm.hasWon = false;
-        musicAnalyzer.shouldStop = false;
+        if (musicAnalyzer != null)
+            musicAnalyzer.shouldStop = false;
 
 
         cameraSwitch.FightScene();
@@ -238,9 +226,16 @@ public class GameFlowManagerLust : MonoBehaviour
 
         returnAll.ToList().ForEach(button =>
         {
+            Debug.Log("worked");
+
             button.SetActive(true);
         });
 
+    }
+
+    private void DisableAttackAnim()
+    {
+        videos[0].SetActive(false);
     }
     private void HideAttack()
     {

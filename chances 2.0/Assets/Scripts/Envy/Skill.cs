@@ -106,7 +106,6 @@ public class Skill : MonoBehaviour
             }
             else
             {
-                gameManagerSloth.AnimateAttack();
                 gameManagerSloth.SlothAttack();
             }
         }
@@ -146,7 +145,6 @@ public class Skill : MonoBehaviour
             }
             else
             {
-                gameManagerSloth.AnimateAttack();
                 gameManagerSloth.SlothAttack();
             }
         }

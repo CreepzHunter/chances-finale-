@@ -14,6 +14,7 @@ public class GameManagerSloth : MonoBehaviour
     public TimeCode timeCode;
     public Finish finish;
     public Enemy enemy;
+    public StartBlinkingAnim startBlinkingAnim;
     [SerializeField] private GameObject timeCodeGO;
     [SerializeField] private GameObject playerBack;
     [SerializeField] private GameObject playerFront;
@@ -30,6 +31,7 @@ public class GameManagerSloth : MonoBehaviour
     [SerializeField] public GameObject slothDead;
     private bool hasDied = false;
     public bool check = false;
+    public GameObject[] videos;
     public GameObject[] slothGameplay;
     public GameObject[] BtnsToShow;
     public GameObject[] ToHide;
@@ -105,15 +107,15 @@ public class GameManagerSloth : MonoBehaviour
 
             cameraSwitch.PlayerView();
             HideAttack();
+            // ckenemyLife.SetActive(false);
+            // playerLife.SetActive(false);
+            // senemyLife.SetActive(false);
+
 
             playerBack.SetActive(false);
             playerFront.SetActive(true);
-            ckenemyLife.SetActive(false);
-            playerLife.SetActive(false);
-            senemyLife.SetActive(false);
 
             Invoke("AnimateCKAttack", 2.0f);
-
         }
 
         else
@@ -123,20 +125,25 @@ public class GameManagerSloth : MonoBehaviour
 
             if (slothLife.health != 0)
             {
-                cameraSwitch.PlayerView();
                 HideAttack();
 
-                // slothLife.TakeDamage(20);
+                videos[0].SetActive(true);
 
-                playerBack.SetActive(false);
-                playerFront.SetActive(true);
+                int number = Random.Range(0, 2);
 
-                playerLife.SetActive(false);
-                senemyLife.SetActive(false);
+                if (number == 0)
+                {
+                    // damage enemy
+                    slothLife.TakeDamage(22f);
 
-                Invoke("AnimateAttack", 2.0f);
+                    startBlinkingAnim.StartBlinking(0);
+                    Invoke("ReturnAll", 1f);
+                }
+                else if (number == 1)
+                {
+                    Invoke("SlothAttack", 4f);
 
-                Invoke("SlothAttack", 3f);
+                }
             }
         }
     }
@@ -170,42 +177,52 @@ public class GameManagerSloth : MonoBehaviour
 
     public void AnimateCKAttack()
     {
-        int rndatt = Random.Range(10, 20);
-        cockroachLife.TakeDamage(rndatt);
-        if (skillOption.attack == true)//activate more damage when skill
+        // Perform Cockroach Attack Animation
+        AttackCk();
+        // cameraSwitch.EnemyPosition();
+
+        // Deal normal damage to the cockroach
+        int normalDamage = Random.Range(10, 20);
+        cockroachLife.TakeDamage(normalDamage);
+
+        // Deal extra damage if skill attack is active
+        if (skillOption.attack)
         {
             cockroachLife.TakeDamage(25f);
             skillOption.attack = false;
         }
-        cameraSwitch.FightScene();
 
+        // Update player visuals
         playerBack.SetActive(true);
         playerFront.SetActive(false);
 
-        AttackCk();//Animation Attack Cockroach
-        Invoke("DisableAttackCk", 1.0f);//DisableAnimation Attack Cockroach
+        // Disable Cockroach Attack Animation after 1 second
+        Invoke("DisableAttackCk", 1.0f);
 
-        int random0to10 = Random.Range(0, 6);
-
-        if (skillOption.shield == false)//immune damage if shielded
+        int damageToPlayer = Random.Range(0, 6);
+        if (!skillOption.shield)
         {
-            healthSystemPlayer.TakeDamage(random0to10);
+            healthSystemPlayer.TakeDamage(damageToPlayer);
         }
-        else if (skillOption.shield == true)
+        else
         {
             skillOption.shield = false;
         }
 
-        ckenemyLife.SetActive(true);
-        senemyLife.SetActive(true);
+        // Activate enemy life UI elements
+        // ckenemyLife.SetActive(true);
+        // senemyLife.SetActive(true);
 
-        ReturnAll();
+
+        Invoke("ReturnAll", 1f);
         Invoke("DelayHide", 1f);
     }
+
 
     private void DelayHide()
     {
         skillOption.HideShield();
+
 
     }
 
@@ -225,6 +242,7 @@ public class GameManagerSloth : MonoBehaviour
     }
     private void DisableAttackCk()
     {
+
         ckIdleenmy.ToList().ForEach(ck =>
        {
            ck.SetActive(true);
@@ -234,6 +252,8 @@ public class GameManagerSloth : MonoBehaviour
         {
             ck.SetActive(false);
         });
+        startBlinkingAnim.StartBlinking(1);
+        startBlinkingAnim.StartBlinking(2);
     }
 
 
@@ -242,28 +262,15 @@ public class GameManagerSloth : MonoBehaviour
 
     #region Sloth Actions
 
-    public void AnimateAttack()
-    {
-        cameraSwitch.FightScene();
-
-        playerBack.SetActive(true);
-        playerFront.SetActive(false);
-
-        cameraSwitch.EnemyPosition();
-
-
-        slothIdle.SetActive(false);
-        slothAttack.SetActive(true);
-
-        senemyLife.SetActive(true);
-
-    }
 
     public void SlothAttack()
     {
         SlothActivate();
+        videos[0].SetActive(false);
+        videos[1].SetActive(true);
+        videos[1].SetActive(true);
 
-        Invoke("SlothShow", 0.5f);
+        Invoke("SlothShow", 3f);
 
         HideAttack();
     }
@@ -272,26 +279,26 @@ public class GameManagerSloth : MonoBehaviour
         slothBoss.SetActive(true);
     }
 
-    private void SlothActivate()
-    {
-        if (slothLife.health >= 0)
-        {
-            SetTransform(slothIdle.transform, new Vector3(2.75097656f, 5.46099854f, 3.22000003f), new Quaternion(0.0f, 0.99995363f, 0.0f, 0.00963968f), new Vector3(0.18f, 0.18f, 0.18f));
-        }
-    }
+
     private void SlothShow()
     {
+        videos[1].SetActive(false);
+
         Invoke("SlothCam", 0.3f);
         check = true;
 
-
-        slothIdle.SetActive(true);
         HideAttack();
-
 
         AttackLocSloth();
 
         LevelChecker();
+    }
+
+    private void SlothCam()
+    {
+        cameraSwitch.SlothGame();
+
+        slothAttack.SetActive(false);
     }
 
     private void LevelChecker()
@@ -318,11 +325,12 @@ public class GameManagerSloth : MonoBehaviour
         }
 
     }
-
-    private void SlothCam()
+    private void SlothActivate()
     {
-        cameraSwitch.SlothGame();
-        slothAttack.SetActive(false);
+        if (slothLife.health >= 0)
+        {
+            SetTransform(slothIdle.transform, new Vector3(2.75097656f, 5.46099854f, 3.22000003f), new Quaternion(0.0f, 0.99995363f, 0.0f, 0.00963968f), new Vector3(0.18f, 0.18f, 0.18f));
+        }
     }
 
     public void AttackLocSloth()

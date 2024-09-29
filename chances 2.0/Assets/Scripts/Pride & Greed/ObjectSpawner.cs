@@ -16,12 +16,14 @@ public class ObjectSpawner2D : MonoBehaviour
 
     public void SpawnRoutineCour()
     {
-        Debug.Log("Called");
         StartCoroutine(SpawnRoutine());
     }
 
     IEnumerator SpawnRoutine()
     {
+        // Wait for 3 seconds before starting the spawn loop
+        yield return new WaitForSeconds(3f);
+
         while (true)
         {
             if (canSpawn)
