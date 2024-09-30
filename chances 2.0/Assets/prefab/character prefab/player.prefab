@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5461268082426411277}
   - component: {fileID: 8389047859161981532}
   - component: {fileID: 2907618229097207624}
+  - component: {fileID: 8308038538010639291}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.344596, y: 0.1372, z: 1.2522851}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8443968650486491397}
@@ -102,8 +103,8 @@ MonoBehaviour:
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 2
-  anim: {fileID: 0}
+  speed: 5
+  anim: {fileID: 5461268082426411277}
   rb: {fileID: 6050574780504159053}
   overworldCam: {fileID: 0}
   closeCam: {fileID: 0}
@@ -193,6 +194,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeXZAxis: 0
+--- !u!114 &8308038538010639291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951998225449442785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ae3ebe0a18afc49b461b3b3f347cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7790719823669573306
 GameObject:
   m_ObjectHideFlags: 0
