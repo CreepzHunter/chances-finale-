@@ -184,13 +184,16 @@ public class GameManagerSloth : MonoBehaviour
 
 
     #region Cockroach
+    private void DelayCameraCK()
+    {
+        cameraSwitch.FightScene();
 
+    }
     public void AnimateCKAttack()
     {
         // Perform Cockroach Attack Animation
         AttackCk();
-        cameraSwitch.FightScene();
-
+        Invoke("DelayCameraCK", 1.2f);
         // Deal normal damage to the cockroach
         int normalDamage = Random.Range(10, 20);
         cockroachLife.TakeDamage(normalDamage);
@@ -238,7 +241,7 @@ public class GameManagerSloth : MonoBehaviour
 
     private void AttackCk()
     {
-
+        cameraSwitch.EnemyPosition();
         ckIdleenmy.ToList().ForEach(ck =>
         {
             ck.SetActive(false);

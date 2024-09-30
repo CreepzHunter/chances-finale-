@@ -156,6 +156,7 @@ public class GameManagerEnvyNew : MonoBehaviour
         {
             // damage enemy
             envyLife.TakeDamage(22f);
+            Debug.Log("test");
             ReturnAll();
         }
         else if (number == 1)
