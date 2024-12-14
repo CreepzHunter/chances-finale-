@@ -10,6 +10,9 @@ TagManager:
   - GM
   - Arrow
   - audio
+  - Cut
+  - Bomb
+  - Chips
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - Water
   - UI
   - terrain
-  - 
+  - cuttable
   - 
   - 
   - 
@@ -55,4 +58,10 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 72473749
+    locked: 0
+  - name: Fruits & Bomb
+    uniqueID: 3910319043
+    locked: 0
+  - name: Line Cut
+    uniqueID: 3135716073
     locked: 0

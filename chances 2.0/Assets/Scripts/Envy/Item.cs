@@ -15,6 +15,7 @@ public class Item : MonoBehaviour
     public GameManagerSloth gameManagerSloth;
     public GameFlowManagerLust gameFlowManagerLust;
     public GameManagerGreedPride gameManagerGreedPride;
+    public AttackGluttony attackGluttony;
     public HealthSystem cockroachLife;
     public Button[] buttons;
 
@@ -86,7 +87,6 @@ public class Item : MonoBehaviour
         AnimatePlayer();
         Invoke("ReturnAnimate", 1.2f);
         Invoke("EnemyTurnGameplay", 1.5f);
-        //Invoke("ReturnAll", 1.5f);
     }
 
     private void HideAttack()
@@ -125,6 +125,12 @@ public class Item : MonoBehaviour
         if (gameManagerGreedPride != null)
         {
             gameManagerGreedPride.ReturnAnimation();
+        }
+        if (attackGluttony != null)
+        {
+            attackGluttony.PlayGame();
+            cameraSwitch.SlothGame();
+            Camera.main.orthographic = true;
         }
     }
 
