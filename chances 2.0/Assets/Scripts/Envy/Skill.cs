@@ -16,6 +16,7 @@ public class Skill : MonoBehaviour
     public GameFlowManagerLust gameFlowManagerLust;
     public GameManagerGreedPride gameManagerGreedPride;
     public AttackGluttony attackGluttony;
+    public GameManagerWrath gameManagerWrath;
     public SkillManager skillManager;
     #endregion
     #region Serialized Fields
@@ -111,12 +112,17 @@ public class Skill : MonoBehaviour
             cameraSwitch.SlothGame();
             Camera.main.orthographic = true;
         }
+        if (gameManagerWrath != null)
+        {
+            gameManagerWrath.ReturnAnimation();
+        }
 
     }
 
     public void ReturnAll()
     {
         ckenemyLife?.SetActive(true);
+
         BtnsToShow.ToList().ForEach(button => button.SetActive(true));
     }
 

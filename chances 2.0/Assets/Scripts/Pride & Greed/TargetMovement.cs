@@ -19,6 +19,7 @@ public class TargetMovement : MonoBehaviour
     public HealthSystem miniGameLife;
     public CameraSwitch cameraSwitch;
     public GameManagerGreedPride gameManagerGreedPride;
+    public GameManagerWrath gameManagerWrath;
     public SkillOption skillOption;
 
     void Start()
@@ -54,12 +55,19 @@ public class TargetMovement : MonoBehaviour
             miniGameLife.health = 100;
 
             //return UI's or call function
-            gameManagerGreedPride.ReturnAll();
+            if (gameManagerGreedPride != null)
+            {
+                gameManagerGreedPride.ReturnAll();
+                //player takes damage
+                //shield Concept
+                gameManagerGreedPride.PlayerTakeDamage();
 
-
-            //player takes damage
-            //shield Concept
-            gameManagerGreedPride.PlayerTakeDamage();
+            }
+            if (gameManagerWrath != null)
+            {
+                gameManagerWrath.ReturnAll();
+                gameManagerWrath.PlayerTakeDamage();
+            }
         }
     }
 
