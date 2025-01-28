@@ -26,6 +26,7 @@ public class GameManagerWrath : MonoBehaviour
     public GameObject[] playerAnimations;
     public GameObject[] enemyAnimations;
     public GameObject[] mainUIs;
+    public GameObject[] gameplays;
     public GameObject gameover;
 
     public void Update()
@@ -141,7 +142,10 @@ public class GameManagerWrath : MonoBehaviour
     public void PlayGame()
     {
         cameraSwitch.PrideLustCameraMiniGame();
-        game.SetActive(true);
+        // game.SetActive(true);
+        int rnd = Random.Range(0, gameplays.Length); // Dynamically handle array size
+        gameplays[rnd].SetActive(true);
+
         objectSpawner.SpawnRoutineCour();
     }
 
@@ -150,7 +154,11 @@ public class GameManagerWrath : MonoBehaviour
     {
         skillOption.HideShield();
         cameraSwitch.FightScene();
-        game.SetActive(false);
+        // game.SetActive(false);
+        gameplays.ToList().ForEach(x =>
+        {
+            x.SetActive(false);
+        });
         senemyLife.SetActive(true);
 
 

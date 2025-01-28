@@ -13,6 +13,7 @@ public class TimeCode : MonoBehaviour
     public GameManagerEnvyNew gameManagerEnvy;
     public GameManagerSloth gameManagerSloth;
     public GameManagerGreedPride gameManagerGreedPride;
+    public GameManagerWrath gameManagerWrath;
     public HealthSystem miniGameLife;
     public Image bar;
     public float initialCountdownDuration = 30f; // Initial countdown duration
@@ -101,6 +102,10 @@ public class TimeCode : MonoBehaviour
                 }
                 gameManagerGreedPride.ReturnAll();
 
+            }
+            if (gameManagerWrath != null)
+            {
+                gameManagerWrath.ReturnAll();
             }
 
 

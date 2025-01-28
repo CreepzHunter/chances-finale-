@@ -6,7 +6,7 @@ using System.Linq;
 public class ObjectSpawner : MonoBehaviour
 {
     [Header("Fruits & Bombs Prefabs")]
-    [SerializeField] private GameObject prefab;
+    public GameObject prefab;
 
     [Header("Gameplay")]
     [SerializeField] private float minInterval = 1f; // Minimum spawn interval

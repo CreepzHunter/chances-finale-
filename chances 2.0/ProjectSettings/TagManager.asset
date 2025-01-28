@@ -13,6 +13,7 @@ TagManager:
   - Cut
   - Bomb
   - Chips
+  - Obstacle
   layers:
   - Default
   - TransparentFX
