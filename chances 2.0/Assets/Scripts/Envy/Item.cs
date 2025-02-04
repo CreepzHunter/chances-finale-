@@ -16,6 +16,7 @@ public class Item : MonoBehaviour
     public GameFlowManagerLust gameFlowManagerLust;
     public GameManagerGreedPride gameManagerGreedPride;
     public AttackGluttony attackGluttony;
+    public GameManagerWrath gameManagerWrath;
     public HealthSystem cockroachLife;
     public Button[] buttons;
 
@@ -82,7 +83,7 @@ public class Item : MonoBehaviour
     {
         ToHide.ToList().ForEach(button =>
         {
-            button.SetActive(false);
+            button.SetActive(true);
         });
         AnimatePlayer();
         Invoke("ReturnAnimate", 1.2f);
@@ -131,6 +132,10 @@ public class Item : MonoBehaviour
             attackGluttony.PlayGame();
             cameraSwitch.SlothGame();
             Camera.main.orthographic = true;
+        }
+        if(gameManagerWrath != null)
+        {
+            gameManagerWrath.ReturnAnimation();
         }
     }
 

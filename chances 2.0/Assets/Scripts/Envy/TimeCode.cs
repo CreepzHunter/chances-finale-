@@ -105,6 +105,7 @@ public class TimeCode : MonoBehaviour
             }
             if (gameManagerWrath != null)
             {
+                healthSystemPlayer.TakeDamage(rndm);
                 gameManagerWrath.ReturnAll();
             }
 

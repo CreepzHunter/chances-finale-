@@ -10,9 +10,9 @@ public class GameManagerWrath : MonoBehaviour
     public HealthSystem wrathLife;
     public HealthSystemPlayer healthSystemPlayer;
     public CameraSwitch cameraSwitch;
+    public Camera camera;
     public SkillOption skillOption;
     public TimeCode timeCode;
-    public ObjectSpawner2D objectSpawner;
 
 
     [SerializeField] private GameObject playerLife;
@@ -86,7 +86,8 @@ public class GameManagerWrath : MonoBehaviour
         if (number == 0)
         {
             // damage enemy
-            wrathLife.TakeDamage(22f);
+            int damage = Random.Range(10, 18);
+            wrathLife.TakeDamage(damage);
 
             Invoke("ReturnAll", 1f);
         }
@@ -113,13 +114,14 @@ public class GameManagerWrath : MonoBehaviour
     public void EnemyTakeDamage()
     {
         int damage = Random.Range(25, 35);
-        wrathLife.TakeDamage(15);
+        wrathLife.TakeDamage(12);
 
         if (skillOption.attack == true)//activate more damage when skill
         {
             wrathLife.TakeDamage(damage);
             skillOption.attack = false;
         }
+        Debug.Log(damage);
 
 
     }
@@ -142,11 +144,11 @@ public class GameManagerWrath : MonoBehaviour
     public void PlayGame()
     {
         cameraSwitch.PrideLustCameraMiniGame();
+        camera.orthographic = true;
         // game.SetActive(true);
         int rnd = Random.Range(0, gameplays.Length); // Dynamically handle array size
         gameplays[rnd].SetActive(true);
 
-        objectSpawner.SpawnRoutineCour();
     }
 
     #region Basics
@@ -168,6 +170,7 @@ public class GameManagerWrath : MonoBehaviour
         {
             x.SetActive(true);
         });
+        camera.orthographic = false;
     }
     private void HideAttack()
     {

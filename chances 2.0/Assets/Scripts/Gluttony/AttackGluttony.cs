@@ -19,20 +19,34 @@ public class AttackGluttony : MonoBehaviour
     {
         if (eHealth.health != 0)
         {
-            HideButtons();
+            int number = Random.Range(0, 2);
+            Debug.Log("number: " + number);
 
-            //attack anim
-            PlayerAnimAttack();
-            Invoke("EnemyAnimAttack", 3f);
+            if (number == 0)
+            {   
+                int damage = Random.Range(10, 18);
+                eHealth.TakeDamage(damage);
 
-            //camera switch
-            cameraSwitch.SlothGame();
-            Camera.main.orthographic = true;
-            Invoke("PlayGame", 6.5f);
-        }
+                Invoke("ReturnAll", 1f);
+            }
+            else if (number == 1)
+            {
+                HideButtons();
+
+                //attack anim
+                PlayerAnimAttack();
+                Invoke("EnemyAnimAttack", 3f);
+
+                //camera switch
+                cameraSwitch.SlothGame();
+                Camera.main.orthographic = true;
+                Invoke("PlayGame", 6.5f);
+            }
         else
         {
         }
+        }
+
     }
     public void PlayGame()
     {
