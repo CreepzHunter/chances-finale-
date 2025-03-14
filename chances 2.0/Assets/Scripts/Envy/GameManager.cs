@@ -50,21 +50,26 @@ public class GameManager : MonoBehaviour
     public void Awake()
     {
         puzzles = Resources.LoadAll<Sprite>("Sprites/1 Envy/puzzles");
-        GetButtons();
+
+
+
 
         SpriteRenderer spriteRenderer = Envy.GetComponent<SpriteRenderer>();
     }
 
 
-    void Start()
+    void OnEnable()
     {
         timeCode.loseIndicator = false;
-
-        AddListeners();
-        AddGamePuzzles();
-        Shuffle(gamePuzzles);
-        gameGuesses = gamePuzzles.Count / 2;
         youWin.SetActive(false);
+
+        GetButtons();
+        LevelUpProgression();
+        AddListeners(); //button listener
+        AddGamePuzzles(); // add game puzezle
+        Shuffle(gamePuzzles); // shuffle the game puzzle
+        gameGuesses = gamePuzzles.Count / 2; //defines the total guesses
+
     }
 
     public void RegisterButton(Button button)
@@ -92,7 +97,10 @@ public class GameManager : MonoBehaviour
     {
         int looper = btns.Count;
         int index = 0;
-
+        if (gamePuzzles.Count > 0)
+        {
+            gamePuzzles.Clear();
+        }
         for (int i = 0; i < looper; i++)
         {
             if (index == looper / 2)
@@ -192,6 +200,7 @@ public class GameManager : MonoBehaviour
         {
             timeCode.initialCountdownDuration = 10f;
         }
+        GetButtons();
 
         AddListeners();
         AddGamePuzzles();
@@ -215,7 +224,7 @@ public class GameManager : MonoBehaviour
     public void CheckTheGameFinished()
     {
         countCorrectGuesses++;
-
+        Debug.Log(countCorrectGuesses + " - " + gameGuesses);
         if (countCorrectGuesses == gameGuesses)
         {
             skillOption.HideShield();
@@ -272,7 +281,11 @@ public class GameManager : MonoBehaviour
 
     private void LevelUpProgression()
     {
-        if (enemyLife.health == 60)
+        if (enemyLife.health > 80 && enemyLife.health <= 90)
+        {
+            addButtons.totalBoxes += 2;
+        }
+        else if (enemyLife.health >= 60 && enemyLife.health <= 80)
         {
             addButtons.totalBoxes += 2;
         }
@@ -280,6 +293,7 @@ public class GameManager : MonoBehaviour
         {
             addButtons.totalBoxes += 2;
         }
+
     }
 
     private void CallReturn()

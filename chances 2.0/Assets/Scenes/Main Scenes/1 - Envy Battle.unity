@@ -8882,6 +8882,7 @@ MonoBehaviour:
   gameManagerEnvy: {fileID: 656989144}
   gameManagerSloth: {fileID: 0}
   gameManagerGreedPride: {fileID: 0}
+  gameManagerWrath: {fileID: 0}
   miniGameLife: {fileID: 0}
   bar: {fileID: 1846704054}
   initialCountdownDuration: 20

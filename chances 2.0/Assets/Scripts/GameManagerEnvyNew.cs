@@ -150,16 +150,16 @@ public class GameManagerEnvyNew : MonoBehaviour
         // eenemyAttack.SetActive(true);
 
         // damage enemy 1 or play game 2
-        int number = Random.Range(0, 2);
+        int number = Random.Range(1, 2);
 
         if (number == 0)
         {
             // damage enemy
             envyLife.TakeDamage(22f);
-            Debug.Log("test");
             ReturnAll();
         }
-        else if (number == 1)
+        else
+        if (number == 1)
         {
             Invoke("EnvyShow", 1f);
             HideAttack();

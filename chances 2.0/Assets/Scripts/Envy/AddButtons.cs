@@ -16,7 +16,8 @@ public class AddButtons : MonoBehaviour
 
     private GameManager gameManager;
 
-    private void Awake()
+    private void OnEnable()
+
     {
         gameManager = FindObjectOfType<GameManager>();
 
@@ -25,6 +26,7 @@ public class AddButtons : MonoBehaviour
 
     public void GenerateButtons()
     {
+        gameManager.btns.Clear();
         foreach (Transform child in puzzleField)
         {
             Destroy(child.gameObject);
