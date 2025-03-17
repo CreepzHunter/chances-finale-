@@ -191,25 +191,24 @@ public class GameManagerSloth : MonoBehaviour
     }
     public void AnimateCKAttack()
     {
-        // Perform Cockroach Attack Animation
         AttackCk();
         Invoke("DelayCameraCK", 1.2f);
-        // Deal normal damage to the cockroach
-        int normalDamage = Random.Range(10, 20);
-        cockroachLife.TakeDamage(normalDamage);
 
-        // Deal extra damage if skill attack is active
+        int normalDmg = Random.Range(10, 20);
+        int skillDmg = 0;
+
         if (skillOption.attack)
         {
-            cockroachLife.TakeDamage(25f);
+            skillDmg = 25;
             skillOption.attack = false;
         }
 
-        // Update player visuals
+        int totalDmg = normalDmg + skillDmg;
+        cockroachLife.TakeDamage(totalDmg);
+
         playerBack.SetActive(true);
         playerFront.SetActive(false);
 
-        // Disable Cockroach Attack Animation after 1 second
         Invoke("DisableAttackCk", 1.0f);
 
         int damageToPlayer = Random.Range(0, 6);

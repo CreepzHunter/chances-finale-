@@ -150,7 +150,7 @@ public class GameManagerEnvyNew : MonoBehaviour
         // eenemyAttack.SetActive(true);
 
         // damage enemy 1 or play game 2
-        int number = Random.Range(1, 2);
+        int number = Random.Range(0, 2);
 
         if (number == 0)
         {
