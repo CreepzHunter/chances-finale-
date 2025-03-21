@@ -167,6 +167,7 @@ public class GameManagerSloth : MonoBehaviour
         timeCodeGO.SetActive(false);
         enemy.ResetLocation();
         enemy.SetEnemyStateAsleep();
+        Camera.main.orthographic = false;
 
         BtnsToShow.ToList().ForEach(x =>
         {
@@ -298,6 +299,7 @@ public class GameManagerSloth : MonoBehaviour
 
         Invoke("SlothCam", 0.3f);
         check = true;
+        Camera.main.orthographic = true;
 
         HideAttack();
 
@@ -315,7 +317,6 @@ public class GameManagerSloth : MonoBehaviour
 
     private void LevelChecker()
     {
-        // Check life to know what level you should be at
         if (slothLife.health >= 66)
         {
             slothGameplay[0].SetActive(true);
