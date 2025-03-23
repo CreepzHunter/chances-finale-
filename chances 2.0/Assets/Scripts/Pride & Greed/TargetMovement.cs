@@ -78,6 +78,11 @@ public class TargetMovement : MonoBehaviour
         float moveY = Input.GetAxis("Vertical");
 
         rb.velocity = new Vector2(moveX, moveY) * currentSpeed;
+        if (rb.velocity != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
     }
 
     void HandleDash()

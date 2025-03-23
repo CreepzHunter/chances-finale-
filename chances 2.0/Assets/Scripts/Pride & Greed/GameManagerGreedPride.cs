@@ -153,6 +153,7 @@ public class GameManagerGreedPride : MonoBehaviour
     {
         cameraSwitch.PrideLustCameraMiniGame();
         game.SetActive(true);
+        Camera.main.orthographic = true;
         objectSpawner.SpawnRoutineCour();
         ReturnEnemyAnim();
     }
@@ -164,6 +165,7 @@ public class GameManagerGreedPride : MonoBehaviour
         cameraSwitch.FightScene();
         game.SetActive(false);
 
+        Camera.main.orthographic = false;
 
         timeCode.countdownTimer = timeCode.initialCountdownDuration;
 
