@@ -2,19 +2,20 @@ using UnityEngine;
 
 public class UpDownMovement : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed = 5f; // Speed of up and down movement
-    [SerializeField] private float moveDistance = 3f; // How far up and down the object will move
+    [SerializeField] private float movementSpeed = 5f;
+    [SerializeField] private float moveDistance = 3f;
     private Vector3 startPosition;
+    private float randomOffset;
 
     void Start()
     {
-        startPosition = transform.position; // Store the starting position
+        startPosition = transform.position;
+        randomOffset = Random.Range(0f, Mathf.PI * 2);
     }
 
     void Update()
     {
-        // Move the object up and down
-        float yMovement = Mathf.Sin(Time.time * movementSpeed) * moveDistance;
+        float yMovement = Mathf.Sin(Time.time * movementSpeed + randomOffset) * moveDistance;
         transform.position = new Vector3(startPosition.x, startPosition.y + yMovement, startPosition.z);
     }
 }

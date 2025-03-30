@@ -31,6 +31,7 @@ public class StartBlinkingAnim : MonoBehaviour
 
     public void StartBlinking(int index)
     {
+        Debug.Log("called");
         InvokeRepeating("Blink_" + index, 0f, 0.1f);
         Invoke("StopBlinking_" + index, 1f);
     }

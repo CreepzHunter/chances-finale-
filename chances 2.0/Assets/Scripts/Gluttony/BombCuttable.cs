@@ -8,9 +8,12 @@ public class BombCuttable : MonoBehaviour
     private Animator mAnimator;
     private SkillManager skillManager;
     private SpriteRenderer spriteRenderer;
+    private GameplayHealth gameplayHealth;
+
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();  // Get the SpriteRenderer
+        gameplayHealth = FindObjectOfType<GameplayHealth>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         healthSystemPlayer = FindObjectOfType<HealthSystemPlayer>();
         skillManager = FindObjectOfType<SkillManager>();
         mAnimator = GetComponent<Animator>();
@@ -30,6 +33,8 @@ public class BombCuttable : MonoBehaviour
             }
             mAnimator.SetTrigger("Boom");
 
+            float rnd = Random.Range(30f, 40f);
+            gameplayHealth.TakeDamage(rnd);
             //animation here?
             StartCoroutine(FadeAndDestroy());
         }

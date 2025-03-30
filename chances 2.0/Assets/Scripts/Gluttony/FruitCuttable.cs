@@ -8,6 +8,7 @@ public class FruitCuttable : MonoBehaviour
     private Animator mAnimator;
     [Header("Visuals")]
     [SerializeField] Sprite[] sprites;
+    private GameplayHealth gameplayHealth;
 
     private int fruitType;
 
@@ -16,8 +17,10 @@ public class FruitCuttable : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         mAnimator = GetComponent<Animator>();
         mAnimator.enabled = false;
+        gameplayHealth = FindObjectOfType<GameplayHealth>();
 
         spriteRenderer.sprite = sprites[fruitType];
+
     }
 
     public void SetFruitType(int type)
@@ -39,6 +42,11 @@ public class FruitCuttable : MonoBehaviour
                 else if (fruitType == 1) mAnimator.SetTrigger("Kiwi");
                 else if (fruitType == 2) mAnimator.SetTrigger("DragonFruit");
             }
+
+            float randomHeal = Random.Range(5f, 10f);
+            gameplayHealth.Heal(randomHeal);
+
+            GetComponent<MoveFood>().MarkAsCut();
 
             StartCoroutine(FadeAndDestroy());
         }

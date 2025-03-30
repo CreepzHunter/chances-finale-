@@ -91,10 +91,6 @@ public class GameManagerEnvyNew : MonoBehaviour
             timeCode.loseIndicator = false;
 
             PVids[0].SetActive(true);
-            // playerBack.SetActive(false);
-            // playerFront.SetActive(true);
-            // playerLife.SetActive(false);
-            // eenemyLife.SetActive(false);
 
 
             Invoke("EAnimatePlayer", 3.8f);

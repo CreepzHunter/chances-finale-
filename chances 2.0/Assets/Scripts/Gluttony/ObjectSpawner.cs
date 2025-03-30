@@ -9,26 +9,27 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject prefab;
 
     [Header("Gameplay")]
-    [SerializeField] private float minInterval = 1f; // Minimum spawn interval
-    [SerializeField] private float maxInterval = 3f; // Maximum spawn interval
+    [SerializeField] private float minInterval = 1f; 
+    [SerializeField] private float maxInterval = 3f; 
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
     [SerializeField] private float y;
-    private float spawnDuration = 10f; // Time limit for spawning
-
+    [SerializeField] private TimerGame timerGame;
+    [SerializeField] private float spawnDuration;
     [Header("Visuals")]
     [SerializeField] private Sprite[] sprites;
 
+
     private bool isSpawning = true;
-    private AttackGluttony attackGluttony; // Find this component dynamically
+    private AttackGluttony attackGluttony; 
 
     void OnEnable()
     {
+        spawnDuration = timerGame.spawnTimer;
         isSpawning = true;
 
-        // Find AttackGluttony in the hierarchy
         attackGluttony = Resources.FindObjectsOfTypeAll<AttackGluttony>()
-              .FirstOrDefault(obj => obj.gameObject.scene.isLoaded); // Ensure it's part of the active scene
+              .FirstOrDefault(obj => obj.gameObject.scene.isLoaded); 
 
         StartCoroutine(SpawnRoutine());
         StartCoroutine(StopSpawningAfterDuration());
@@ -49,9 +50,6 @@ public class ObjectSpawner : MonoBehaviour
         yield return new WaitForSeconds(spawnDuration);
         isSpawning = false;
 
-        // gameObject.SetActive(false);
-
-        // Pass the status to AttackGluttony
 
         Invoke(nameof(HandleSpawningStatusWrapper), 2.5f);
     }

@@ -6,10 +6,13 @@ public class ChipsCuttable : MonoBehaviour
 {
     private HealthSystemPlayer healthSystemPlayer;
     private SpriteRenderer spriteRenderer;
+    private GameplayHealth gameplayHealth;
+
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();  // Get the SpriteRenderer
-        // Dynamically find the HealthSystemPlayer in the scene
+        gameplayHealth = FindObjectOfType<GameplayHealth>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
         healthSystemPlayer = FindObjectOfType<HealthSystemPlayer>();
     }
 
@@ -22,8 +25,8 @@ public class ChipsCuttable : MonoBehaviour
             {
                 healthSystemPlayer.health -= 10;
             }
-            //animation here?
-
+            float rnd = Random.Range(15f, 30f);
+            gameplayHealth.TakeDamage(rnd);
             StartCoroutine(FadeAndDestroy());
         }
     }

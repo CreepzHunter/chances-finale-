@@ -12,6 +12,8 @@ public class MoveFood : MonoBehaviour
     //gameplay
     [SerializeField] private float lifetime;
     [SerializeField] private Rigidbody2D rb2d;
+    private bool wasCut = false;
+
     void Start()
     {
         //throw the objects upwards
@@ -21,5 +23,22 @@ public class MoveFood : MonoBehaviour
         );
         Destroy(gameObject, lifetime);
 
+    }
+
+    public void MarkAsCut()
+    {
+        wasCut = true;
+    }
+
+    void OnDestroy()
+    {
+        if (!wasCut && gameObject.CompareTag("Fruits"))
+        {
+            GameplayHealth health = FindObjectOfType<GameplayHealth>();
+
+            float rnd = Random.Range(10f, 20f);
+            if (health != null)
+                health.TakeDamage(rnd);
+        }
     }
 }
