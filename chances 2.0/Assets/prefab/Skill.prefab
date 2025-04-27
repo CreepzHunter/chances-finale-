@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 711caf5a2143d9747a2e4d6e9d336203, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69a6867db24fa8b4aa13e58bef5afc2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -225,11 +225,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSwitch: {fileID: 0}
-  healthSystem: {fileID: 0}
+  cockroachLife: {fileID: 0}
   startBlinking: {fileID: 0}
+  gameManagerSloth: {fileID: 0}
+  gameManagerEnvyNew: {fileID: 0}
+  gameFlowManagerLust: {fileID: 0}
+  gameManagerGreedPride: {fileID: 0}
+  attackGluttony: {fileID: 0}
+  gameManagerWrath: {fileID: 0}
+  skillManager: {fileID: 0}
   playerBack: {fileID: 0}
   playerSkill: {fileID: 0}
+  playerShield: {fileID: 0}
   enemyLife: {fileID: 0}
+  ckenemyLife: {fileID: 0}
+  skillOpt: {fileID: 0}
+  PSkills: []
   BtnsToShow:
   - {fileID: 0}
   - {fileID: 6406312317015275031}
