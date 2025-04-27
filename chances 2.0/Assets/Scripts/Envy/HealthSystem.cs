@@ -9,9 +9,7 @@ public class HealthSystem : MonoBehaviour
 {
 
     public Image healthBar;
-    public DsplyAnmCntrllr dsplyAnmCntrllr;
     public float health = 100f;
-    [SerializeField] private Transform textSpawnPoint;
     public void Update()
     {
         healthBar.fillAmount = health / 100f;
@@ -23,8 +21,7 @@ public class HealthSystem : MonoBehaviour
         health -= damage;
         health = Mathf.Clamp(health, 0, 100);
 
-        if (dsplyAnmCntrllr && textSpawnPoint)
-            dsplyAnmCntrllr.DisplayFloatingText(-damage, textSpawnPoint);
+
 
     }
 
@@ -33,7 +30,6 @@ public class HealthSystem : MonoBehaviour
         health += heal;
         health = Mathf.Clamp(health, 0, 100);
 
-        if (dsplyAnmCntrllr && textSpawnPoint)
-            dsplyAnmCntrllr.DisplayFloatingText(heal, textSpawnPoint);
+
     }
 }

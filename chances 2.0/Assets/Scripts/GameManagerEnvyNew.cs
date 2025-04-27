@@ -8,7 +8,6 @@ public class GameManagerEnvyNew : MonoBehaviour
 {
     public GameManager gameManager1;
     public HealthSystem envyLife;
-    public HealthSystemPlayer healthSystemPlayer;
     public CameraSwitch cameraSwitch;
     public TimeCode timeCode;
     public SkillOption skillOption;
@@ -46,8 +45,9 @@ public class GameManagerEnvyNew : MonoBehaviour
             Invoke("LoadOverWorld", 0.8f);
 
         }
+
         //player ded
-        if (healthSystemPlayer.health == 0)
+        if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
             Invoke("LoadOverWorld", 1.06f);

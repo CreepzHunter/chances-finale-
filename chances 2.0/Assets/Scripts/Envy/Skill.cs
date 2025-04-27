@@ -8,7 +8,6 @@ public class Skill : MonoBehaviour
 {
     #region Dependencies
     public CameraSwitch cameraSwitch;
-    public HealthSystem healthSystem;
     public HealthSystem cockroachLife;
     public StartBlinkingAnim startBlinking;
     public GameManagerSloth gameManagerSloth;
@@ -33,12 +32,18 @@ public class Skill : MonoBehaviour
 
 
     #region Skill Logic
+    void Start()
+    {
+        PlayerStats.Instance.PSkill = PlayerPrefs.GetInt("PSkill", PlayerStats.Instance.PSkill);
+    }
+
     public void OnClickSkill()
     {
-        if (healthSystem.health != 0 && skillManager.diamond != 0)
+        if (PlayerStats.Instance.PHealth != 0 && PlayerStats.Instance.PSkill != 0)
         {
             HideAttack();
-            skillManager.diamond--;
+            PlayerStats.Instance.PSkill--;
+            PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
             skillOpt.SetActive(true);
         }
     }

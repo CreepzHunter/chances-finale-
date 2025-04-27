@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 977273867}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.57481873, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641335, b: 0.5748198, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6692,9 +6692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 615596735}
-  dsplyAnmCntrllr: {fileID: 0}
   health: 50
-  transformObj: {fileID: 0}
 --- !u!1 &619560303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2482737799955499190, guid: 110448efa54901247bc2fe406818d90c, type: 3}
@@ -8686,7 +8684,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1166118189
 GameObject:
@@ -12363,8 +12361,8 @@ SceneRoots:
   - {fileID: 1473896912}
   - {fileID: 877499712}
   - {fileID: 219719955}
-  - {fileID: 99053290}
   - {fileID: 323544444}
+  - {fileID: 99053290}
   - {fileID: 1017168065}
   - {fileID: 271628303}
   - {fileID: 1203030936}

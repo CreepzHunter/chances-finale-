@@ -57,7 +57,9 @@ public class TimeCode : MonoBehaviour
             {
                 if (skillOption.shield == false)
                 {
-                    healthSystemPlayer.TakeDamage(rndm);
+
+                    PlayerStats.Instance.PHealth -= 10;
+                    PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
                 }
                 else if (skillOption.shield == true)
                 {
@@ -77,7 +79,8 @@ public class TimeCode : MonoBehaviour
             {
                 if (skillOption.shield == false)
                 {
-                    healthSystemPlayer.TakeDamage(rndm);
+                    PlayerStats.Instance.PHealth -= rndm;
+                    PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
                 }
                 else if (skillOption.shield == true)
                 {
@@ -105,7 +108,8 @@ public class TimeCode : MonoBehaviour
             }
             if (gameManagerWrath != null)
             {
-                healthSystemPlayer.TakeDamage(rndm);
+                PlayerStats.Instance.PHealth -= rndm;
+                PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
                 gameManagerWrath.ReturnAll();
             }
 

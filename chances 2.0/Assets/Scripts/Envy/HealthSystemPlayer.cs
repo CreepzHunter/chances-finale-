@@ -9,9 +9,7 @@ public class HealthSystemPlayer : MonoBehaviour
 {
 
     public Image healthBar;
-    public DsplyAnmCntrllr dsplyAnmCntrllr;
     public float health = 50;
-    [SerializeField] private Transform transformObj;
 
     public void Update()
     {
@@ -23,17 +21,12 @@ public class HealthSystemPlayer : MonoBehaviour
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, 50);
-        if (dsplyAnmCntrllr)
-            dsplyAnmCntrllr.DisplayFloatingText(-damage, transformObj);
-
     }
 
     public void Heal(float heal)
     {
         health += heal;
         health = Mathf.Clamp(health, 0, 50);
-        if (dsplyAnmCntrllr)
-            dsplyAnmCntrllr.DisplayFloatingText(heal, transformObj);
 
     }
 }

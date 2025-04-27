@@ -27,9 +27,10 @@ public class BombCuttable : MonoBehaviour
             {
                 healthSystemPlayer.health -= 10;
             }
-            if (skillManager.diamond > 0)
+            if (PlayerStats.Instance.PSkill > 0)
             {
-                skillManager.diamond--;
+                PlayerStats.Instance.PSkill--;
+                PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
             }
             mAnimator.SetTrigger("Boom");
 

@@ -9,7 +9,6 @@ public class Item : MonoBehaviour
 {
     public CameraSwitch cameraSwitch;
     public HealthSystem EnvyLife;
-    public HealthSystemPlayer healthSystemPlayer;
     public SkillManager skillManager;
     public GameManagerEnvyNew gameManagerEnvyNew;
     public GameManagerSloth gameManagerSloth;
@@ -22,7 +21,7 @@ public class Item : MonoBehaviour
 
 
     // Inventory counts
-    private int smallBottleCount = 3;  // Example count, set based on your needs
+    private int smallBottleCount = 3;
     private int midBottleCount = 2;
     private int largeBottleCount = 1;
     private int appleCount = 5;
@@ -43,9 +42,6 @@ public class Item : MonoBehaviour
         {
             HideAttack();
             Invoke("Inventory", 0.4f);
-
-            // Invoke("AnimatePlayer", 1.2f);
-            // Invoke("ReturnAll", 1.5f);
         }
     }
 
@@ -133,7 +129,7 @@ public class Item : MonoBehaviour
             cameraSwitch.SlothGame();
             Camera.main.orthographic = true;
         }
-        if(gameManagerWrath != null)
+        if (gameManagerWrath != null)
         {
             gameManagerWrath.ReturnAnimation();
         }
@@ -170,7 +166,8 @@ public class Item : MonoBehaviour
     {
         if (smallBottleCount > 0)
         {
-            skillManager.diamond += 1;
+            PlayerStats.Instance.PSkill++;
+            PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
             smallBottleCount--;
             UpdateButtonStates();
             DoneItem();
@@ -182,8 +179,8 @@ public class Item : MonoBehaviour
     {
         if (midBottleCount > 0)
         {
-            skillManager.diamond += 2;
-            midBottleCount--;
+            PlayerStats.Instance.PSkill += 2;
+            PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
             UpdateButtonStates();
             DoneItem();
             Debug.Log("Used Mid Bottle. Remaining: " + midBottleCount);
@@ -194,8 +191,10 @@ public class Item : MonoBehaviour
     {
         if (largeBottleCount > 0)
         {
-            skillManager.diamond += 2;
-            healthSystemPlayer.Heal(5);
+            PlayerStats.Instance.PSkill += 2;
+            PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
+            PlayerStats.Instance.PHealth += 5;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
             largeBottleCount--;
             DoneItem();
             UpdateButtonStates();
@@ -207,7 +206,8 @@ public class Item : MonoBehaviour
     {
         if (appleCount > 0)
         {
-            healthSystemPlayer.Heal(5);
+            PlayerStats.Instance.PHealth += 5;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
             appleCount--;
             DoneItem();
             UpdateButtonStates();
@@ -219,7 +219,8 @@ public class Item : MonoBehaviour
     {
         if (chocolateCount > 0)
         {
-            healthSystemPlayer.Heal(10);
+            PlayerStats.Instance.PHealth += 10;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
             chocolateCount--;
             DoneItem();
             UpdateButtonStates();
@@ -231,7 +232,8 @@ public class Item : MonoBehaviour
     {
         if (medkitCount > 0)
         {
-            healthSystemPlayer.Heal(20);
+            PlayerStats.Instance.PHealth += 20;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
             medkitCount--;
             DoneItem();
             UpdateButtonStates();

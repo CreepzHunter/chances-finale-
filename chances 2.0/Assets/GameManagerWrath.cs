@@ -131,7 +131,8 @@ public class GameManagerWrath : MonoBehaviour
         int damage = Random.Range(10, 20);
         if (skillOption.shield == false)//immune damage if shielded
         {
-            healthSystemPlayer.TakeDamage(damage);
+            PlayerStats.Instance.PHealth -= damage;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
 
         }
         else if (skillOption.shield == true)

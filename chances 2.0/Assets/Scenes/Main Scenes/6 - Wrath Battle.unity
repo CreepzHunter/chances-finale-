@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 977273867}
-  m_IndirectSpecularColor: {r: 0.004030756, g: 0.00022010782, b: 0.000000054050446, a: 1}
+  m_IndirectSpecularColor: {r: 0.004030758, g: 0.00022010785, b: 0.000000054050446, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11198,9 +11198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 586775450}
-  dsplyAnmCntrllr: {fileID: 0}
   health: 50
-  transformObj: {fileID: 0}
 --- !u!114 &586775450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11494,9 +11492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 615596735}
-  dsplyAnmCntrllr: {fileID: 0}
   health: 50
-  transformObj: {fileID: 0}
 --- !u!1 &619560303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2482737799955499190, guid: 110448efa54901247bc2fe406818d90c, type: 3}
@@ -16428,7 +16424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1020506766
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17023,7 +17019,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 3fbb91aa314cb6d4484d1fe7c2ae670c, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
