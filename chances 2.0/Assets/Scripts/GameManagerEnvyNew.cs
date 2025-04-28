@@ -42,7 +42,8 @@ public class GameManagerEnvyNew : MonoBehaviour
             hasDied = true;
             EnvyDone();
 
-            Invoke("LoadOverWorld", 0.8f);
+            // Invoke("LoadOverWorld", 0.8f);
+            Invoke("DemoWorld", 1.06f);
 
         }
 
@@ -50,7 +51,9 @@ public class GameManagerEnvyNew : MonoBehaviour
         if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
-            Invoke("LoadOverWorld", 1.06f);
+
+            // Invoke("LoadOverWorld", 1.06f);
+            Invoke("DemoWorld", 1.06f);
         }
     }
 
@@ -58,7 +61,10 @@ public class GameManagerEnvyNew : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
+    private void DemoWorld()
+    {
+        SceneManager.LoadScene(17);
+    }
     public void EnvyDone()
     {
 

@@ -53,16 +53,22 @@ public class GameFlowManagerLust : MonoBehaviour
             lustIdle.SetActive(false);
             lustDead.SetActive(true);
 
-            Invoke("LoadOverWorld", 0.8f);
-
+            // Invoke("LoadOverWorld", 0.8f);
+            Invoke("DemoWorld", 1.06f);
         }
         //player dead
         if (healthSystemPlayer.health == 0)
         {
             gameover.SetActive(true);
-            Invoke("LoadOverWorld", 1.06f);
+
+            // Invoke("LoadOverWorld", 1.06f);
+            Invoke("DemoWorld", 1.06f);
         }
 
+    }
+    private void DemoWorld()
+    {
+        SceneManager.LoadScene(17);
     }
     private void LoadOverWorld()
     {

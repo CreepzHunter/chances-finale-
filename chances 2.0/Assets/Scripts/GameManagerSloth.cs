@@ -51,9 +51,10 @@ public class GameManagerSloth : MonoBehaviour
         {
             slothIdle.SetActive(false);
             slothDead.SetActive(true);
+            // Invoke("LoadOverWorld", 0.8f);
 
-            Invoke("LoadOverWorld", 0.8f);
 
+            Invoke("DemoWorld", 1.06f);
         }
         if (cockroachLife.health == 0)
         {
@@ -72,11 +73,17 @@ public class GameManagerSloth : MonoBehaviour
         if (healthSystemPlayer.health == 0)
         {
             gameover.SetActive(true);
-            Invoke("LoadOverWorld", 1.06f);
+            // Invoke("LoadOverWorld", 1.06f);sss
+
+            Invoke("DemoWorld", 1.06f);
         }
 
     }
 
+    private void DemoWorld()
+    {
+        SceneManager.LoadScene(17);
+    }
     private void LoadOverWorld()
     {
         SceneManager.LoadScene(1);
@@ -103,7 +110,6 @@ public class GameManagerSloth : MonoBehaviour
 
         if (cockroachLife.health != 0)
         {
-            Debug.Log("attack ");
 
             cameraSwitch.PlayerView();
             HideAttack();
@@ -195,7 +201,7 @@ public class GameManagerSloth : MonoBehaviour
         AttackCk();
         Invoke("DelayCameraCK", 1.2f);
 
-        int normalDmg = Random.Range(10, 20);
+        int normalDmg = Random.Range(20, 30);
         int skillDmg = 0;
 
         if (skillOption.attack)
