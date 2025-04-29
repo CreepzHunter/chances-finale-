@@ -91,7 +91,9 @@ public class GameFlowManagerLust : MonoBehaviour
         if (number == 0)
         {
             // damage enemy
-            lustLife.TakeDamage(22);
+            int attackpower = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+            lustLife.TakeDamage(attackpower);
 
             Invoke("ReturnAll", 4f);
         }

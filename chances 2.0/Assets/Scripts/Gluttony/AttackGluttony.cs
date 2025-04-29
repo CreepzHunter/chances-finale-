@@ -13,6 +13,8 @@ public class AttackGluttony : MonoBehaviour
     [SerializeField] private GameObject enemyParent;
     [SerializeField] private GameObject gameplay;
     [SerializeField] private StartBlinkingAnim blink;
+    public SkillOption skillOption;
+
 
     private bool hasLoaded = false;
 
@@ -20,16 +22,21 @@ public class AttackGluttony : MonoBehaviour
     {
         if (hasLoaded) return;
 
-        if (pHealth.health <= 0 || eHealth.health <= 0)
+        if (eHealth.health <= 0)
         {
             hasLoaded = true;
-            if (pHealth.health <= 0) { }
-            //damgage player
+            DemoWorld();
+        }
+        if (PlayerStats.Instance.PHealth == 0)
+        {
 
-            Invoke("LoadOverWorld", 0.8f);
+            DemoWorld();
         }
     }
-
+    private void DemoWorld()
+    {
+        SceneManager.LoadScene(17);
+    }
     public void OnClickAttack()
     {
         if (eHealth.health != 0)
@@ -45,12 +52,20 @@ public class AttackGluttony : MonoBehaviour
 
     private void Attack()
     {
-        int number = Random.Range(0, 2);
+        int number = Random.value < 0.7f ? 1 : 0;
+        //1 appear 60% and 0 appear 40%
 
         if (number == 0)
         {
-            int damage = Random.Range(10, 18);
-            eHealth.TakeDamage(damage);
+            int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+            if (skillOption != null && skillOption.attack == true)
+            {
+                totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+                skillOption.attack = false;
+            }
+
+            eHealth.TakeDamage(totalDamage);
 
             Invoke("CallBlink", 2.8f);
             Invoke("ReturnAll", 2.8f);
@@ -62,9 +77,10 @@ public class AttackGluttony : MonoBehaviour
 
             //camera switch
             cameraSwitch.SlothGame();
-            Invoke("PlayGame", 4.5f);
+            Invoke("PlayGame", 5f);
         }
     }
+
     void OnEnable()
     {
         hasLoaded = false;

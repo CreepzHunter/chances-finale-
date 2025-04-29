@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class GameManagerWrath : MonoBehaviour
 {
     public HealthSystem wrathLife;
-    public HealthSystemPlayer healthSystemPlayer;
     public CameraSwitch cameraSwitch;
     public Camera camera;
     public SkillOption skillOption;
@@ -36,18 +35,18 @@ public class GameManagerWrath : MonoBehaviour
             enemyAnimations[0].SetActive(false);
             enemyAnimations[2].SetActive(true);
 
-            Invoke("LoadOverWorld", 0.8f);
+            Invoke("DemoWorld", 0.8f);
         }
         //player dead
-        if (healthSystemPlayer.health == 0)
+        if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
-            Invoke("LoadOverWorld", 1.06f);
+            Invoke("DemoWorld", 1.06f);
         }
 
     }
 
-    private void LoadOverWorld()
+    private void DemoWorld()
     {
         SceneManager.LoadScene(1);
     }
@@ -80,14 +79,15 @@ public class GameManagerWrath : MonoBehaviour
     }
     private void RandomBattleOutcome()
     {
-        int number = Random.Range(0, 2);
+        int number = Random.value < 0.6f ? 1 : 0;
         Debug.Log("number: " + number);
 
         if (number == 0)
         {
             // damage enemy
-            int damage = Random.Range(10, 18);
-            wrathLife.TakeDamage(damage);
+            int attackpower = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+            wrathLife.TakeDamage(attackpower);
 
             Invoke("ReturnAll", 1f);
         }
@@ -113,15 +113,16 @@ public class GameManagerWrath : MonoBehaviour
 
     public void EnemyTakeDamage()
     {
-        int damage = Random.Range(25, 35);
-        wrathLife.TakeDamage(12);
+        int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
 
-        if (skillOption.attack == true)//activate more damage when skill
+        if (skillOption != null && skillOption.attack == true)
         {
-            wrathLife.TakeDamage(damage);
+            totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
             skillOption.attack = false;
         }
-        Debug.Log(damage);
+
+        wrathLife.TakeDamage(totalDamage);
+
 
 
     }

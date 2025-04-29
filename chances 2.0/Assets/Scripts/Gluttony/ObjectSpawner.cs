@@ -9,8 +9,8 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject prefab;
 
     [Header("Gameplay")]
-    [SerializeField] private float minInterval = 1f; 
-    [SerializeField] private float maxInterval = 3f; 
+    [SerializeField] private float minInterval = 1f;
+    [SerializeField] private float maxInterval = 3f;
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
     [SerializeField] private float y;
@@ -21,7 +21,7 @@ public class ObjectSpawner : MonoBehaviour
 
 
     private bool isSpawning = true;
-    private AttackGluttony attackGluttony; 
+    private AttackGluttony attackGluttony;
 
     void OnEnable()
     {
@@ -29,7 +29,7 @@ public class ObjectSpawner : MonoBehaviour
         isSpawning = true;
 
         attackGluttony = Resources.FindObjectsOfTypeAll<AttackGluttony>()
-              .FirstOrDefault(obj => obj.gameObject.scene.isLoaded); 
+              .FirstOrDefault(obj => obj.gameObject.scene.isLoaded);
 
         StartCoroutine(SpawnRoutine());
         StartCoroutine(StopSpawningAfterDuration());

@@ -8,7 +8,6 @@ public class TimerGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private Image timerFillImage;
     [SerializeField] private GameplayHealth gameplayHealth;
-    [SerializeField] private HealthSystemPlayer healthSystemPlayer;
     [SerializeField] private HealthSystem healthSystem;
     [SerializeField] private AttackGluttony attackGluttony;
     [SerializeField] private StartBlinkingAnim blink;
@@ -42,6 +41,7 @@ public class TimerGame : MonoBehaviour
                 {
                     int rnd = Random.Range(20, 30);
                     attackGluttony.ReturnAll();
+
                     healthSystem.TakeDamage(rnd);
                     blink.StartBlinking(0);
                 }
@@ -49,7 +49,10 @@ public class TimerGame : MonoBehaviour
                 {
                     // dmg player
                     int rnd = Random.Range(10, 20);
-                    healthSystemPlayer.TakeDamage(rnd);
+                    // healthSystemPlayer.TakeDamage(rnd);
+                    PlayerStats.Instance.PHealth -= rnd;
+                    PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+
                     attackGluttony.ReturnAll();
                     blink.StartBlinking(1);
 

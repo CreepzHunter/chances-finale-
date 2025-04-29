@@ -15,7 +15,6 @@ public class GameplayHealth : MonoBehaviour
     {
         if (pHealth == null)
             pHealth = FindObjectOfType<HealthSystemPlayer>();
-
     }
     public void Update()
     {
@@ -30,8 +29,8 @@ public class GameplayHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            pHealth.TakeDamage(10f);
-
+            PlayerStats.Instance.PHealth -= Random.Range(20, 35);
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
             //disable game
             game.SetActive(false);
             attackGluttony.ReturnAll();
