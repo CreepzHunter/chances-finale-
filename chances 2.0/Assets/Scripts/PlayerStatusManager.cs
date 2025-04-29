@@ -6,7 +6,7 @@ using TMPro;
 
 public class PlayerStatusManager : MonoBehaviour
 {
-    public Image healthBar;
+
     public TMP_Text healthValue;
     public TMP_Text playerlife;
     public TMP_Text pskillText;
@@ -15,15 +15,12 @@ public class PlayerStatusManager : MonoBehaviour
     public TMP_Text allocationStats;
 
     public GameObject buttons;
-    void Start()
-    {
-        PlayerStats.Instance.PHealth = PlayerPrefs.GetInt("PHealth", PlayerStats.Instance.PHealth);
-        PlayerStats.Instance.MaxPHealth = PlayerPrefs.GetInt("MaxPHealth", PlayerStats.Instance.MaxPHealth);
-    }
+
+
     void Update()
     {
         //Health
-        UpdateHealthUI();
+        // UpdateHealthUI();
         UpdateLifeUI();
         CheckHealthState();
 
@@ -41,16 +38,16 @@ public class PlayerStatusManager : MonoBehaviour
     }
 
     #region Health Part
-    void UpdateHealthUI()
-    {
-        float current = PlayerStats.Instance.PHealth;
-        float max = PlayerStats.Instance.MaxPHealth;
+    // void UpdateHealthUI()
+    // {
+    //     float current = PlayerStats.Instance.PHealth;
+    //     float max = PlayerStats.Instance.MaxPHealth;
 
-        healthBar.fillAmount = current / max;
+    //     PlayerStats.Instance.healthBar.fillAmount = current / max;
 
-        if (healthValue != null)
-            healthValue.text = current + " / " + max;
-    }
+    //     if (healthValue != null)
+    //         healthValue.text = current + " / " + max;
+    // }
 
     void UpdateLifeUI()
     {
@@ -79,9 +76,22 @@ public class PlayerStatusManager : MonoBehaviour
         PlayerStats.Instance.PSkill++;
         PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
     }
+    public void SkillMinusTesting()
+    {
+        PlayerStats.Instance.PSkill--;
+        PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
+    }
+
+    public void ChangeValueTest()
+    {
+        PlayerStats.Instance.AttackPower = 10;
+        PlayerPrefs.SetInt("AttackPower", PlayerStats.Instance.PSkill);
+        PlayerStats.Instance.MagicPower = 10;
+        PlayerPrefs.SetInt("MagicPower", PlayerStats.Instance.PSkill);
+    }
     public void TakeDamage()
     {
-        int damage = PlayerStats.Instance.AttackPower;
+        int damage = 10;
         PlayerStats.Instance.PHealth -= damage;
         PlayerStats.Instance.PHealth = Mathf.Clamp(PlayerStats.Instance.PHealth, 0, PlayerStats.Instance.MaxPHealth);
 
@@ -106,19 +116,23 @@ public class PlayerStatusManager : MonoBehaviour
     void UpdateSkillUI()
     {
         if (pskillText != null)
-            pskillText.text = PlayerStats.Instance.PSkill + " / 3";
+            pskillText.text = PlayerStats.Instance.PSkill.ToString() + " / 3";
     }
     //Attack Power
     void UpdateAttackPower()
     {
         if (attackPower != null)
             attackPower.text = PlayerStats.Instance.AttackPower.ToString();
+        // attackPower.text = PlayerPrefs.GetInt("AttackPower", 0).ToString();
+
     }
     //Magic Power
     void UpdateMagicPower()
     {
         if (magicPowerText != null)
             magicPowerText.text = PlayerStats.Instance.MagicPower.ToString();
+        // magicPowerText.text = PlayerPrefs.GetInt("MagicPower", 0).ToString();
+
     }
 
     // Allocation Stats

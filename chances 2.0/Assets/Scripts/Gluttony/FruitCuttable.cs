@@ -43,7 +43,7 @@ public class FruitCuttable : MonoBehaviour
                 else if (fruitType == 2) mAnimator.SetTrigger("DragonFruit");
             }
 
-            float randomHeal = Random.Range(5f, 10f);
+            int randomHeal = Random.Range(5, 10);
             gameplayHealth.Heal(randomHeal);
 
             GetComponent<MoveFood>().MarkAsCut();

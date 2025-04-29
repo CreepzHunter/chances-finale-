@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerEnvyNew : MonoBehaviour
 {
+
+
     public GameManager gameManager1;
     public HealthSystem envyLife;
     public CameraSwitch cameraSwitch;
@@ -54,6 +56,7 @@ public class GameManagerEnvyNew : MonoBehaviour
 
             // Invoke("LoadOverWorld", 1.06f);
             Invoke("DemoWorld", 1.06f);
+
         }
     }
 
@@ -157,7 +160,19 @@ public class GameManagerEnvyNew : MonoBehaviour
         if (number == 0)
         {
             // damage enemy
-            envyLife.TakeDamage(22f);
+            // envyLife.TakeDamage(22f);
+
+
+            int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+            if (skillOption != null && skillOption.attack == true)
+            {
+                totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+                skillOption.attack = false;
+            }
+
+            envyLife.TakeDamage(totalDamage);
+
             ReturnAll();
         }
         else

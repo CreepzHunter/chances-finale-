@@ -34,7 +34,7 @@ public class BombCuttable : MonoBehaviour
             }
             mAnimator.SetTrigger("Boom");
 
-            float rnd = Random.Range(30f, 40f);
+            int rnd = Random.Range(30, 40);
             gameplayHealth.TakeDamage(rnd);
             //animation here?
             StartCoroutine(FadeAndDestroy());

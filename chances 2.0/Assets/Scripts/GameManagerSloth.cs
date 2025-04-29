@@ -141,7 +141,7 @@ public class GameManagerSloth : MonoBehaviour
                 if (number == 0)
                 {
                     // damage enemy
-                    slothLife.TakeDamage(22f);
+                    slothLife.TakeDamage(22);
                     Invoke("DisableVidAttackAnim", 3f);
 
                 }

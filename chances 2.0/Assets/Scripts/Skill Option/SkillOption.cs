@@ -12,6 +12,8 @@ public class SkillOption : MonoBehaviour
     public float timeDelayShield = 1f;
 
     [SerializeField] private GameObject[] shieldIcon;
+
+
     public void SkillAttackButton()
     {
         attack = true;

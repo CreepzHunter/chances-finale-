@@ -9,14 +9,14 @@ public class HealthSystem : MonoBehaviour
 {
 
     public Image healthBar;
-    public float health = 100f;
+    public int health = 100;
     public void Update()
     {
         healthBar.fillAmount = health / 100f;
 
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, 100);
@@ -25,7 +25,7 @@ public class HealthSystem : MonoBehaviour
 
     }
 
-    public void Heal(float heal)
+    public void Heal(int heal)
     {
         health += heal;
         health = Mathf.Clamp(health, 0, 100);

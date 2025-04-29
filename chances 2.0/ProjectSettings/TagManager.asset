@@ -15,6 +15,7 @@ TagManager:
   - Chips
   - Obstacle
   - Fruits
+  - PlayerLife
   layers:
   - Default
   - TransparentFX

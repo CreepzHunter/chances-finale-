@@ -25,7 +25,7 @@ public class ChipsCuttable : MonoBehaviour
             {
                 healthSystemPlayer.health -= 10;
             }
-            float rnd = Random.Range(15f, 30f);
+            int rnd = Random.Range(15, 30);
             gameplayHealth.TakeDamage(rnd);
             StartCoroutine(FadeAndDestroy());
         }

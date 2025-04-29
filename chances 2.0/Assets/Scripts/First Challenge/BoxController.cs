@@ -47,8 +47,8 @@ public class BoxController : MonoBehaviour
             {
                 if (HSPersuasion.health < 100)
                 {
-                    damageDisplay.Persuade(20f);
-                    HSPersuasion.Heal(20f);
+                    damageDisplay.Persuade(20);
+                    HSPersuasion.Heal(20);
                     Debug.Log("Persausion Level: " + HSPersuasion.health);
                 }
 
@@ -57,13 +57,13 @@ public class BoxController : MonoBehaviour
             (button.text == "B" && lowestNumber == numberB) ||
             (button.text == "C" && lowestNumber == numberC))
             {
-                damageDisplay.Damage(10f);
-                HSDamage.TakeDamage(10f);
+                damageDisplay.Damage(10);
+                HSDamage.TakeDamage(10);
             }
             else
             {
-                damageDisplay.Persuade(10f);
-                HSPersuasion.Heal(10f);
+                damageDisplay.Persuade(10);
+                HSPersuasion.Heal(10);
             }
             numbersRevealed = true;
         }

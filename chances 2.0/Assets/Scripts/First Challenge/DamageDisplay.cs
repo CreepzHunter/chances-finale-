@@ -16,11 +16,11 @@ public class DamageDisplay : MonoBehaviour
         //damageText.text = " ";
     }
 
-    public void CheckLifeValue(float value)
+    public void CheckLifeValue(int value)
     {
         // Retrieve the life value
-        float lifeValue = Persuasion.health;
-        float life = Player.health;
+        int lifeValue = Persuasion.health;
+        int life = Player.health;
         // Check if the life value meets certain conditions (e.g., less than 50%)
 
         if (life > 0)
@@ -46,14 +46,14 @@ public class DamageDisplay : MonoBehaviour
 
     }
 
-    public void Damage(float value)
+    public void Damage(int value)
     {
         //Player.TakeDamage(value);
         damageText.text = "-" + value;
         StartCoroutine(FadeTxtD(value));
 
     }
-    public void Persuade(float value)
+    public void Persuade(int value)
     {
         //Persuasion.Persuasion(value);
         persuadeText.text = "+" + value;
@@ -62,7 +62,7 @@ public class DamageDisplay : MonoBehaviour
     }
 
 
-    IEnumerator FadeTxtD(float value)
+    IEnumerator FadeTxtD(int value)
     {
         damageText.CrossFadeAlpha(1f, 1.5f, false); // Fade in over 1.5 seconds
         yield return new WaitForSeconds(.3f);
@@ -71,7 +71,7 @@ public class DamageDisplay : MonoBehaviour
         damageText.text = ""; // Set the text back to "-10" or any desired value
         damageText.gameObject.SetActive(false);
     }
-    IEnumerator FadeTxtP(float value)
+    IEnumerator FadeTxtP(int value)
     {
         persuadeText.CrossFadeAlpha(1f, 1.5f, false); // Fade in over 1.5 seconds
         yield return new WaitForSeconds(.3f);

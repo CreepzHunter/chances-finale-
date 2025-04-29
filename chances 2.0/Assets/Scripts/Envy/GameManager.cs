@@ -224,23 +224,27 @@ public class GameManager : MonoBehaviour
     public void CheckTheGameFinished()
     {
         countCorrectGuesses++;
-        Debug.Log(countCorrectGuesses + " - " + gameGuesses);
         if (countCorrectGuesses == gameGuesses)
         {
             skillOption.HideShield();
 
             gameManagerEnvy.check = true;
 
-            enemyLife.TakeDamage(20f);
+            //  Damage *** Part
 
-            if (skillOption != null)
+            int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+            if (skillOption != null && skillOption.attack == true)
             {
-                if (skillOption.attack == true)
-                {
-                    enemyLife.TakeDamage(20f);
-                    skillOption.attack = false;
-                }
+                totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+
+                skillOption.attack = false;
             }
+
+            enemyLife.TakeDamage(totalDamage);
+            Debug.Log(totalDamage);
+
+            // ***
 
             Invoke("CallReturn", 1f);
 

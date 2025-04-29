@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameplayHealth : MonoBehaviour
 {
     public Image healthBar;
-    public float health = 100f;
+    public int health = 100;
     private HealthSystemPlayer pHealth;
     public AttackGluttony attackGluttony;
     [SerializeField] private StartBlinkingAnim blink;
@@ -23,10 +23,10 @@ public class GameplayHealth : MonoBehaviour
     }
     void OnEnable()
     {
-        health = 100f;
+        health = 100;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         if (health <= 0)
         {
@@ -44,7 +44,7 @@ public class GameplayHealth : MonoBehaviour
 
     }
 
-    public void Heal(float heal)
+    public void Heal(int heal)
     {
         health += heal;
         health = Mathf.Clamp(health, 0, 100);

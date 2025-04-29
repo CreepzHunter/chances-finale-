@@ -91,7 +91,7 @@ public class GameManagerGreedPride : MonoBehaviour
         if (number == 0)
         {
             // damage enemy
-            GreedLife.TakeDamage(22f);
+            GreedLife.TakeDamage(22);
 
             Invoke("ReturnAll", 1f);
         }

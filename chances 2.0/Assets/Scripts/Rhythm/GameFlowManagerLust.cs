@@ -91,7 +91,7 @@ public class GameFlowManagerLust : MonoBehaviour
         if (number == 0)
         {
             // damage enemy
-            lustLife.TakeDamage(22f);
+            lustLife.TakeDamage(22);
 
             Invoke("ReturnAll", 4f);
         }

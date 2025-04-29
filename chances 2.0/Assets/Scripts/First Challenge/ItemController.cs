@@ -31,7 +31,7 @@ public class ItemController : MonoBehaviour
         {
             button.SetActive(active);
         }
-        damageDisplay.CheckLifeValue(10f);
+        damageDisplay.CheckLifeValue(10);
 
     }
 

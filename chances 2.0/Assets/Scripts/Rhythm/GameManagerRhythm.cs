@@ -135,7 +135,8 @@ public class GameManagerRhythm : MonoBehaviour
     {
         currMultiplier = 1;
         trackMultiplier = 0;
-        gameplayLife.Heal(missedNote);
+        gameplayLife.Heal((int)missedNote);
+
         multiText.text = "Multiplier : x" + currMultiplier;
 
         consecutiveMissCount++;
@@ -154,7 +155,7 @@ public class GameManagerRhythm : MonoBehaviour
 
     void DealDamage(int score)
     {
-        float damage = (float)score / activeMusicAnalyzer.damageRatio; // Use the active MusicAnalyzer for damage calculation
+        int damage = (int)((float)score / activeMusicAnalyzer.damageRatio);
         gameplayLife.TakeDamage(damage);
     }
 }

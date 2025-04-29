@@ -49,7 +49,7 @@ public class Finish : MonoBehaviour
         enemyHealth.TakeDamage(rndatt);
         if (skillOption.attack == true)//activate more damage when skill
         {
-            enemyHealth.TakeDamage(25f);
+            enemyHealth.TakeDamage(25);
             skillOption.attack = false;
         }
         // Disable sloth-related GameObjects

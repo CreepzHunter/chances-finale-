@@ -36,7 +36,7 @@ public class MoveFood : MonoBehaviour
         {
             GameplayHealth health = FindObjectOfType<GameplayHealth>();
 
-            float rnd = Random.Range(10f, 20f);
+            int rnd = Random.Range(10, 20);
             if (health != null)
                 health.TakeDamage(rnd);
         }
