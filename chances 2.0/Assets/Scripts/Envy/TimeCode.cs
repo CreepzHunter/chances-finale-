@@ -8,7 +8,6 @@ public class TimeCode : MonoBehaviour
 {
     public TextMeshProUGUI countdownText;
     public SkillOption skillOption;
-    public HealthSystemPlayer healthSystemPlayer;
     public GameManager gameManager;
     public GameManagerEnvyNew gameManagerEnvy;
     public GameManagerSloth gameManagerSloth;
@@ -97,6 +96,8 @@ public class TimeCode : MonoBehaviour
                 {
                     //damages player 
                     gameManagerGreedPride.PlayerTakeDamage();
+
+
                 }
                 else
                 {

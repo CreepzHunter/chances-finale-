@@ -230,7 +230,7 @@ public class GameManager : MonoBehaviour
 
             gameManagerEnvy.check = true;
 
-            //  Damage *** Part
+            //  Damage Envy *** 
 
             int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
 
@@ -242,7 +242,6 @@ public class GameManager : MonoBehaviour
             }
 
             enemyLife.TakeDamage(totalDamage);
-            Debug.Log(totalDamage);
 
             // ***
 

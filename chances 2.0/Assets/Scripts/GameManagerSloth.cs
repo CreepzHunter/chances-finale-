@@ -121,6 +121,18 @@ public class GameManagerSloth : MonoBehaviour
             playerBack.SetActive(false);
             playerFront.SetActive(true);
 
+            //Cockroach Damage ***
+            int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+            if (skillOption != null && skillOption.attack == true)
+            {
+                totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+                skillOption.attack = false;
+            }
+
+            cockroachLife.TakeDamage(Random.Range(totalDamage, totalDamage + 10));
+
+            //***
             Invoke("AnimateCKAttack", 2.5f);
         }
 
@@ -140,8 +152,18 @@ public class GameManagerSloth : MonoBehaviour
 
                 if (number == 0)
                 {
-                    // damage enemy
-                    slothLife.TakeDamage(22);
+                    //Sloth Damage ***
+                    int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+                    if (skillOption != null && skillOption.attack == true)
+                    {
+                        totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+                        skillOption.attack = false;
+                    }
+
+                    slothLife.TakeDamage(Random.Range(totalDamage, totalDamage + 10));
+
+                    //***
                     Invoke("DisableVidAttackAnim", 3f);
 
                 }
@@ -201,27 +223,29 @@ public class GameManagerSloth : MonoBehaviour
         AttackCk();
         Invoke("DelayCameraCK", 1.2f);
 
-        int normalDmg = Random.Range(20, 30);
-        int skillDmg = 0;
 
-        if (skillOption.attack)
-        {
-            skillDmg = 25;
-            skillOption.attack = false;
-        }
 
-        int totalDmg = normalDmg + skillDmg;
-        cockroachLife.TakeDamage(totalDmg);
 
         playerBack.SetActive(true);
         playerFront.SetActive(false);
 
         Invoke("DisableAttackCk", 1.0f);
 
-        int damageToPlayer = Random.Range(0, 6);
+
+        // Damage Player
+        int damageToPlayer = Random.Range(5, 15);
         if (!skillOption.shield)
         {
-            healthSystemPlayer.TakeDamage(damageToPlayer);
+
+
+
+            //  Damage Player *** 
+
+            PlayerStats.Instance.PHealth -= damageToPlayer;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+
+            // ***
+
         }
         else
         {
@@ -323,25 +347,27 @@ public class GameManagerSloth : MonoBehaviour
 
     private void LevelChecker()
     {
-        if (slothLife.health >= 66)
+        float healthPercent = (float)slothLife.health / slothLife.maxHealth;
+
+        if (healthPercent >= 0.66f)
         {
             slothGameplay[0].SetActive(true);
             timeCodeGO.SetActive(true);
             timeCode.initialCountdownDuration = 20f;
         }
-        else if (slothLife.health < 66 && slothLife.health >= 33)
+        else if (healthPercent >= 0.33f)
         {
             slothGameplay[1].SetActive(true);
             timeCodeGO.SetActive(true);
             timeCode.initialCountdownDuration = 35f;
-
         }
-        else if (slothLife.health < 33 && slothLife.health > 1)
+        else if (healthPercent > 0f)
         {
             slothGameplay[2].SetActive(true);
             timeCodeGO.SetActive(true);
             timeCode.initialCountdownDuration = 50f;
         }
+
 
     }
     private void SlothActivate()
@@ -361,9 +387,10 @@ public class GameManagerSloth : MonoBehaviour
     {
         if (slothLife.health >= 0)
         {
-            SetTransform(slothIdle.transform, new Vector3(2.75097656f, 5.46099854f, 3.22000003f),
-                         new Quaternion(0.0f, 0.99995363f, 0.0f, 0.00963968f),
-                         new Vector3(0.18f, 0.18f, 0.18f));
+            SetTransform(slothIdle.transform,
+                new Vector3(2.75097656f, 5.46099854f, 3.22000003f),
+                new Quaternion(0.0f, 0.99995363f, 0.0f, 0.00963968f),
+                new Vector3(0.18f, 0.18f, 0.18f));
         }
     }
     private void SetTransform(Transform transform, Vector3 position, Quaternion rotation, Vector3 scale)

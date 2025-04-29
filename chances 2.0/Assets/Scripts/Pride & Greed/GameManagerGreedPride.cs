@@ -38,13 +38,13 @@ public class GameManagerGreedPride : MonoBehaviour
             enemyAnimations[2].SetActive(true);
             enemyAnimations[5].SetActive(true);
 
-            Invoke("LoadOverWorld", 0.8f);
+            Invoke("DemoWorld", 0.8f);
         }
         //player dead
-        if (healthSystemPlayer.health == 0)
+        if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
-            Invoke("LoadOverWorld", 1.06f);
+            Invoke("DemoWorld", 1.06f);
         }
 
     }
@@ -85,13 +85,22 @@ public class GameManagerGreedPride : MonoBehaviour
 
         EnemyAnimAttack();
 
-        int number = Random.Range(0, 2);
+        int number = Random.value < 0.6f ? 1 : 0;
         Debug.Log("number: " + number);
 
         if (number == 0)
         {
             // damage enemy
-            GreedLife.TakeDamage(22);
+
+            int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+            if (skillOption != null && skillOption.attack == true)
+            {
+                totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+                skillOption.attack = false;
+            }
+
+            GreedLife.TakeDamage(totalDamage);
 
             Invoke("ReturnAll", 1f);
         }
@@ -123,15 +132,16 @@ public class GameManagerGreedPride : MonoBehaviour
 
     public void EnemyTakeDamage()
     {
-        int damage = Random.Range(25, 35);
-        GreedLife.TakeDamage(15);
 
-        if (skillOption.attack == true)//activate more damage when skill
+        int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+        if (skillOption != null && skillOption.attack == true)
         {
-            GreedLife.TakeDamage(damage);
+            totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
             skillOption.attack = false;
         }
 
+        GreedLife.TakeDamage(totalDamage);
 
     }
     public void PlayerTakeDamage()
@@ -139,8 +149,8 @@ public class GameManagerGreedPride : MonoBehaviour
         int damage = Random.Range(10, 20);
         if (skillOption.shield == false)//immune damage if shielded
         {
-            healthSystemPlayer.TakeDamage(damage);
-
+            PlayerStats.Instance.PHealth -= damage;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
         }
         else if (skillOption.shield == true)
         {

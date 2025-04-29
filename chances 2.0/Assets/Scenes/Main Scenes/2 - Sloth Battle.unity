@@ -2139,6 +2139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 189650617}
   health: 100
+  maxHealth: 200
 --- !u!1 &211013115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3891,6 +3892,7 @@ GameObject:
   - component: {fileID: 545232233}
   - component: {fileID: 545232234}
   - component: {fileID: 545232231}
+  - component: {fileID: 545232235}
   m_Layer: 5
   m_Name: Life
   m_TagString: Untagged
@@ -3962,13 +3964,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545232229}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a74efcc86c05e4e8d461d8dd89deeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 545232231}
-  health: 50
+  health: 66
+--- !u!114 &545232235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545232229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca83e423cac73b9429886240712725ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 545232231}
 --- !u!1 &568856198
 GameObject:
   m_ObjectHideFlags: 0
@@ -4111,6 +4126,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3584540402981879693, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
+      propertyPath: MagicPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584540402981879693, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
+      propertyPath: AttackPower
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7166717609713391790, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4686,6 +4709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 612147114}
   health: 100
+  maxHealth: 100
 --- !u!222 &612147116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12231,7 +12255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &909487714
 Transform:
   m_ObjectHideFlags: 0
@@ -13303,7 +13327,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdownText: {fileID: 1064028562}
   skillOption: {fileID: 576409402}
-  healthSystemPlayer: {fileID: 545232234}
   gameManager: {fileID: 0}
   gameManagerEnvy: {fileID: 0}
   gameManagerSloth: {fileID: 639300196}

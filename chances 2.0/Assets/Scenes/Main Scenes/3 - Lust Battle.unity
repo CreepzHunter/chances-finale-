@@ -5108,6 +5108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 784717278}
   health: 100
+  maxHealth: 150
 --- !u!222 &784717280
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6609,6 +6610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1088841029}
   health: 100
+  maxHealth: 100
 --- !u!222 &1088841031
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9464,6 +9466,7 @@ GameObject:
   - component: {fileID: 1541853886}
   - component: {fileID: 1541853887}
   - component: {fileID: 1541853884}
+  - component: {fileID: 1541853888}
   m_Layer: 5
   m_Name: Life
   m_TagString: Untagged
@@ -9542,6 +9545,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1541853884}
   health: 50
+--- !u!114 &1541853888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541853882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca83e423cac73b9429886240712725ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1541853884}
 --- !u!1 &1570941096
 GameObject:
   m_ObjectHideFlags: 0

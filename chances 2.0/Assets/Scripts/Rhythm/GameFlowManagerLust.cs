@@ -57,7 +57,7 @@ public class GameFlowManagerLust : MonoBehaviour
             Invoke("DemoWorld", 1.06f);
         }
         //player dead
-        if (healthSystemPlayer.health == 0)
+        if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
 
@@ -153,16 +153,16 @@ public class GameFlowManagerLust : MonoBehaviour
         gameManagerRhythm.currentScore = 0;
         gameManagerRhythm.currMultiplier = 1;
 
-        int rndatt = Random.Range(15, 35);
-        if (skillOption.attack == true)//activate more damage when skill
-        {
-            Debug.Log("Did the skill damage work?");
-            skillOption.attack = false;
-            lustLife.TakeDamage(rndatt);
-        }
-        int random0to10 = Random.Range(10, 20);
 
-        lustLife.TakeDamage(random0to10);
+        int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+        if (skillOption != null && skillOption.attack == true)
+        {
+            totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+            skillOption.attack = false;
+        }
+
+        lustLife.TakeDamage(totalDamage);
 
 
         if (beatScroller.musicAnalyzer1GO.activeSelf)
@@ -196,15 +196,17 @@ public class GameFlowManagerLust : MonoBehaviour
 
         if (skillOption.shield == false)//immune damage if shielded
         {
-            healthSystemPlayer.TakeDamage(random0to10);
-            Debug.Log("Damage: " + random0to10);
+            //  Damage Player *** 
+
+            PlayerStats.Instance.PHealth -= random0to10;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+
+            // ***
 
         }
         else if (skillOption.shield == true)
         {
             skillOption.shield = false;
-            Debug.Log("Did this run ");
-
         }
 
 

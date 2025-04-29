@@ -3,7 +3,7 @@ using UnityEngine;
 public class MoveToTarget : MonoBehaviour
 {
     private Vector2 moveDirection;  // Direction to move in
-    private float speed;
+    public float speed;
 
     // Initialize with target's position and speed
     public void Initialize(Vector2 targetPos, float moveSpeed)

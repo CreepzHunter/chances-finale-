@@ -100,7 +100,7 @@ public class Skill : MonoBehaviour
         {
             if (cockroachLife.health != 0)
             {
-                gameManagerSloth.AnimateCKAttack();
+                gameManagerSloth.OnClickAttack();
             }
             else
             {
