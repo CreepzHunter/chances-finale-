@@ -626,8 +626,12 @@ namespace DialogueEditor
 
         private void TurnOnUI()
         {
+            PlayerController PController = GameObject.Find("player").GetComponent<PlayerController>();
+
             DialoguePanel.gameObject.SetActive(true);
             OptionsPanel.gameObject.SetActive(true);
+            
+            PController.Walking = false;
 
             if (BackgroundImage != null)
             {
@@ -644,8 +648,12 @@ namespace DialogueEditor
 
         private void TurnOffUI()
         {
+            PlayerController PController = GameObject.Find("player").GetComponent<PlayerController>();
             DialoguePanel.gameObject.SetActive(false);
             OptionsPanel.gameObject.SetActive(false);
+
+            PController.Walking = true;
+
             SetState(eState.Off);
 #if UNITY_EDITOR
             // Debug.Log("[ConversationManager]: Conversation UI off.");

@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     //camera
     [SerializeField] CinemachineVirtualCamera overworldCam;
     [SerializeField] CinemachineVirtualCamera closeCam;
+
+    //Bool
+    public bool Walking = true;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
@@ -28,6 +32,30 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(Walking)
+        {
+            walk();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        rb.velocity = movement.normalized * speed;
+    }
+    private void OnEnable()
+    {
+        CameraSwitcher.Register(overworldCam);
+        CameraSwitcher.Register(closeCam);
+        CameraSwitcher.SwitchCamera(overworldCam);
+    }
+    private void OnDisable()
+    {
+        CameraSwitcher.Unregister(overworldCam);
+        CameraSwitcher.Unregister(closeCam);
+    }
+
+   void walk()
+   {
     //Raycast
         RaycastHit hit;
         Vector3 castPos = transform.position;
@@ -75,23 +103,5 @@ public class PlayerController : MonoBehaviour
             }
         } 
 
-    }
-
-    void FixedUpdate()
-    {
-        rb.velocity = movement.normalized * speed;
-    }
-    private void OnEnable()
-    {
-        CameraSwitcher.Register(overworldCam);
-        CameraSwitcher.Register(closeCam);
-        CameraSwitcher.SwitchCamera(overworldCam);
-    }
-    private void OnDisable()
-    {
-        CameraSwitcher.Unregister(overworldCam);
-        CameraSwitcher.Unregister(closeCam);
-    }
-
-   
+   }
 }

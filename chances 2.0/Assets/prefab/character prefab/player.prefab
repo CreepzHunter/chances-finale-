@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8775323224599447916}
   - component: {fileID: 5461268082426411277}
   - component: {fileID: 8389047859161981532}
-  - component: {fileID: 2907618229097207624}
   - component: {fileID: 8308038538010639291}
   m_Layer: 0
   m_Name: player
@@ -108,6 +107,7 @@ MonoBehaviour:
   rb: {fileID: 6050574780504159053}
   overworldCam: {fileID: 0}
   closeCam: {fileID: 0}
+  Walking: 1
 --- !u!95 &5461268082426411277
 Animator:
   serializedVersion: 5
@@ -181,19 +181,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2907618229097207624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4951998225449442785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e946dd39c38e1414781f76500fb4c7c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freezeXZAxis: 0
 --- !u!114 &8308038538010639291
 MonoBehaviour:
   m_ObjectHideFlags: 0

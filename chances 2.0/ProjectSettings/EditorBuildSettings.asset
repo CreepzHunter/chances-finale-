@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/mainmenu.unity
     guid: 4562118d80a976c46968856850b30d63
   - enabled: 1
-    path: Assets/Scenes/1.gameplay.unity
-    guid: 76991280587bba04691e3964ce62b07f
+    path: Assets/Scenes/Updated Scenes/OverWorld.unity
+    guid: 5ca54b1dad9809d43be3eda0c57ded7f
   - enabled: 1
     path: Assets/Scenes/VN Scenes/1.heaven.unity
     guid: e7bc7a0ce0a0c4843b19421205075f82
@@ -19,28 +19,25 @@ EditorBuildSettings:
     guid: c1ee92ab40003434289f3d929bbe7f1f
   - enabled: 1
     path: Assets/Scenes/VN Scenes/3.Market.unity
-    guid: 1ff6f04cf56ac564faa33ace4efa4e5e
+    guid: b16170641c961bc4cafd0aa3fb5b5dd8
   - enabled: 1
-    path: Assets/Scenes/VN Scenes/4.schoolHallway.unity
-    guid: f541a11d14b8aad438fa1ddee096c188
+    path: Assets/Scenes/VN Scenes/4.Forest.unity
+    guid: d45f6552b6e313047bc89df419510e07
   - enabled: 1
-    path: Assets/Scenes/VN Scenes/5.stage.unity
-    guid: b5d6758505d4af64e88dd036e8d0b835
+    path: Assets/Scenes/VN Scenes/5.Office.unity
+    guid: d0339a58c1ad05c42a9d169b299dcb29
   - enabled: 1
     path: Assets/Scenes/VN Scenes/6.Kitchen.unity
-    guid: 0b7e8c00c2b4de44e8a544bb3db0d0ee
+    guid: 2856400212afd5c41be0da83be9564fb
   - enabled: 1
-    path: Assets/Scenes/VN Scenes/7.bar.unity
-    guid: 4154fc72540a9c34bad6a170fe6b1630
+    path: Assets/Scenes/VN Scenes/7. Hallway.unity
+    guid: 9f5590c41671d2544834f58b413f1a13
   - enabled: 1
-    path: Assets/Scenes/VN Scenes/8.officehallway.unity
-    guid: 97a17caab499b6243989d9fedf1f4edc
+    path: Assets/Scenes/VN Scenes/8. City Hall.unity
+    guid: 6fe6fc41c7019e34ca4b5e941c015d53
   - enabled: 1
-    path: Assets/Scenes/VN Scenes/9.office.unity
-    guid: 77897f9331e53b94baaf01207e65198c
-  - enabled: 1
-    path: Assets/Scenes/VN Scenes/10.pres office.unity
-    guid: 866d428a94efef24690c7518ed16ea27
+    path: Assets/Scenes/VN Scenes/9. Bar.unity
+    guid: 97561264e318af44f88c6b36725bd44a
   - enabled: 1
     path: Assets/Scenes/Main Scenes/1 - Envy Battle.unity
     guid: 9d285b5c180450548a750f5b3089fd12
@@ -54,8 +51,71 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Scenes/4 - Greed & Pride Test.unity
     guid: 978292e9814a92940b9a37fb2d0d4d51
   - enabled: 1
-    path: Assets/Scenes/VN Scenes/11.forest.unity
-    guid: 25229456abbf00f42b2284b6446eef5a
+    path: Assets/Scenes/Main Scenes/5 - Gluttony Battle.unity
+    guid: 95876a6e32679e54bbe2615be19ef03a
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/6 - Wrath Battle.unity
+    guid: 4a6da24f1a1b3914b803e318d83e46f3
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/1. Awakening (Cutscene).unity
+    guid: d2513419d4ca4cc4aa076baecb4a5078
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Boss cutscene/1. Envy encounter.unity
+    guid: 99793db5808415444b1f2194b4872391
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Boss cutscene/2.sloth encounter.unity
+    guid: 040a7ddf56b54244585aac54001640a6
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Boss cutscene/3. wrath.unity
+    guid: fcd6ac2f962f4764fb1f653c1817d1ed
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Boss cutscene/4. glutony encounter.unity
+    guid: 922ec27251a595e4bb6b057231757bb7
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Boss cutscene/5.Pride & Greed encounter.unity
+    guid: 14b3a612817415943b2af26d77f17449
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Boss cutscene/6. lust Encounter.unity
+    guid: c600e110ec01be846bbacd03cadb0a3f
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/cleanse cutscene/1. Envy Cleanse.unity
+    guid: 1046f40d8bcafbd42984462f3ae487c9
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/cleanse cutscene/2. Sloth Cleanse.unity
+    guid: c65b1e39505dde849a95ba721fd903e5
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/cleanse cutscene/3.Gluttony Cleanse.unity
+    guid: 5e2a858b9655b8748a08fe85d31d80e9
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/cleanse cutscene/4. Pride & Greed Cleanse.unity
+    guid: c47bbd24b93d50e4eb90e29c1858b958
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/cleanse cutscene/5. Lust Cleanse.unity
+    guid: d7b009a2e58bdff43a7683dce928b367
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/cleanse cutscene/6. wraith Cleanse.unity
+    guid: 11fcacf668e0ae74bb60a1a398d8d8d7
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Post Battle/1. envy Post battle.unity
+    guid: 51ff69ddfcd1456428b38f0fc5c92afd
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Post Battle/2. Sloth post battle.unity
+    guid: bb6f0cc27ae54aa40a12b23afc567235
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Post Battle/3. gluttony post battle.unity
+    guid: 580a148ff7014b94f9f363513e252dc1
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Post Battle/4. pride and greed post battle.unity
+    guid: a20bff940cd3f6c4a8aa3d16925f5dd5
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Post Battle/5.lust post battle.unity
+    guid: 483289a6873a019438cff7f7c1db3e44
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Post Battle/6. wraith post battle.unity
+    guid: e95bf47d5a4306a4cb48baa8ae24939d
+  - enabled: 1
+    path: Assets/Scenes/Cutscene/Post Battle/7. Ending.unity
+    guid: 144dd034bae97a048af98d5c7dec97ef
   - enabled: 1
     path: Assets/Scenes/Updated Scenes/demo.unity
     guid: a7fb48970f38819429135df3e67f4ef5
