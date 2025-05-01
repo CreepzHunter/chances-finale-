@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         youWin.SetActive(false);
 
         GetButtons();
-        LevelUpProgression();
+        // LevelUpProgression();
         AddListeners(); //button listener
         AddGamePuzzles(); // add game puzezle
         Shuffle(gamePuzzles); // shuffle the game puzzle
@@ -187,18 +187,19 @@ public class GameManager : MonoBehaviour
             btn.image.color = Color.white;
             btn.image.sprite = bgImage;
         }
+        float percent = enemyLife.health / enemyLife.maxHealth * 100f;
 
-        if (enemyLife.health >= 80)
+        if (percent >= 80f)
         {
             timeCode.initialCountdownDuration = 20f;
         }
-        else if (enemyLife.health <= 80 && enemyLife.health >= 60)
+        else if (percent >= 60f && percent <= 80f)
         {
             timeCode.initialCountdownDuration = 15f;
         }
-        else if (enemyLife.health <= 60)
+        else if (percent == 40f)
         {
-            timeCode.initialCountdownDuration = 10f;
+            timeCode.initialCountdownDuration = 15f;
         }
         GetButtons();
 
@@ -263,7 +264,8 @@ public class GameManager : MonoBehaviour
                 Timer.SetActive(false);
             }
 
-            LevelUpProgression();
+            // LevelUpProgression();
+            addButtons.totalBoxes += 2;
 
 
             toShow.ToList().ForEach(button =>
@@ -282,22 +284,22 @@ public class GameManager : MonoBehaviour
 
 
 
-    private void LevelUpProgression()
-    {
-        if (enemyLife.health > 80 && enemyLife.health <= 90)
-        {
-            addButtons.totalBoxes += 2;
-        }
-        else if (enemyLife.health >= 60 && enemyLife.health <= 80)
-        {
-            addButtons.totalBoxes += 2;
-        }
-        else if (enemyLife.health == 40)
-        {
-            addButtons.totalBoxes += 2;
-        }
+    // private void LevelUpProgression()
+    // {
+    //     if (enemyLife.health > 80 && enemyLife.health <= 90)
+    //     {
+    //         addButtons.totalBoxes += 2;
+    //     }
+    //     else if (enemyLife.health >= 60 && enemyLife.health <= 80)
+    //     {
+    //         addButtons.totalBoxes += 2;
+    //     }
+    //     else if (enemyLife.health == 40)
+    //     {
+    //         addButtons.totalBoxes += 2;
+    //     }
 
-    }
+    // }
 
     private void CallReturn()
     {

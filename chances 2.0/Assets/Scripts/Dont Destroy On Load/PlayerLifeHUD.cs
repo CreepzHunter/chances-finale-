@@ -17,7 +17,6 @@ public class PlayerLifeHUD : MonoBehaviour
 
         healthBar.fillAmount = current / max;
 
-        Debug.Log(PlayerPrefs.GetInt("PHealth"));
     }
 
 

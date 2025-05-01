@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using TMPro;
 
 
 public class Item : MonoBehaviour
@@ -19,14 +20,12 @@ public class Item : MonoBehaviour
     public HealthSystem cockroachLife;
     public Button[] buttons;
 
+    public TextMeshProUGUI skillS;
+    public TextMeshProUGUI skillM;
+    public TextMeshProUGUI healthS;
+    public TextMeshProUGUI healthM;
 
-    // Inventory counts
-    private int smallBottleCount = 3;
-    private int midBottleCount = 2;
-    private int largeBottleCount = 1;
-    private int appleCount = 5;
-    private int chocolateCount = 3;
-    private int medkitCount = 1;
+
 
     [SerializeField] private GameObject playerBack;
     [SerializeField] private GameObject playerItem;
@@ -44,6 +43,36 @@ public class Item : MonoBehaviour
             Invoke("Inventory", 0.4f);
         }
     }
+    void Start()
+    {
+        // Assign listeners to buttons
+        buttons[0].onClick.AddListener(() => UseSmallBottle());
+        buttons[1].onClick.AddListener(() => UseMidBottle());
+        buttons[4].onClick.AddListener(() => EatChocolate());
+        buttons[5].onClick.AddListener(() => UseMedkit());
+
+        ItemStats.Instance.smallBottle = PlayerPrefs.GetInt("SmallBottle", 0);
+        ItemStats.Instance.largeBottle = PlayerPrefs.GetInt("LargeBottle", 0);
+        ItemStats.Instance.smallMedkit = PlayerPrefs.GetInt("SmallMedkit", 0);
+        ItemStats.Instance.largeMedkit = PlayerPrefs.GetInt("LargeMedkit", 0);
+
+        // Initialize button states
+        UpdateButtonStates();
+    }
+
+    void Update()
+    {
+        UpdateItemValue();
+    }
+
+    void UpdateItemValue()
+    {
+        skillS.text = ItemStats.Instance.smallBottle.ToString();
+        skillM.text = ItemStats.Instance.largeBottle.ToString();
+        healthS.text = ItemStats.Instance.smallMedkit.ToString();
+        healthM.text = ItemStats.Instance.largeMedkit.ToString();
+    }
+
 
     #region skill animation
     private void AnimatePlayer()
@@ -125,120 +154,94 @@ public class Item : MonoBehaviour
         }
         if (attackGluttony != null)
         {
-            attackGluttony.PlayGame();
-            cameraSwitch.SlothGame();
-            Camera.main.orthographic = true;
+            attackGluttony.EnemyAnimAttack();
+
+            Invoke("GluttonyPlayGame", 1f);
+
+            // ItemStats.Instance.smallBottle += 10;
+            // ItemStats.Instance.largeBottle += 10;
+            // ItemStats.Instance.smallMedkit += 10;
+            // ItemStats.Instance.largeMedkit += 10;
+            // PlayerPrefs.SetInt("SmallBottle", ItemStats.Instance.smallBottle);
+            // PlayerPrefs.SetInt("LargeBottle", ItemStats.Instance.largeBottle);
+            // PlayerPrefs.SetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
+            // PlayerPrefs.SetInt("LargeMedkit", ItemStats.Instance.largeMedkit);
+            // PlayerPrefs.Save();
         }
         if (gameManagerWrath != null)
         {
-            gameManagerWrath.ReturnAnimation();
+            gameManagerWrath.OnClickAttack();
         }
+    }
+
+    private void GluttonyPlayGame()
+    {
+        attackGluttony.PlayGame();
     }
 
     #endregion
 
     #region inventory system
-    void Start()
-    {
-        // Assign listeners to buttons
-        buttons[0].onClick.AddListener(() => UseSmallBottle());
-        buttons[1].onClick.AddListener(() => UseMidBottle());
-        buttons[2].onClick.AddListener(() => UseLargeBottle());
-        buttons[3].onClick.AddListener(() => EatApple());
-        buttons[4].onClick.AddListener(() => EatChocolate());
-        buttons[5].onClick.AddListener(() => UseMedkit());
 
-        // Initialize button states
-        UpdateButtonStates();
-    }
 
     void UpdateButtonStates()
     {
-        buttons[0].interactable = smallBottleCount > 0;
-        buttons[1].interactable = midBottleCount > 0;
-        buttons[2].interactable = largeBottleCount > 0;
-        buttons[3].interactable = appleCount > 0;
-        buttons[4].interactable = chocolateCount > 0;
-        buttons[5].interactable = medkitCount > 0;
+        buttons[0].interactable = ItemStats.Instance.smallBottle > 0;
+        buttons[1].interactable = ItemStats.Instance.largeBottle > 0;
+        buttons[4].interactable = ItemStats.Instance.smallMedkit > 0;
+        buttons[5].interactable = ItemStats.Instance.smallBottle > 0;
     }
 
     void UseSmallBottle()
     {
-        if (smallBottleCount > 0)
+        if (ItemStats.Instance.smallBottle > 0)
         {
             PlayerStats.Instance.PSkill++;
+            ItemStats.Instance.smallBottle--;
             PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
-            smallBottleCount--;
+            PlayerPrefs.SetInt("SmallBottle", ItemStats.Instance.smallBottle);
             UpdateButtonStates();
             DoneItem();
-            Debug.Log("Used Small Bottle. Remaining: " + smallBottleCount);
         }
     }
 
     void UseMidBottle()
     {
-        if (midBottleCount > 0)
+        if (ItemStats.Instance.largeBottle > 0)
         {
             PlayerStats.Instance.PSkill += 2;
+            ItemStats.Instance.largeBottle--;
             PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
+            PlayerPrefs.SetInt("LargeBottle", ItemStats.Instance.largeBottle);
             UpdateButtonStates();
             DoneItem();
-            Debug.Log("Used Mid Bottle. Remaining: " + midBottleCount);
-        }
-    }
-
-    void UseLargeBottle()
-    {
-        if (largeBottleCount > 0)
-        {
-            PlayerStats.Instance.PSkill += 2;
-            PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
-            PlayerStats.Instance.PHealth += 5;
-            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
-            largeBottleCount--;
-            DoneItem();
-            UpdateButtonStates();
-            Debug.Log("Used Large Bottle. Remaining: " + largeBottleCount);
-        }
-    }
-
-    void EatApple()
-    {
-        if (appleCount > 0)
-        {
-            PlayerStats.Instance.PHealth += 5;
-            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
-            appleCount--;
-            DoneItem();
-            UpdateButtonStates();
-            Debug.Log("Ate Apple. Remaining: " + appleCount);
         }
     }
 
     void EatChocolate()
     {
-        if (chocolateCount > 0)
+        if (ItemStats.Instance.smallMedkit > 0)
         {
-            PlayerStats.Instance.PHealth += 10;
+            PlayerStats.Instance.PHealth += 15;
+            ItemStats.Instance.smallMedkit--;
             PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
-            chocolateCount--;
+            PlayerPrefs.SetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
             DoneItem();
             UpdateButtonStates();
-            Debug.Log("Ate Chocolate. Remaining: " + chocolateCount);
         }
     }
 
     void UseMedkit()
     {
-        if (medkitCount > 0)
+        if (ItemStats.Instance.largeMedkit > 0)
         {
-            PlayerStats.Instance.PHealth += 20;
+            PlayerStats.Instance.PHealth += 40;
+            ItemStats.Instance.largeMedkit--;
             PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
-            medkitCount--;
+            PlayerPrefs.SetInt("LargeMedkit", ItemStats.Instance.largeMedkit);
             DoneItem();
             UpdateButtonStates();
-            Debug.Log("Used Medkit. Remaining: " + medkitCount);
         }
+        #endregion
     }
-    #endregion 
 }

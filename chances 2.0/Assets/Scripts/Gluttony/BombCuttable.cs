@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BombCuttable : MonoBehaviour
 {
-    private HealthSystemPlayer healthSystemPlayer;
     private Animator mAnimator;
     private SkillManager skillManager;
     private SpriteRenderer spriteRenderer;
@@ -14,7 +13,6 @@ public class BombCuttable : MonoBehaviour
     {
         gameplayHealth = FindObjectOfType<GameplayHealth>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        healthSystemPlayer = FindObjectOfType<HealthSystemPlayer>();
         skillManager = FindObjectOfType<SkillManager>();
         mAnimator = GetComponent<Animator>();
     }
@@ -23,10 +21,7 @@ public class BombCuttable : MonoBehaviour
         if (other.gameObject.tag == "Cut")
         {
             // deduct life and skill
-            if (healthSystemPlayer.health > 0)
-            {
-                healthSystemPlayer.health -= 10;
-            }
+
             if (PlayerStats.Instance.PSkill > 0)
             {
                 PlayerStats.Instance.PSkill--;

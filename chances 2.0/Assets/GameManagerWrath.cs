@@ -12,6 +12,7 @@ public class GameManagerWrath : MonoBehaviour
     public Camera camera;
     public SkillOption skillOption;
     public TimeCode timeCode;
+    public StartBlinkingAnim blink;
 
 
     [SerializeField] private GameObject playerLife;
@@ -48,6 +49,8 @@ public class GameManagerWrath : MonoBehaviour
 
     private void DemoWorld()
     {
+        PlayerPrefs.Save();
+
         SceneManager.LoadScene(1);
     }
     public void OnClickAttack()
@@ -62,25 +65,16 @@ public class GameManagerWrath : MonoBehaviour
 
             // player animation
             playerVids[0].SetActive(true);
-
+            Invoke("RandomBattleOutcome", 3f);
             //return animation
-            Invoke("ReturnAnimation", 3f);
         }
     }
 
-    public void ReturnAnimation()
-    {
-        playerVids[0].SetActive(false);
 
-        EnemyAnimAttack();
-
-
-        Invoke(nameof(ReturnEnemyAnim), 4.5f);
-    }
     private void RandomBattleOutcome()
     {
         int number = Random.value < 0.6f ? 1 : 0;
-        Debug.Log("number: " + number);
+        playerVids[0].SetActive(false);
 
         if (number == 0)
         {
@@ -88,27 +82,38 @@ public class GameManagerWrath : MonoBehaviour
             int attackpower = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
 
             wrathLife.TakeDamage(attackpower);
+            blink.StartBlinking(1);
+
 
             Invoke("ReturnAll", 1f);
         }
         else if (number == 1)
         {
-            Invoke("PlayGame", 1f);
+            ReturnAnimation();
         }
         senemyLife.SetActive(false);
     }
 
+    public void ReturnAnimation()
+    {
+
+        EnemyAnimAttack();
+
+
+        Invoke(nameof(ReturnEnemyAnim), 4.5f);
+    }
     public void EnemyAnimAttack()
     {
         enemyAnimations[1].SetActive(true);
     }
+
 
     public void ReturnEnemyAnim()
     {
         enemyAnimations[0].SetActive(true);
         enemyAnimations[1].SetActive(false);
 
-        RandomBattleOutcome();
+        PlayGame();
     }
 
     public void EnemyTakeDamage()
@@ -122,6 +127,8 @@ public class GameManagerWrath : MonoBehaviour
         }
 
         wrathLife.TakeDamage(totalDamage);
+        blink.StartBlinking(1);
+
 
 
 
@@ -140,6 +147,8 @@ public class GameManagerWrath : MonoBehaviour
         {
             skillOption.shield = false;
         }
+        blink.StartBlinking(0);
+
     }
 
 

@@ -113,9 +113,9 @@ public class Skill : MonoBehaviour
         }
         if (attackGluttony != null)
         {
-            attackGluttony.PlayGame();
-            cameraSwitch.SlothGame();
-            Camera.main.orthographic = true;
+            attackGluttony.EnemyAnimAttack();
+
+            Invoke("GluttonyPlayGame", 1f);
         }
         if (gameManagerWrath != null)
         {
@@ -123,7 +123,10 @@ public class Skill : MonoBehaviour
         }
 
     }
-
+    private void GluttonyPlayGame()
+    {
+        attackGluttony.PlayGame();
+    }
     public void ReturnAll()
     {
         ckenemyLife?.SetActive(true);

@@ -13,10 +13,14 @@ public class AttackGluttony : MonoBehaviour
     [SerializeField] private GameObject enemyParent;
     [SerializeField] private GameObject gameplay;
     [SerializeField] private StartBlinkingAnim blink;
+
+
     public SkillOption skillOption;
 
-
     private bool hasLoaded = false;
+
+
+
 
     void Update()
     {
@@ -25,12 +29,15 @@ public class AttackGluttony : MonoBehaviour
         if (eHealth.health <= 0)
         {
             hasLoaded = true;
+            PlayerPrefs.Save();
             DemoWorld();
         }
         if (PlayerStats.Instance.PHealth == 0)
         {
 
+            PlayerPrefs.Save();
             DemoWorld();
+
         }
     }
     private void DemoWorld()
@@ -50,13 +57,15 @@ public class AttackGluttony : MonoBehaviour
 
     }
 
-    private void Attack()
+    public void Attack()
     {
-        int number = Random.value < 0.7f ? 1 : 0;
+        int number = Random.value < 0.6f ? 1 : 0;
         //1 appear 60% and 0 appear 40%
 
         if (number == 0)
         {
+
+            pAnimations[0].SetActive(true);
             int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
 
             if (skillOption != null && skillOption.attack == true)
@@ -76,7 +85,6 @@ public class AttackGluttony : MonoBehaviour
             Invoke("EnemyAnimAttack", 2.8f);
 
             //camera switch
-            cameraSwitch.SlothGame();
             Invoke("PlayGame", 5f);
         }
     }
@@ -89,21 +97,23 @@ public class AttackGluttony : MonoBehaviour
     public void PlayGame()
     {
         buttons[3].SetActive(false);
+        cameraSwitch.SlothGame();
         Camera.main.orthographic = true;
 
         gameplay.SetActive(true);
     }
 
     #region Animations
-    private void EnemyAnimAttack()
+    public void EnemyAnimAttack()
     {
         eAnimations[0].SetActive(true);
         Invoke("ReturnAnimation", 2.8f);
     }
-    private void PlayerAnimAttack()
+    public void PlayerAnimAttack()
     {
         pAnimations[0].SetActive(true);
         Invoke("ReturnAnimation", 2.8f);
+        // Invoke("Attack", 2.8f);
 
         Attack();
     }
@@ -141,7 +151,7 @@ public class AttackGluttony : MonoBehaviour
 
     }
 
-    private void CallBllink()
+    private void CallBlink()
     {
         blink.StartBlinking(0);
     }

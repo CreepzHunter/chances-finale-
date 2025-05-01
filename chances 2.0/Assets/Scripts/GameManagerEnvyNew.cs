@@ -23,6 +23,7 @@ public class GameManagerEnvyNew : MonoBehaviour
     [SerializeField] private GameObject envyBoss;
     [SerializeField] private GameObject envyGameplay;
     [SerializeField] private GameObject playerLife;
+    public StartBlinkingAnim blink;
     //SlothSection
 
 
@@ -46,6 +47,7 @@ public class GameManagerEnvyNew : MonoBehaviour
 
             // Invoke("LoadOverWorld", 0.8f);
             Invoke("DemoWorld", 1.06f);
+            PlayerPrefs.Save();
 
         }
 
@@ -56,6 +58,8 @@ public class GameManagerEnvyNew : MonoBehaviour
 
             // Invoke("LoadOverWorld", 1.06f);
             Invoke("DemoWorld", 1.06f);
+            PlayerPrefs.Save();
+
 
         }
     }
@@ -156,7 +160,7 @@ public class GameManagerEnvyNew : MonoBehaviour
 
         // damage enemy 1 or play game 2
         int number = Random.Range(0, 2);
-
+        // int number = 1;
         if (number == 0)
         {
             // damage enemy
@@ -172,6 +176,7 @@ public class GameManagerEnvyNew : MonoBehaviour
             }
 
             envyLife.TakeDamage(totalDamage);
+            blink.StartBlinking(0);
 
             ReturnAll();
         }

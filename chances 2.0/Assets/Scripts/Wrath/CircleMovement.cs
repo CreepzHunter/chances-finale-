@@ -14,6 +14,7 @@ public class CircleMovement : MonoBehaviour
     private bool isAtPositionA = true;
     private bool canTeleport = true;
     [SerializeField] private float teleportCooldown = 0.5f;
+    public TimeCode timeCode;
 
     public GameManagerWrath gameManagerWrath;
     void Update()
@@ -60,6 +61,7 @@ public class CircleMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             transform.position = spawnPoint.position;
+            timeCode.countdownTimer -= 2;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

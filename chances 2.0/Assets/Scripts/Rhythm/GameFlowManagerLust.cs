@@ -32,7 +32,7 @@ public class GameFlowManagerLust : MonoBehaviour
     private MusicAnalyzer musicAnalyzer;
     private int currentLevel = 0;
     public GameObject gameover;
-
+    public StartBlinkingAnim blink;
     void Start()
     {
         gameLife.DisableRhythm();
@@ -55,6 +55,8 @@ public class GameFlowManagerLust : MonoBehaviour
 
             // Invoke("LoadOverWorld", 0.8f);
             Invoke("DemoWorld", 1.06f);
+            PlayerPrefs.Save();
+
         }
         //player dead
         if (PlayerStats.Instance.PHealth == 0)
@@ -63,6 +65,8 @@ public class GameFlowManagerLust : MonoBehaviour
 
             // Invoke("LoadOverWorld", 1.06f);
             Invoke("DemoWorld", 1.06f);
+            PlayerPrefs.Save();
+
         }
 
     }
@@ -94,6 +98,7 @@ public class GameFlowManagerLust : MonoBehaviour
             int attackpower = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
 
             lustLife.TakeDamage(attackpower);
+            blink.StartBlinking(0);
 
             Invoke("ReturnAll", 4f);
         }
@@ -165,6 +170,7 @@ public class GameFlowManagerLust : MonoBehaviour
         }
 
         lustLife.TakeDamage(totalDamage);
+        blink.StartBlinking(0);
 
 
         if (beatScroller.musicAnalyzer1GO.activeSelf)
@@ -195,6 +201,9 @@ public class GameFlowManagerLust : MonoBehaviour
 
 
         int random0to10 = Random.Range(10, 20);
+
+        PlayerStats.Instance.PHealth -= random0to10;
+        PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
 
         if (skillOption.shield == false)//immune damage if shielded
         {

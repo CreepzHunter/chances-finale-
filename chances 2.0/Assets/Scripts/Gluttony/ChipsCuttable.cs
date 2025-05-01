@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ChipsCuttable : MonoBehaviour
 {
-    private HealthSystemPlayer healthSystemPlayer;
     private SpriteRenderer spriteRenderer;
     private GameplayHealth gameplayHealth;
 
@@ -13,7 +12,6 @@ public class ChipsCuttable : MonoBehaviour
         gameplayHealth = FindObjectOfType<GameplayHealth>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-        healthSystemPlayer = FindObjectOfType<HealthSystemPlayer>();
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -21,10 +19,7 @@ public class ChipsCuttable : MonoBehaviour
         if (other.gameObject.tag == "Cut")
         {
             // Deduct health if the reference is set
-            if (healthSystemPlayer.health >= 0)
-            {
-                healthSystemPlayer.health -= 10;
-            }
+
             int rnd = Random.Range(15, 30);
             gameplayHealth.TakeDamage(rnd);
             StartCoroutine(FadeAndDestroy());

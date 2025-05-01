@@ -39,13 +39,23 @@ public class GameManagerGreedPride : MonoBehaviour
             enemyAnimations[5].SetActive(true);
 
             Invoke("DemoWorld", 0.8f);
+            PlayerPrefs.Save();
+
         }
         //player dead
         if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
             Invoke("DemoWorld", 1.06f);
+            PlayerPrefs.Save();
+
         }
+
+    }
+
+    private void DemoWorld()
+    {
+        //SceneManager Heree!
 
     }
 

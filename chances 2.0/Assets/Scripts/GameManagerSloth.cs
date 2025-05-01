@@ -55,6 +55,8 @@ public class GameManagerSloth : MonoBehaviour
 
 
             Invoke("DemoWorld", 1.06f);
+            PlayerPrefs.Save();
+
         }
         if (cockroachLife.health == 0)
         {
@@ -76,6 +78,8 @@ public class GameManagerSloth : MonoBehaviour
             // Invoke("LoadOverWorld", 1.06f);sss
 
             Invoke("DemoWorld", 1.06f);
+            PlayerPrefs.Save();
+
         }
 
     }
