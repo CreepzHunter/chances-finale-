@@ -8,12 +8,10 @@ public class ConvoAdderValue : MonoBehaviour
     public convoManager CM;
     public int Number;
 
-    void OnTriggerEnter(Collider other)
+    public void addValue()
     {
-        if (other.CompareTag("Player"))
-        {
+        
             CM.Adder(Number);
             Debug.Log("value has been added");
-        }
     }
 }

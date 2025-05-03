@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa80eddeff98cf9419d1a6481e228191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumber: 1
+  SceneNumber: 14
   SecondsToWait: 21
   SceneLoader: {fileID: 1802488}
 --- !u!95 &1802488

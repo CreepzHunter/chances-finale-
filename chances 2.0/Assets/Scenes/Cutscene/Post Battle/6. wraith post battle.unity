@@ -618,6 +618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scene
       objectReference: {fileID: 0}
+    - target: {fileID: 7387860537602178309, guid: ca92ca4256cc6ca40a2cea30488b26df, type: 3}
+      propertyPath: SceneNumber
+      value: 29
+      objectReference: {fileID: 0}
     - target: {fileID: 8642242543599522110, guid: ca92ca4256cc6ca40a2cea30488b26df, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -729,6 +733,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1561290326}
   - component: {fileID: 1561290327}
+  - component: {fileID: 1561290328}
+  - component: {fileID: 1561290341}
+  - component: {fileID: 1561290340}
+  - component: {fileID: 1561290339}
+  - component: {fileID: 1561290338}
+  - component: {fileID: 1561290337}
   - component: {fileID: 1561290336}
   - component: {fileID: 1561290335}
   - component: {fileID: 1561290334}
@@ -737,7 +747,6 @@ GameObject:
   - component: {fileID: 1561290331}
   - component: {fileID: 1561290330}
   - component: {fileID: 1561290329}
-  - component: {fileID: 1561290328}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -777,7 +786,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 21300000, guid: 69ea184db625737448cbedab109ef17e, type: 3}
+  Icon: {fileID: 21300000, guid: 689cab7220e570f48bb3b38889dcbec8, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290328
 MonoBehaviour:
@@ -825,9 +834,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
-  NodeID: 9
+  NodeID: 23
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 21300000, guid: 2c85875c7e0752640a20d77bfea8fe36, type: 3}
+  Icon: {fileID: 21300000, guid: d5cc114f46cefc94d8d452a4fa9e9831, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290330
 MonoBehaviour:
@@ -844,9 +853,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
-  NodeID: 8
+  NodeID: 22
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 21300000, guid: 2c85875c7e0752640a20d77bfea8fe36, type: 3}
+  Icon: {fileID: 21300000, guid: d5cc114f46cefc94d8d452a4fa9e9831, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290331
 MonoBehaviour:
@@ -863,9 +872,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
-  NodeID: 7
+  NodeID: 21
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 21300000, guid: 69ea184db625737448cbedab109ef17e, type: 3}
+  Icon: {fileID: 21300000, guid: 80203f1bdd3d1c849855e4917c1d2733, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290332
 MonoBehaviour:
@@ -882,9 +891,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
-  NodeID: 6
+  NodeID: 20
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: ae95ca82f3bf5804cb69bdbc79797412, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290333
 MonoBehaviour:
@@ -901,9 +910,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
-  NodeID: 5
+  NodeID: 19
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 2e76b9d8d474804458d36688ea83d178, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290334
 MonoBehaviour:
@@ -920,9 +929,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
-  NodeID: 4
+  NodeID: 18
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 21300000, guid: 2c85875c7e0752640a20d77bfea8fe36, type: 3}
+  Icon: {fileID: 21300000, guid: 074eeed215a41254589d51b227c4052b, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290335
 MonoBehaviour:
@@ -939,9 +948,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
-  NodeID: 3
+  NodeID: 17
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 21300000, guid: 6a5da2fcd6bd9684b9fdc100e98aada5, type: 3}
+  Icon: {fileID: 21300000, guid: 10a9ad1cd96107449b2191dd9df8ab04, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290336
 MonoBehaviour:
@@ -958,9 +967,104 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
-  NodeID: 2
+  NodeID: 16
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 21300000, guid: cf477fc065a027341b325284c39116ce, type: 3}
+  Icon: {fileID: 21300000, guid: 689cab7220e570f48bb3b38889dcbec8, type: 3}
+  Audio: {fileID: 0}
+--- !u!114 &1561290337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561290325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 15
+  TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  Icon: {fileID: 21300000, guid: 2e76b9d8d474804458d36688ea83d178, type: 3}
+  Audio: {fileID: 0}
+--- !u!114 &1561290338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561290325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 14
+  TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  Icon: {fileID: 21300000, guid: 80203f1bdd3d1c849855e4917c1d2733, type: 3}
+  Audio: {fileID: 0}
+--- !u!114 &1561290339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561290325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 13
+  TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  Icon: {fileID: 21300000, guid: 10a9ad1cd96107449b2191dd9df8ab04, type: 3}
+  Audio: {fileID: 0}
+--- !u!114 &1561290340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561290325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 12
+  TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  Icon: {fileID: 21300000, guid: 80203f1bdd3d1c849855e4917c1d2733, type: 3}
+  Audio: {fileID: 0}
+--- !u!114 &1561290341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561290325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 11
+  TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  Icon: {fileID: 21300000, guid: 10a9ad1cd96107449b2191dd9df8ab04, type: 3}
   Audio: {fileID: 0}
 --- !u!1 &1575449605
 GameObject:
@@ -1046,6 +1150,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1811134981}
+  - component: {fileID: 1811134985}
+  - component: {fileID: 1811134984}
+  - component: {fileID: 1811134983}
+  - component: {fileID: 1811134982}
   m_Layer: 0
   m_Name: Conversation manager
   m_TagString: Untagged
@@ -1070,6 +1178,78 @@ Transform:
   - {fileID: 1971664604}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1811134982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811134980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3399c455d2d5834dbcc835d66fbb836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 0}
+  TheEvent: 1
+--- !u!114 &1811134983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811134980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981cf080f5027e74aabb5cd32e4f283b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstPath: {fileID: 0}
+  SecondPath: {fileID: 0}
+  ThirdPath: {fileID: 0}
+  FourthPath: {fileID: 0}
+  FifthPath: {fileID: 0}
+  sixthPath: {fileID: 0}
+  checkmark1: {fileID: 0}
+  checkmark2: {fileID: 0}
+  checkmark3: {fileID: 0}
+  checkmark4: {fileID: 0}
+  checkmark5: {fileID: 0}
+  EventOccur: 0
+--- !u!114 &1811134984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811134980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9532fe188c9d23e4083e8cd3c73fe732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CM: {fileID: 1811134985}
+  Number: 5
+--- !u!114 &1811134985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811134980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752103d31f280c144879b467c8ea8d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConvoTrigger: 0
+  Self: {fileID: 0}
+  School: {fileID: 0}
+  Market: {fileID: 0}
+  City: {fileID: 0}
+  Rage: {fileID: 0}
+  Fight: {fileID: 0}
+  Encounter: {fileID: 0}
 --- !u!1001 &1852361046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1327,26 +1507,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 11
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":257,"yPos":1396},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Go
-    Outside","parentUIDs":[9],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":241,"yPos":-4},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"*GASP!*
-    haa- haaa-","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":251,"yPos":182},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"It
-    was all a dream.....","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekeil","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":249,"yPos":357},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"What
-    does he mean \"Grant you the grace to forgive yourself and the seven upon whom
-    unknowingly bear a silent grudge\"?","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekeil","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":248,"yPos":531},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    don''t remember bearing grudge to someone especially 7 people.....","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekeil","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":248,"yPos":664},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"*7:00
-    ALARM*","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"SmartPhone","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":249,"yPos":810},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Alarm
-    Notification: Graduation Day - 9:00","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"SmartPhone","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":252,"yPos":951},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"AH!
-    I almost Forgot. Today is the graduation day!","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekeil","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":250,"yPos":1111},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    should prepare myself and head to mom. I think she is in the market right now
-    doing some early groceries.","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekeil","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":253,"yPos":1263},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    should head out now","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekeil","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  CurrentIDCounter: 26
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":382.5,"yPos":312},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"","parentUIDs":[23],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":true,"xPos":-2128.5,"yPos":49},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"NOOOOO!!!
+    HOW COULD YOU!!!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-2186,"yPos":207},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"YOU''RE
+    LIFE WAS SUPPOSED TO BE MINE!?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"wrath","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-2062,"yPos":358},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"i''m
+    sorry......","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":-1807,"yPos":294},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"w-what!?","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"wrath","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-1678,"yPos":146},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    sorry for all these misery i put up right now.","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":-1313,"yPos":266},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    sorry for not being able to face it sooner and istead ignore this problem.","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-1440,"yPos":164},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"s-stop!","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"wrath","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-1105,"yPos":147},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    said STOP!!!","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"wrath","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":-896,"yPos":249},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    sorry for that i resent myself and hold grudge to myself","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-675,"yPos":133},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"stop!!!
+    Please......","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"wrath","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":-444,"yPos":238},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"To
+    all those 6 people i put grudge upon, I''m sorry for all the grudges that i put
+    to you all","parentUIDs":[19],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"EZekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":-257,"yPos":115},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"stop......","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"wrath","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":23}],"EditorInfo":{"isRoot":false,"xPos":-11,"yPos":146},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    will not be swayed by my rage and anger again.","parentUIDs":[21],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":233,"yPos":132},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"although
+    you made my life worse, i still have to thank you for making me realize that
+    i can still overcome this trauma and made me a better person. ","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Ezekeil
-  DefaultSprite: {fileID: 0}
+  DefaultName: wrath
+  DefaultSprite: {fileID: 21300000, guid: 15cb3d46296f7904ebcb8f179ac6279f, type: 3}
   DefaultFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   NodeSerializedDataList:
   - {fileID: 1561290327}
+  - {fileID: 1561290328}
+  - {fileID: 1561290341}
+  - {fileID: 1561290340}
+  - {fileID: 1561290339}
+  - {fileID: 1561290338}
+  - {fileID: 1561290337}
   - {fileID: 1561290336}
   - {fileID: 1561290335}
   - {fileID: 1561290334}
@@ -1355,12 +1542,23 @@ MonoBehaviour:
   - {fileID: 1561290331}
   - {fileID: 1561290330}
   - {fileID: 1561290329}
-  - {fileID: 1561290328}
   ContinueFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   EndConversationFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1082635110}
+        m_TargetAssemblyTypeName: convotonextscene, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
