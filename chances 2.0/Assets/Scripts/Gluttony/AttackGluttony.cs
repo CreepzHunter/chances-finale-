@@ -30,19 +30,24 @@ public class AttackGluttony : MonoBehaviour
         {
             hasLoaded = true;
             PlayerPrefs.Save();
-            DemoWorld();
+            PostBattle();
         }
         if (PlayerStats.Instance.PHealth == 0)
         {
 
             PlayerPrefs.Save();
-            DemoWorld();
+            PostBattle();
 
         }
     }
     private void DemoWorld()
     {
         SceneManager.LoadScene(17);
+    }
+    private void PostBattle()
+    {
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(32);
     }
     public void OnClickAttack()
     {

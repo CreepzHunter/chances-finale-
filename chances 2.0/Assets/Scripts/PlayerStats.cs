@@ -29,7 +29,7 @@ public class PlayerStats : MonoBehaviour
         { // to prevent dupl.
             Destroy(gameObject);
         }
-        SetPlayerPrefs();
+        GetPlayerPrefs();
     }
     // void LoadPlayerData()
     // {
@@ -62,4 +62,16 @@ public class PlayerStats : MonoBehaviour
 
         PlayerPrefs.Save();
     }
+
+    void GetPlayerPrefs()
+    {
+        PHealth = PlayerPrefs.GetInt("PHealth", PHealth);
+        MaxPHealth = PlayerPrefs.GetInt("MaxPHealth", MaxPHealth);
+        PlayerLife = PlayerPrefs.GetInt("PlayerLife", PlayerLife);
+        PSkill = PlayerPrefs.GetInt("PSkill", PSkill);
+        AttackPower = PlayerPrefs.GetInt("AttackPower", AttackPower);
+        MagicPower = PlayerPrefs.GetInt("MagicPower", MagicPower);
+        AllocationStats = PlayerPrefs.GetInt("AllocationStats", AllocationStats);
+    }
+
 }

@@ -36,17 +36,22 @@ public class GameManagerWrath : MonoBehaviour
             enemyAnimations[0].SetActive(false);
             enemyAnimations[2].SetActive(true);
 
-            Invoke("DemoWorld", 0.8f);
+            Invoke("PostBattle", 0.8f);
         }
         //player dead
         if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
-            Invoke("DemoWorld", 1.06f);
+            Invoke("PostBattle", 1.06f);
         }
 
     }
+    private void PostBattle()
+    {
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(35);
 
+    }
     private void DemoWorld()
     {
         PlayerPrefs.Save();

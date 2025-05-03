@@ -49,8 +49,8 @@ MonoBehaviour:
   MaxPHealth: 100
   PlayerLife: 3
   PSkill: 3
-  AttackPower: 30
-  MagicPower: 40
+  AttackPower: 25
+  MagicPower: 10
   Heal: 10
   AllocationStats: 5
 --- !u!114 &8333017926920777941
@@ -60,12 +60,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7554143899056984378}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efa2fdf507be2f947bf84baece46279e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
   healthValue: {fileID: 0}
   playerlife: {fileID: 0}
   pskillText: {fileID: 0}

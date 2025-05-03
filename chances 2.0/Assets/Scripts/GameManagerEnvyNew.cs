@@ -46,7 +46,7 @@ public class GameManagerEnvyNew : MonoBehaviour
             EnvyDone();
 
             // Invoke("LoadOverWorld", 0.8f);
-            Invoke("DemoWorld", 1.06f);
+            Invoke("PostBattle", 1.06f);
             PlayerPrefs.Save();
 
         }
@@ -57,7 +57,7 @@ public class GameManagerEnvyNew : MonoBehaviour
             gameover.SetActive(true);
 
             // Invoke("LoadOverWorld", 1.06f);
-            Invoke("DemoWorld", 1.06f);
+            Invoke("PostBattle", 1.06f);
             PlayerPrefs.Save();
 
 
@@ -71,6 +71,11 @@ public class GameManagerEnvyNew : MonoBehaviour
     private void DemoWorld()
     {
         SceneManager.LoadScene(17);
+    }
+    private void PostBattle()
+    {
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(30);
     }
     public void EnvyDone()
     {

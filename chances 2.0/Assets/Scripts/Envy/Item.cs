@@ -51,10 +51,12 @@ public class Item : MonoBehaviour
         buttons[4].onClick.AddListener(() => EatChocolate());
         buttons[5].onClick.AddListener(() => UseMedkit());
 
-        ItemStats.Instance.smallBottle = PlayerPrefs.GetInt("SmallBottle", 0);
-        ItemStats.Instance.largeBottle = PlayerPrefs.GetInt("LargeBottle", 0);
-        ItemStats.Instance.smallMedkit = PlayerPrefs.GetInt("SmallMedkit", 0);
-        ItemStats.Instance.largeMedkit = PlayerPrefs.GetInt("LargeMedkit", 0);
+
+        ItemStats.Instance.smallBottle = PlayerPrefs.GetInt("SmallBottle", ItemStats.Instance.smallBottle);
+        ItemStats.Instance.largeBottle = PlayerPrefs.GetInt("LargeBottle", ItemStats.Instance.largeBottle);
+        ItemStats.Instance.smallMedkit = PlayerPrefs.GetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
+        ItemStats.Instance.largeMedkit = PlayerPrefs.GetInt("LargeMedkit", ItemStats.Instance.largeMedkit);
+
 
         // Initialize button states
         UpdateButtonStates();
@@ -67,10 +69,20 @@ public class Item : MonoBehaviour
 
     void UpdateItemValue()
     {
-        skillS.text = ItemStats.Instance.smallBottle.ToString();
-        skillM.text = ItemStats.Instance.largeBottle.ToString();
-        healthS.text = ItemStats.Instance.smallMedkit.ToString();
-        healthM.text = ItemStats.Instance.largeMedkit.ToString();
+        int small = PlayerPrefs.GetInt("SmallBottle", ItemStats.Instance.smallBottle);
+        int large = PlayerPrefs.GetInt("LargeBottle", ItemStats.Instance.largeBottle);
+        int medS = PlayerPrefs.GetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
+        int medL = PlayerPrefs.GetInt("LargeMedkit", ItemStats.Instance.largeMedkit);
+
+        ItemStats.Instance.smallBottle = small;
+        ItemStats.Instance.largeBottle = large;
+        ItemStats.Instance.smallMedkit = medS;
+        ItemStats.Instance.largeMedkit = medL;
+
+        skillS.text = small.ToString();
+        skillM.text = large.ToString();
+        healthS.text = medS.ToString();
+        healthM.text = medL.ToString();
     }
 
 
@@ -197,9 +209,11 @@ public class Item : MonoBehaviour
         if (ItemStats.Instance.smallBottle > 0)
         {
             PlayerStats.Instance.PSkill++;
-            ItemStats.Instance.smallBottle--;
             PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
+            ItemStats.Instance.smallBottle--;
             PlayerPrefs.SetInt("SmallBottle", ItemStats.Instance.smallBottle);
+            PlayerPrefs.Save();
+
             UpdateButtonStates();
             DoneItem();
         }
@@ -210,9 +224,10 @@ public class Item : MonoBehaviour
         if (ItemStats.Instance.largeBottle > 0)
         {
             PlayerStats.Instance.PSkill += 2;
-            ItemStats.Instance.largeBottle--;
             PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
+            ItemStats.Instance.largeBottle--;
             PlayerPrefs.SetInt("LargeBottle", ItemStats.Instance.largeBottle);
+            PlayerPrefs.Save();
             UpdateButtonStates();
             DoneItem();
         }
@@ -223,9 +238,10 @@ public class Item : MonoBehaviour
         if (ItemStats.Instance.smallMedkit > 0)
         {
             PlayerStats.Instance.PHealth += 15;
-            ItemStats.Instance.smallMedkit--;
             PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+            ItemStats.Instance.smallMedkit--;
             PlayerPrefs.SetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
+            PlayerPrefs.Save();
             DoneItem();
             UpdateButtonStates();
         }
@@ -236,9 +252,10 @@ public class Item : MonoBehaviour
         if (ItemStats.Instance.largeMedkit > 0)
         {
             PlayerStats.Instance.PHealth += 40;
-            ItemStats.Instance.largeMedkit--;
             PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+            ItemStats.Instance.largeMedkit--;
             PlayerPrefs.SetInt("LargeMedkit", ItemStats.Instance.largeMedkit);
+            PlayerPrefs.Save();
             DoneItem();
             UpdateButtonStates();
         }

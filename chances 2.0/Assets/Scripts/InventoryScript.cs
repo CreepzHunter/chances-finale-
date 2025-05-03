@@ -14,10 +14,10 @@ public class InventoryScript : MonoBehaviour
 
     void OnEnable()
     {
-        ItemStats.Instance.smallBottle = PlayerPrefs.GetInt("SmallBottle", 0);
-        ItemStats.Instance.largeBottle = PlayerPrefs.GetInt("LargeBottle", 0);
-        ItemStats.Instance.smallMedkit = PlayerPrefs.GetInt("SmallMedkit", 0);
-        ItemStats.Instance.largeMedkit = PlayerPrefs.GetInt("LargeMedkit", 0);
+        ItemStats.Instance.smallBottle = PlayerPrefs.GetInt("SmallBottle", ItemStats.Instance.smallBottle);
+        ItemStats.Instance.largeBottle = PlayerPrefs.GetInt("LargeBottle", ItemStats.Instance.largeBottle);
+        ItemStats.Instance.smallMedkit = PlayerPrefs.GetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
+        ItemStats.Instance.largeMedkit = PlayerPrefs.GetInt("LargeMedkit", ItemStats.Instance.largeMedkit);
     }
     void Update()
     {

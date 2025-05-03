@@ -54,7 +54,7 @@ public class GameManagerSloth : MonoBehaviour
             // Invoke("LoadOverWorld", 0.8f);
 
 
-            Invoke("DemoWorld", 1.06f);
+            Invoke("PostBattle", 1.06f);
             PlayerPrefs.Save();
 
         }
@@ -77,7 +77,7 @@ public class GameManagerSloth : MonoBehaviour
             gameover.SetActive(true);
             // Invoke("LoadOverWorld", 1.06f);sss
 
-            Invoke("DemoWorld", 1.06f);
+            Invoke("PostBattle", 1.06f);
             PlayerPrefs.Save();
 
         }
@@ -92,7 +92,11 @@ public class GameManagerSloth : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
+    private void PostBattle()
+    {
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(31);
+    }
 
     private void DisableDeath()
     {

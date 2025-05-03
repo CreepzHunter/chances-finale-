@@ -54,7 +54,7 @@ public class GameFlowManagerLust : MonoBehaviour
             lustDead.SetActive(true);
 
             // Invoke("LoadOverWorld", 0.8f);
-            Invoke("DemoWorld", 1.06f);
+            Invoke("PostBattle", 1.06f);
             PlayerPrefs.Save();
 
         }
@@ -64,7 +64,7 @@ public class GameFlowManagerLust : MonoBehaviour
             gameover.SetActive(true);
 
             // Invoke("LoadOverWorld", 1.06f);
-            Invoke("DemoWorld", 1.06f);
+            Invoke("PostBattle", 1.06f);
             PlayerPrefs.Save();
 
         }
@@ -78,7 +78,11 @@ public class GameFlowManagerLust : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
+    private void PostBattle()
+    {
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(34);
+    }
     public void StartGame()
     {
         // cameraSwitch.PlayerView();

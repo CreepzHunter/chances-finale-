@@ -29,4 +29,10 @@ public class SceneTestingDeleteAfterwards : MonoBehaviour
     {
         SceneManager.LoadScene(16);
     }
+
+    public void Overworld()
+    {
+        SceneManager.LoadScene(1);
+
+    }
 }

@@ -38,7 +38,7 @@ public class GameManagerGreedPride : MonoBehaviour
             enemyAnimations[2].SetActive(true);
             enemyAnimations[5].SetActive(true);
 
-            Invoke("DemoWorld", 0.8f);
+            Invoke("PostBattle", 0.8f);
             PlayerPrefs.Save();
 
         }
@@ -46,7 +46,7 @@ public class GameManagerGreedPride : MonoBehaviour
         if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
-            Invoke("DemoWorld", 1.06f);
+            Invoke("PostBattle", 1.06f);
             PlayerPrefs.Save();
 
         }
@@ -58,7 +58,11 @@ public class GameManagerGreedPride : MonoBehaviour
         //SceneManager Heree!
 
     }
-
+    private void PostBattle()
+    {
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(33);
+    }
     private void LoadOverWorld()
     {
         SceneManager.LoadScene(1);
