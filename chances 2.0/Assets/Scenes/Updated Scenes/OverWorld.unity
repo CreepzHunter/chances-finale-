@@ -2118,12 +2118,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPCTrigger: 0
-  NPC1: {fileID: 0}
-  NPC2: {fileID: 501494138}
-  NPC3: {fileID: 0}
-  NPC4: {fileID: 0}
-  NPC5: {fileID: 0}
-  NPC6: {fileID: 0}
+  NPC1: {fileID: 1561999464}
+  NPC2: {fileID: 1606779824}
+  NPC3: {fileID: 1780382792}
+  NPC4: {fileID: 865418693}
+  NPC5: {fileID: 743485488}
+  NPC6: {fileID: 743485488}
 --- !u!4 &57301688
 Transform:
   m_ObjectHideFlags: 0
@@ -10997,7 +10997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":222.5,"yPos":188},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":220.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     Market Should be on the Left. I should head there","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -13111,16 +13111,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 11
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-980.5,"yPos":74},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"A-alice......","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-933,"yPos":315},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    remember Alice.....","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-648,"yPos":185},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"calm...
-    cheerful....","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-510,"yPos":326},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"But
-    why does it hurt when im trying to remember her?......","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezkiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":-328,"yPos":193},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-947.5,"yPos":75},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"A-alice......","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-900,"yPos":316},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    remember Alice.....","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-615,"yPos":186},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"calm...
+    cheerful....","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-477,"yPos":327},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"But
+    why does it hurt when im trying to remember her?......","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezkiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":-295,"yPos":194},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
     you ok Ezekiel?","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-203,"yPos":336},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":".....
-    I''m ok. i feel a bit light headed after those cleansing","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-31,"yPos":196},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Then
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-170,"yPos":337},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":".....
+    I''m ok. i feel a bit light headed after those cleansing","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":2,"yPos":197},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Then
     Shall we take a rest for a moment?","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":86,"yPos":317},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"no,
-    we can still keep going","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":275,"yPos":200},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"*whispers*
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":119,"yPos":318},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"no,
+    we can still keep going","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":308,"yPos":201},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"*whispers*
     I need answers....","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -16076,11 +16076,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPCTrigger: 0
-  NPC1: {fileID: 0}
-  NPC2: {fileID: 501494138}
-  NPC3: {fileID: 0}
-  NPC4: {fileID: 0}
-  NPC5: {fileID: 0}
+  NPC1: {fileID: 1976803947}
+  NPC2: {fileID: 1011835312}
+  NPC3: {fileID: 1662110866}
+  NPC4: {fileID: 1234854471}
+  NPC5: {fileID: 604392262}
   NPC6: {fileID: 0}
 --- !u!1 &640800593
 GameObject:
@@ -17539,49 +17539,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 33
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":-2668.5,"yPos":154},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"hehehehehe.....","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-2665.5,"yPos":260},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":-3118.5,"yPos":78},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"hehehehehe.....","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-3115.5,"yPos":184},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     won''t let you take over him!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-2665.5,"yPos":382},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"AAAARRRRRRRRGGGGHHHH!!!!","parentUIDs":[0,1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-2659.5,"yPos":515},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"AH!
-    Ahhhh!!! *Blaaaauuurrrgghhhh*","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-2387.5,"yPos":183},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Wha-
-    what was that!?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":-2358.5,"yPos":316},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Be
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-3115.5,"yPos":306},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"AAAARRRRRRRRGGGGHHHH!!!!","parentUIDs":[0,1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-3109.5,"yPos":439},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"AH!
+    Ahhhh!!! *Blaaaauuurrrgghhhh*","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-2837.5,"yPos":107},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Wha-
+    what was that!?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":-2808.5,"yPos":240},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Be
     Not Afraid..","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":-2291.5,"yPos":417},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"AAAAAAAAAHHHHHH!!!!","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-2097.5,"yPos":197},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"........","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-2017.5,"yPos":308},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"W-WISP!?
-    T-they Exist?!","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-1793.5,"yPos":471},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes,
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":-2741.5,"yPos":341},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"AAAAAAAAAHHHHHH!!!!","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-2547.5,"yPos":121},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"........","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-2467.5,"yPos":232},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"W-WISP!?
+    T-they Exist?!","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-2243.5,"yPos":395},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes,
     and we are here to guide you on your journey as you accomplish the task that
     the almighty has given to you","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-1767.5,"yPos":199},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-    Almighty!? w-wait does  that mean... my dream was real!?","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-1645.5,"yPos":345},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes,
-    and we we''re lucky that we made it in time to save you from your transformation","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-1487.5,"yPos":211},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Tr-
-    transform? I was transforming?","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":-1352.5,"yPos":391},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes,
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-2217.5,"yPos":123},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    Almighty!? w-wait does  that mean... my dream was real!?","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-2095.5,"yPos":269},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes,
+    and we were lucky that we made it in time to save you from your transformation","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-1937.5,"yPos":135},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Tr-
+    transform? I was transforming?","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":-1802.5,"yPos":315},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes,
     although the entity inside you has calm down. it wont be too long before the
     entity inside of you wake up again","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-1105.5,"yPos":135},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"It
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-1555.5,"yPos":59},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"It
     seems you don''t know that there is something lingering deep inside of you","parentUIDs":[25],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-868.5,"yPos":-25},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"hhhhmmmmmm....
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-1318.5,"yPos":-101},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"hhhhmmmmmm....
     wait.....","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-612.5,"yPos":336},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-    School?","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":-395.5,"yPos":196},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes.
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-1062.5,"yPos":260},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    School?","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":-845.5,"yPos":120},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes.
     it seems there might be some uncanny scent that wonder around your school","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":-244.5,"yPos":373},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"Familiar
-    scent?","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":-759,"yPos":155},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"i
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":-694.5,"yPos":297},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"uncanny
+    scent?","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":-1209,"yPos":79},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"i
     detect something bad and it came from that building over there?","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":-1113,"yPos":586},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Lingering
-    desire!? i dont have any of those!","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":-1358,"yPos":537},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"It
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":-1563,"yPos":510},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Lingering
+    desire!? i dont have any of those!","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":-1808,"yPos":461},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"It
     seems there''s a lingering desire deep inside of that causes you to transform
     at any moment","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":-1057,"yPos":468},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"*aurgh*","parentUIDs":[21],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-1153,"yPos":273},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"what
-    the- it hurts all of a sudden....","parentUIDs":[24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":-75,"yPos":228},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"we
+    wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":-1507,"yPos":392},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"*aurgh*","parentUIDs":[21],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-1603,"yPos":197},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"what
+    the- it hurts all of a sudden....","parentUIDs":[24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":-525,"yPos":152},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"we
     wisps are able to detect scents that are not from this world","parentUIDs":[19],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":89,"yPos":359},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"t-thats
-    useful","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":239,"yPos":209},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"hehehe
+    wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":-361,"yPos":283},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"t-thats
+    useful","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":-211,"yPos":133},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"hehehe
     it is","parentUIDs":[28],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":390,"yPos":358},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"now,
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":-60,"yPos":282},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"now,
     now, we better get going we might be able to find some answers too about your
     deep linger that causes your transformation ","parentUIDs":[29],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32}],"EditorInfo":{"isRoot":false,"xPos":596,"yPos":233},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"eeeeehhhh.....
-    ok?","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":771,"yPos":373},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"......
+    wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32}],"EditorInfo":{"isRoot":false,"xPos":146,"yPos":157},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"eeeeehhhh.....
+    ok?","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":321,"yPos":297},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"......
     *whisper* that scent around that boy when transform had a strong grudge around
     him.....","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
     Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
@@ -23186,7 +23186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 2
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":231.5,"yPos":193},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":169.5,"yPos":124},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     should head to school right now before the ceremony starts","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -24782,12 +24782,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPCTrigger: 0
-  NPC1: {fileID: 0}
-  NPC2: {fileID: 501494138}
-  NPC3: {fileID: 0}
-  NPC4: {fileID: 0}
-  NPC5: {fileID: 0}
-  NPC6: {fileID: 0}
+  NPC1: {fileID: 1282446767}
+  NPC2: {fileID: 1574183773}
+  NPC3: {fileID: 1879095680}
+  NPC4: {fileID: 1833899562}
+  NPC5: {fileID: 167171933}
+  NPC6: {fileID: 2026416695}
 --- !u!4 &1051039073
 Transform:
   m_ObjectHideFlags: 0
@@ -29384,8 +29384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPCTrigger: 0
-  NPC1: {fileID: 0}
-  NPC2: {fileID: 501494138}
+  NPC1: {fileID: 1881262533}
+  NPC2: {fileID: 7814744}
   NPC3: {fileID: 0}
   NPC4: {fileID: 0}
   NPC5: {fileID: 0}
@@ -33218,27 +33218,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 16
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-1711.5,"yPos":184},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"What
-    was that?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-1713.5,"yPos":331},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"She
-    looks familiar....","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-1440.5,"yPos":235},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-607.5,"yPos":143},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"What
+    was that?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-609.5,"yPos":290},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"She
+    looks familiar....","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-336.5,"yPos":194},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
     you ok Ezekiel?","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-1231.5,"yPos":140},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"wait
-    you didn''t see that [Redacted!]","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-1180.5,"yPos":290},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"uuhhhh...
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-127.5,"yPos":99},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"wait
+    you didn''t see that [Redacted!]","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-76.5,"yPos":249},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"uuhhhh...
     Ezekiel?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":-983.5,"yPos":181},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"*thought*
-    i- i cant say it for some reason..... i need answers...","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":-813.5,"yPos":281},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Ezekiel?
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":120.5,"yPos":140},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"*in
+    thought* i- i cant say it for some reason..... i need answers...","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":290.5,"yPos":240},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Ezekiel?
     Are you ok? it seems you have about to say something","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-654.5,"yPos":147},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"I-
-    it''s nothing. We should hurry head to the next sins","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-450.5,"yPos":268},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"B-but
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":449.5,"yPos":106},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"I-
+    it''s nothing. We should hurry head to the next sins","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":653.5,"yPos":227},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"B-but
     what about the ceremony? the cleanse gave you enough time to hold that transformation.
     so there still time to attend the ceremony","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-279.5,"yPos":144},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"I-
-    it''s ok, i dont mind not attending.....","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-174.5,"yPos":266},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"are
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":824.5,"yPos":103},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"I-
+    it''s ok, i dont mind not attending.....","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":929.5,"yPos":225},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"are
     you sure? i thought you wanna-","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-16.5,"yPos":151},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"YES
-    IM SURE! NOW LET''s GO!","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":108.5,"yPos":279},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"*Shivers*","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":261.5,"yPos":156},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
-    sorry....","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":416.5,"yPos":292},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"......","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":1087.5,"yPos":110},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"YES
+    IM SURE! NOW LET''s GO!","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":1212.5,"yPos":238},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"*Shivers*","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":1365.5,"yPos":115},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    sorry....","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1520.5,"yPos":251},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"......","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
     Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -43643,9 +43643,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":221,"yPos":275},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"AAAUUUURRRRGGGHHHH!!!!","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-242.5,"yPos":89},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"YOU,
-    WHO HARBOR THE GREATEST SIN OF ALL","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"WRATH","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-104,"yPos":299},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"TO
-    THINK YOU''RE BLIND RAGE SOLE REASON TO KILL SOMEONE!!!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"WRATH","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":115,"yPos":141},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":336,"yPos":294},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"AAAUUUURRRRGGGHHHH!!!!","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-127.5,"yPos":108},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"YOU,
+    WHO HARBOR THE GREATEST SIN OF ALL","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"WRATH","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":11,"yPos":318},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"TO
+    THINK YOU''RE BLIND RAGE SOLE REASON TO KILL SOMEONE!!!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"WRATH","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":230,"yPos":160},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     DID NOT MEAN TO DO THAT","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"EZEKIEL","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: EZEKIEL
@@ -43660,19 +43660,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1930629914}
-        m_TargetAssemblyTypeName: sceneloader, Assembly-CSharp
-        m_MethodName: sceneLoaderButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1930629914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49536,9 +49524,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPCTrigger: 0
-  NPC1: {fileID: 0}
-  NPC2: {fileID: 501494138}
-  NPC3: {fileID: 0}
+  NPC1: {fileID: 640800595}
+  NPC2: {fileID: 2052957699}
+  NPC3: {fileID: 881460603}
   NPC4: {fileID: 0}
   NPC5: {fileID: 0}
   NPC6: {fileID: 0}

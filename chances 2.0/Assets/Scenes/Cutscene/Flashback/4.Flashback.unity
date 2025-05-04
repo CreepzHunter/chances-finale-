@@ -719,6 +719,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8642242543599522110, guid: ca92ca4256cc6ca40a2cea30488b26df, type: 3}
   m_PrefabInstance: {fileID: 1082635109}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1523047223
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5225345471308201968, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_Name
+      value: audio flashback
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
 --- !u!1 &1561290325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,22 +1409,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 17
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-664.5,\"yPos\":1445},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Go
-    Outside\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":310,\"yPos\":144},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[15],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-680.5,\"yPos\":45},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"She
-    looks... angry at me..... urgh....\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekiel\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-671.5,\"yPos\":1160},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-460.5,\"yPos\":1532},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Go
+    Outside\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":514,\"yPos\":231},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[15],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-476.5,\"yPos\":132},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"She
+    looks... angry at me..... urgh....\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekiel\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-467.5,\"yPos\":1247},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
     should prepare myself and head to mom. I think she is in the market right now
-    doing some early groceries.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-668.5,\"yPos\":1312},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
-    should head out now\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-551,\"yPos\":200},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Though
+    doing some early groceries.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-464.5,\"yPos\":1399},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+    should head out now\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-347,\"yPos\":287},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Though
     their bond was strong, even the closest of souls are not spared from the trials
     of discord. At times, the fire of passion gave rise to heated quarrels between
     them, testing the very foundation of their connection.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"The
-    Almighty\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-323,\"yPos\":110},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"The
+    Almighty\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-119,\"yPos\":197},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"The
     boy's heart grew heavy with resentment as the girl prepared to depart from his
     hometown. Yet she, with patience and sorrow, sought to help him understand the
     path she must walk\u2014a journey not of choice, but of calling\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"The
-    Almighty\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-165,\"yPos\":238},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"that's
-    right..... we were having a fight because she was moving out.....\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1,\"yPos\":114},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"*grunts*
-    i need more answers..... \",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":129,\"yPos\":245},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Why
+    Almighty\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":39,\"yPos\":325},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"that's
+    right..... we were having a fight because she was moving out.....\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":205,\"yPos\":201},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"*grunts*
+    i need more answers..... \",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":333,\"yPos\":332},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Why
     did the twins resent me....\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ezekeil\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Ezekeil
@@ -1388,19 +1445,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1082635110}
-        m_TargetAssemblyTypeName: convotonextscene, Assembly-CSharp
-        m_MethodName: ActivateTransition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1412,3 +1457,4 @@ SceneRoots:
   - {fileID: 1039174974}
   - {fileID: 1901206232}
   - {fileID: 1811134981}
+  - {fileID: 1523047223}

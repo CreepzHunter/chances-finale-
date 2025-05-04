@@ -225,6 +225,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5e5899f9c53e9048b2e02ad12e5926d, type: 3}
+--- !u!1001 &459539961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5225345471308201968, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_Name
+      value: audio flashback
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202121096315764364, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd1ac88c4337118499bd30f3ac85f3f1, type: 3}
 --- !u!1 &497888924
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,11 +764,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca92ca4256cc6ca40a2cea30488b26df, type: 3}
---- !u!1 &1082635110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4948030630057829353, guid: ca92ca4256cc6ca40a2cea30488b26df, type: 3}
+--- !u!114 &1082635110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7387860537602178309, guid: ca92ca4256cc6ca40a2cea30488b26df, type: 3}
   m_PrefabInstance: {fileID: 1082635109}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60154a4155a77e54a9efddbfe2582163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1082635111 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8642242543599522110, guid: ca92ca4256cc6ca40a2cea30488b26df, type: 3}
@@ -788,12 +851,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1082635110}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: convotonextscene, Assembly-CSharp
+        m_MethodName: ActivateTransition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1238,16 +1301,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 15
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":366,\"yPos\":407},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"hehehehehe......\",\"parentUIDs\":[13],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-18.5,\"yPos\":-141},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"He
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":495,\"yPos\":529},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"hehehehehe......\",\"parentUIDs\":[13],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":108.5,\"yPos\":-20},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"He
     refused to believe the sight before him, clinging to the desperate hope that
     it was but a cruel dream. \",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"THE
-    ALMIGHTY\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-281,\"yPos\":-3},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yet
+    ALMIGHTY\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-154,\"yPos\":119},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yet
     no slumber held him, and no illusion veiled the truth\u2014it was reality, raw
     and merciless, and it had claimed the one he cherished most\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"tHE
-    ALMIGHTY\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-40,\"yPos\":153},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"He
+    ALMIGHTY\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":87,\"yPos\":275},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"He
     turned his wrath inward, loathing none but himself. The hatred burned not against
     the world, but within his own soul\u2014silent, consuming.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"tHE
-    ALMIGHTY\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":167,\"yPos\":268},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Though
+    ALMIGHTY\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":294,\"yPos\":390},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Though
     he swore never again to be ruled by anger, it was but a fragile veil, a desperate
     illusion to escape the truth of what had been done. Yet the fury and sorrow he
     buried did not fade\u2014they festered, lingering deep within, like embers waiting
@@ -1267,19 +1330,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1082635110}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1291,3 +1342,4 @@ SceneRoots:
   - {fileID: 1039174974}
   - {fileID: 1901206232}
   - {fileID: 1811134981}
+  - {fileID: 459539961}
