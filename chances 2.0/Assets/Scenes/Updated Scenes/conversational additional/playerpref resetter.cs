@@ -15,4 +15,10 @@ public class playerprefresetter : MonoBehaviour
 
         }
     }
+    public void newGame()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        Debug.Log("PlayerPrefs cleared from menu.");
+    }
 }

@@ -60,27 +60,52 @@ public class EventBlocker : MonoBehaviour
                 break;
             
             case 2:
+                FirstPath.gameObject.SetActive(false);
                 SecondPath.gameObject.SetActive(false);
                 checkmark1.gameObject.SetActive(true);
                 break;
             
             case 3:
+                FirstPath.gameObject.SetActive(false);
+                SecondPath.gameObject.SetActive(false);
                 ThirdPath.gameObject.SetActive(false);
+                checkmark1.gameObject.SetActive(true);
                 checkmark2.gameObject.SetActive(true);
                 break;
 
             case 4:
+                FirstPath.gameObject.SetActive(false);
+                SecondPath.gameObject.SetActive(false);
+                ThirdPath.gameObject.SetActive(false);
                 FourthPath.gameObject.SetActive(false);
+                checkmark1.gameObject.SetActive(true);
+                checkmark2.gameObject.SetActive(true);
                 checkmark3.gameObject.SetActive(true);
                 break;
             
             case 5:
+                FirstPath.gameObject.SetActive(false);
+                SecondPath.gameObject.SetActive(false);
+                ThirdPath.gameObject.SetActive(false);
+                FourthPath.gameObject.SetActive(false);
                 FifthPath.gameObject.SetActive(false);
+                checkmark1.gameObject.SetActive(true);
+                checkmark2.gameObject.SetActive(true);
+                checkmark3.gameObject.SetActive(true);
                 checkmark4.gameObject.SetActive(true);
                 break;
 
             case 6:
+                FirstPath.gameObject.SetActive(false);
+                SecondPath.gameObject.SetActive(false);
+                ThirdPath.gameObject.SetActive(false);
+                FourthPath.gameObject.SetActive(false);
+                FifthPath.gameObject.SetActive(false);
                 sixthPath.gameObject.SetActive(false);
+                checkmark1.gameObject.SetActive(true);
+                checkmark2.gameObject.SetActive(true);
+                checkmark3.gameObject.SetActive(true);
+                checkmark4.gameObject.SetActive(true);
                 checkmark5.gameObject.SetActive(true);
                 break;
         }

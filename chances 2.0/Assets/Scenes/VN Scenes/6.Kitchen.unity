@@ -789,7 +789,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 0611fb28bc20e4c45b9401557c8c45b5, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290328
 MonoBehaviour:
@@ -858,7 +858,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 28
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 4883694d72b8204419ebd8ed120ba778, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290331
 MonoBehaviour:
@@ -896,7 +896,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 26
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: f956f592756b5864cb88eb7b8697162a, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290333
 MonoBehaviour:
@@ -953,7 +953,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 21
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 4883694d72b8204419ebd8ed120ba778, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290336
 MonoBehaviour:
@@ -1086,7 +1086,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 13
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 2072c131c81adff4eb56f514ce2cf517, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1561290343
 MonoBehaviour:
@@ -1124,7 +1124,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 11
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: d5cc114f46cefc94d8d452a4fa9e9831, type: 3}
   Audio: {fileID: 0}
 --- !u!1 &1575449605
 GameObject:
@@ -1201,6 +1201,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575449605}
   m_CullTransparentMesh: 1
+--- !u!1001 &1636569698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430171624238544069, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897053234125951152, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
+      propertyPath: m_Name
+      value: audio VA
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eebc6c6b8197c4b45bd3ebbe56e1da12, type: 3}
 --- !u!1 &1811134980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,33 +1549,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 31
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":285,"yPos":340},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"Here
-    it goes","parentUIDs":[29],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":true,"xPos":-2552.5,"yPos":-47},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":312,"yPos":298},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"Here
+    it goes","parentUIDs":[29],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":true,"xPos":-2525.5,"yPos":-89},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     Scent is strong inside the kitchen","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-2413.5,"yPos":109},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"hhhhhmmmmmm.....
-    This area looks familiar.....","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-2180.5,"yPos":-53},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"H-HEY!!!","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":-2050.5,"yPos":125},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"U-
-    uncle Vorax??","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-1845.5,"yPos":-45},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Oi
-    Kid, what are you doing here!? You''re not allowed to be here in the kitchen?","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-1665.5,"yPos":101},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Wh-
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-2386.5,"yPos":67},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"hhhhhmmmmmm.....
+    This area looks familiar.....","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-2153.5,"yPos":-95},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"H-HEY!!!","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":-2023.5,"yPos":83},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"U-
+    uncle Vorax??","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-1818.5,"yPos":-87},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Oi
+    Kid, what are you doing here!? You''re not allowed to be here in the kitchen?","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-1638.5,"yPos":59},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Wh-
     what Happen to you? Aren''t you Supposed to be the face of healthy food chef
-    in this city!?","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-1517.5,"yPos":-35},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    AM HEALTHY!!!","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":-1197.5,"yPos":-23},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"SHUT
+    in this city!?","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-1490.5,"yPos":-77},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    AM HEALTHY!!!","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":-1170.5,"yPos":-65},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"SHUT
     UP YOU UNGRATEFUL BUNCH!!! ALWAYS CRITICISING ME ABOUT MY HEALTHY WAYS!!! YOU''RE
-    THE UNHEALTHY ONE HERE!!!","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":-1078.5,"yPos":101},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"*munch*
-    I AM THE FACE OF THE HEALTHY FOOD COMMITEE HERE!!! YOU OBEY ME!!! ","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-1368.5,"yPos":116},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"But
-    you''re eating nothing like healthy here! Look at you!","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":-845.5,"yPos":185},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
+    THE UNHEALTHY ONE HERE!!!","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":-1051.5,"yPos":59},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"*munch*
+    I AM THE FACE OF THE HEALTHY FOOD COMMITEE HERE!!! YOU OBEY ME!!! ","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-1341.5,"yPos":74},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"But
+    you''re eating nothing like healthy here! Look at you!","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":-818.5,"yPos":143},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
     is he Ezekiel? and he is not right in his  mind!","parentUIDs":[19],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":-637.5,"yPos":50},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"That
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":-610.5,"yPos":8},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"That
     is vorax. he is the face of healthy food chef commitee in this city. If i remember
     correctly he is obssess of being healthy to the point he starts giving the customer
-    some unnecessary healthy food recommendation.","parentUIDs":[21],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":26}],"EditorInfo":{"isRoot":false,"xPos":-440.5,"yPos":181},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"Although
+    some unnecessary healthy food recommendation.","parentUIDs":[21],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":26}],"EditorInfo":{"isRoot":false,"xPos":-413.5,"yPos":139},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"Although
     people like these sort of recommendation. but whenever some people denies his
     offer, he start to shout at them and call them unhealthy and criticize their
-    appearance, making a scandal out of them.....","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekeil","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":-355,"yPos":341},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"He
+    appearance, making a scandal out of them.....","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekeil","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":-328,"yPos":299},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"He
     doesn''t look healthy too me","parentUIDs":[25],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Red
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":-99,"yPos":161},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"DID
-    YOU JUST CALL ME UNHEALTHY!?","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":-19,"yPos":316},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Prepare
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":-72,"yPos":119},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"DID
+    YOU JUST CALL ME UNHEALTHY!?","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":8,"yPos":274},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Prepare
     Yourself guys","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Blue
-    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":162,"yPos":194},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"RAAAAAAAAARRRRRGGGGHHHH!!!!!
+    Wisp","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":189,"yPos":152},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"RAAAAAAAAARRRRRGGGGHHHH!!!!!
     IM HEALTHY!!!","parentUIDs":[28],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Vorax","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Ezekeil
@@ -1547,19 +1604,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1082635110}
-        m_TargetAssemblyTypeName: convotonextscene, Assembly-CSharp
-        m_MethodName: ActivateTransition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1571,3 +1616,4 @@ SceneRoots:
   - {fileID: 1039174974}
   - {fileID: 1901206232}
   - {fileID: 1811134981}
+  - {fileID: 1636569698}

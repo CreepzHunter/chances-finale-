@@ -12,6 +12,13 @@ public class convotrigger : MonoBehaviour
     public bool interact = false;
     public Button signs;
 
+    AudioManager audioManager;
+
+    void Start()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -34,6 +41,7 @@ public class convotrigger : MonoBehaviour
     {
         if (interact)
         {
+            audioManager.PlaySFX(audioManager.Click);
             signs.gameObject.SetActive(false);
             Trigger.Adder(ConvoNumber);
         }

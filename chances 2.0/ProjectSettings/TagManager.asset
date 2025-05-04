@@ -16,6 +16,8 @@ TagManager:
   - Obstacle
   - Fruits
   - PlayerLife
+  - LocationZone
+  - Audio
   layers:
   - Default
   - TransparentFX

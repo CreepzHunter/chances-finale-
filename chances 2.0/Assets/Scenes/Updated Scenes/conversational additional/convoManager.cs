@@ -17,9 +17,12 @@ public class convoManager : MonoBehaviour
 
     private const string convoKey = "ConvoTriggerNumber";
 
+    AudioManager audioManager;
+
     void Awake()
     {
         ConvoTrigger = PlayerPrefs.GetInt(convoKey, 0);
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         
     }
     
@@ -53,6 +56,7 @@ public class convoManager : MonoBehaviour
         else if(ConvoTrigger == 5)
         {
             ConversationManager.Instance.StartConversation(Rage);
+            audioManager.PlayMusic(audioManager.ScaryBackground);
         }
 
         else if(ConvoTrigger == 6)
