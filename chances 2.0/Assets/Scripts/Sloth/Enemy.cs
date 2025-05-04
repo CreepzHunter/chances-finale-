@@ -44,7 +44,6 @@ public class Enemy : MonoBehaviour
 
     public void Awake()
     {
-        Debug.Log($"initialStartLocation1 on Awake: {initialStartLocation1}");
 
         playerMovement1.transform.localPosition = initialStartLocation1;
         playerMovement2.transform.localPosition = initialStartLocation2;

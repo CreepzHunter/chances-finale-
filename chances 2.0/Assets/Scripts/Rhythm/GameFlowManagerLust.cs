@@ -80,6 +80,11 @@ public class GameFlowManagerLust : MonoBehaviour
     }
     private void PostBattle()
     {
+        PlayerStats.Instance.Money += 100;
+        PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
+        PlayerStats.Instance.AllocationStats += 2;
+        PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+
         PlayerPrefs.Save();
         SceneManager.LoadScene(34);
     }

@@ -613,7 +613,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2624972205719469294, guid: 5d14db1b0014afe4c9b0ae9543c3eca8, type: 3}
       propertyPath: m_Name
-      value: '**Next Scene (1)'
+      value: '**Overworld'
       objectReference: {fileID: 0}
     - target: {fileID: 2624972205719469294, guid: 5d14db1b0014afe4c9b0ae9543c3eca8, type: 3}
       propertyPath: m_IsActive
@@ -8649,6 +8649,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3584540402981879693, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
+      propertyPath: AttackPower
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7166717609713391790, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

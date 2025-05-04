@@ -94,6 +94,11 @@ public class GameManagerSloth : MonoBehaviour
     }
     private void PostBattle()
     {
+        PlayerStats.Instance.Money += 40;
+        PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
+        PlayerStats.Instance.AllocationStats += 2;
+        PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+
         PlayerPrefs.Save();
         SceneManager.LoadScene(31);
     }

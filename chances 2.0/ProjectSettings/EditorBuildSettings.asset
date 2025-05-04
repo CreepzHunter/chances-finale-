@@ -45,13 +45,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Scenes/2 - Sloth Battle.unity
     guid: 76c10e08e0b95d54dbb3ecfebf40d152
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/3 - Lust Battle.unity
+    path: Assets/Scenes/Main Scenes/5 - Lust Battle.unity
     guid: 55049b1a46223b541908d6a87f32dfe6
   - enabled: 1
     path: Assets/Scenes/Main Scenes/4 - Greed & Pride Test.unity
     guid: 978292e9814a92940b9a37fb2d0d4d51
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/5 - Gluttony Battle.unity
+    path: Assets/Scenes/Main Scenes/3 - Gluttony Battle.unity
     guid: 95876a6e32679e54bbe2615be19ef03a
   - enabled: 1
     path: Assets/Scenes/Main Scenes/6 - Wrath Battle.unity
@@ -102,7 +102,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene/Post Battle/2. Sloth  post battle.unity
     guid: 580a148ff7014b94f9f363513e252dc1
   - enabled: 1
-    path: Assets/Scenes/Cutscene/Post Battle/3. Gluttony post battle.unity
+    path: Assets/Scenes/Cutscene/Post Battle/3. gluttony post battle.unity
     guid: bb6f0cc27ae54aa40a12b23afc567235
   - enabled: 1
     path: Assets/Scenes/Cutscene/Post Battle/4. pride and greed post battle.unity

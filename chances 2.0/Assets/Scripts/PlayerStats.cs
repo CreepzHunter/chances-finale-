@@ -6,17 +6,40 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats Instance;
 
     //Health
-    public int PHealth = 100;
+    private int _pHealth = 100;
+    public int PHealth
+    {
+        get => _pHealth;
+        set => _pHealth = Mathf.Clamp(value, 0, MaxPHealth);
+    }
+
     public int MaxPHealth = 100;
-    public int PlayerLife = 3;
+    private int _playerLife = 3;
+    public int PlayerLife
+    {
+        get => _playerLife;
+        set => _playerLife = Mathf.Clamp(value, 0, 3);
+    }
     //Skill
-    public int PSkill = 3;
+    private int _pSkill = 0;
+    public int PSkill
+    {
+        get => _pSkill;
+        set => _pSkill = Mathf.Clamp(value, 0, 3);
+    }
+
     //Attack Power 
     public int AttackPower = 10;
     //Magic Power 
     public int MagicPower = 10;
     public int Heal = 10;
-    public int AllocationStats = 5;
+    private int _allocationStats = 5;
+    public int AllocationStats
+    {
+        get => _allocationStats;
+        set => _allocationStats = Mathf.Clamp(value, 0, 10);
+    }
+    public int Money = 100;
 
     private void Awake()
     {
@@ -59,6 +82,7 @@ public class PlayerStats : MonoBehaviour
         PlayerPrefs.SetInt("AttackPower", AttackPower);
         PlayerPrefs.SetInt("MagicPower", MagicPower);
         PlayerPrefs.SetInt("AllocationStats", AllocationStats);
+        PlayerPrefs.SetInt("Money", Money);
 
         PlayerPrefs.Save();
     }
@@ -72,6 +96,18 @@ public class PlayerStats : MonoBehaviour
         AttackPower = PlayerPrefs.GetInt("AttackPower", AttackPower);
         MagicPower = PlayerPrefs.GetInt("MagicPower", MagicPower);
         AllocationStats = PlayerPrefs.GetInt("AllocationStats", AllocationStats);
+        Money = PlayerPrefs.GetInt("Money", Money);
+
     }
+
+    public void PrintStats()
+    {
+        Debug.Log(
+            $"HP: {PHealth}/{MaxPHealth} | Life: {PlayerLife} | Skill: {PSkill} | " +
+            $"AP: {AttackPower} | MP: {MagicPower} | Heal: {Heal} | " +
+            $"Alloc: {AllocationStats}/10 | $: {Money}"
+        );
+    }
+
 
 }

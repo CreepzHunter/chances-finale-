@@ -48,6 +48,12 @@ public class GameManagerWrath : MonoBehaviour
     }
     private void PostBattle()
     {
+
+        PlayerStats.Instance.Money += 150;
+        PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
+        PlayerStats.Instance.AllocationStats += 3;
+        PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+
         PlayerPrefs.Save();
         SceneManager.LoadScene(35);
 

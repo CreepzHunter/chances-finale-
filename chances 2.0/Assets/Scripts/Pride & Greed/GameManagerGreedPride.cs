@@ -39,7 +39,6 @@ public class GameManagerGreedPride : MonoBehaviour
             enemyAnimations[5].SetActive(true);
 
             Invoke("PostBattle", 0.8f);
-            PlayerPrefs.Save();
 
         }
         //player dead
@@ -47,7 +46,6 @@ public class GameManagerGreedPride : MonoBehaviour
         {
             gameover.SetActive(true);
             Invoke("PostBattle", 1.06f);
-            PlayerPrefs.Save();
 
         }
 
@@ -60,6 +58,11 @@ public class GameManagerGreedPride : MonoBehaviour
     }
     private void PostBattle()
     {
+        PlayerStats.Instance.Money += 80;
+        PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
+        PlayerStats.Instance.AllocationStats += 1;
+        PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+
         PlayerPrefs.Save();
         SceneManager.LoadScene(33);
     }
