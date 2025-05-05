@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43975493, g: 0.4881794, b: 0.5683984, a: 1}
+  m_IndirectSpecularColor: {r: 0.43975514, g: 0.48817998, b: 0.5683994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -40697,7 +40697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1789931365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40944,10 +40944,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25454bc180026a841b73c916d2a2b466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallBottle: 1
-  largeBottle: 1
-  smallMedkit: 1
-  largeMedkit: 1
+  smallBottle: 5
+  largeBottle: 5
+  smallMedkit: 5
+  largeMedkit: 5
 --- !u!4 &1797611761
 Transform:
   m_ObjectHideFlags: 0
@@ -51432,6 +51432,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1993611776325798264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51568,7 +51580,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3568823261978974066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8208052994190676806}
+        m_TargetAssemblyTypeName: InventoryScript, Assembly-CSharp
+        m_MethodName: UseSmallMedkit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &2104321360258873950
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53017,7 +53041,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 226424500286843438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8208052994190676806}
+        m_TargetAssemblyTypeName: InventoryScript, Assembly-CSharp
+        m_MethodName: UseSmallBottle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &2955428034899547650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53194,7 +53230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &3054741695470095097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56212,7 +56248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &5213222967430506870
 GameObject:
   m_ObjectHideFlags: 0
@@ -56975,7 +57011,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1901152732079479990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8208052994190676806}
+        m_TargetAssemblyTypeName: InventoryScript, Assembly-CSharp
+        m_MethodName: UseLargeBottle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6029811578624664172
 GameObject:
   m_ObjectHideFlags: 0
@@ -57269,7 +57317,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6643002747291163212}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8208052994190676806}
+        m_TargetAssemblyTypeName: InventoryScript, Assembly-CSharp
+        m_MethodName: UseLargeMedkit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &6434582051405046218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -59669,7 +59729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &8133977448668097162
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61131,9 +61191,9 @@ SceneRoots:
   - {fileID: 1582298777}
   - {fileID: 1667138909}
   - {fileID: 1428147323}
-  - {fileID: 1797611761}
-  - {fileID: 1576400443}
   - {fileID: 1003443135}
   - {fileID: 323326302}
   - {fileID: 948622945}
   - {fileID: 1728328183}
+  - {fileID: 1797611761}
+  - {fileID: 1576400443}

@@ -25,7 +25,8 @@ public class Enemy : MonoBehaviour
     public GameManagerSloth gameManagerSloth;
     public HealthSystem healthSystem;
     //parent's Vector3(2.25,-1.29797363,-3.72000003)
-    public Vector3 initialStartLocation1 = new Vector3(0.23f, 3.53f, 0f);
+    // public Vector3 initialStartLocation1 = new Vector3(0.23f, 3.53f, 0f);
+    public Vector3 initialStartLocation1;
     public Vector3 initialStartLocation2 = new Vector3(1.67299998f, 1.95099998f, 0f);
     public Vector3 initialStartLocation3 = new Vector3(1.15999997f, -1.05999994f, 0f);
 

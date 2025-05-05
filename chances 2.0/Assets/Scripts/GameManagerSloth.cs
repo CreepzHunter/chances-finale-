@@ -35,8 +35,10 @@ public class GameManagerSloth : MonoBehaviour
     public GameObject[] slothGameplay;
     public GameObject[] BtnsToShow;
     public GameObject[] ToHide;
+    public GameObject[] Box;
     private Vector3 initialLocation = new Vector3(-957.249023f, -534.539001f, 3.22000003f);
     public GameObject gameover;
+
 
     void Awake()
     {
@@ -364,18 +366,25 @@ public class GameManagerSloth : MonoBehaviour
 
         if (healthPercent >= 0.66f)
         {
+            Box[0].SetActive(true);
+
+
             slothGameplay[0].SetActive(true);
             timeCodeGO.SetActive(true);
             timeCode.initialCountdownDuration = 20f;
         }
         else if (healthPercent >= 0.33f)
         {
+            Box[1].SetActive(true);
+
             slothGameplay[1].SetActive(true);
             timeCodeGO.SetActive(true);
             timeCode.initialCountdownDuration = 35f;
         }
         else if (healthPercent > 0f)
         {
+            Box[2].SetActive(true);
+
             slothGameplay[2].SetActive(true);
             timeCodeGO.SetActive(true);
             timeCode.initialCountdownDuration = 50f;

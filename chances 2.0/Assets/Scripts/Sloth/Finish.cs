@@ -19,13 +19,14 @@ public class Finish : MonoBehaviour
 
     public GameObject[] boxHide;
 
-    public GameObject[] destroyBoxAfterWin;
-    private Vector2 startLocation;
+    public Vector2 startLocation;
+    bool hasStarted = false;
 
     private void Start()
     {
         StartingLocation();
     }
+
 
     public void StartingLocation()
     {
@@ -43,15 +44,17 @@ public class Finish : MonoBehaviour
 
     private void HandlePlayerCollision()
     {
-        // Deal damage to the enemy
-        enemyHealth.TakeDamage(15);
-        int rndatt = Random.Range(5, 15);
-        enemyHealth.TakeDamage(rndatt);
-        if (skillOption.attack == true)//activate more damage when skill
+        int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+        if (skillOption != null && skillOption.attack == true)
         {
-            enemyHealth.TakeDamage(25);
+            totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
             skillOption.attack = false;
         }
+
+        enemyHealth.TakeDamage(totalDamage);
+
+
         // Disable sloth-related GameObjects
         slothCharacter.SetActive(false);
         // slothLifeBar.SetActive(false);
@@ -75,10 +78,10 @@ public class Finish : MonoBehaviour
         {
             button.SetActive(false);
         });
-        destroyBoxAfterWin.ToList().ForEach(item =>
-        {
-            Destroy(item);
-        });
+        // destroyBoxAfterWin.ToList().ForEach(item =>
+        // {
+        //     Destroy(item);
+        // });
 
         gameManager.ReturnAll();
         gameManager.SlothEnable();

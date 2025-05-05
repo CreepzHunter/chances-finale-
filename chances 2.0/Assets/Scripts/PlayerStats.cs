@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats Instance;
 
     //Health
-    private int _pHealth = 100;
+    public int _pHealth = 100;
     public int PHealth
     {
         get => _pHealth;
@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour
         set => _playerLife = Mathf.Clamp(value, 0, 3);
     }
     //Skill
-    private int _pSkill = 0;
+    public int _pSkill = 0;
     public int PSkill
     {
         get => _pSkill;
@@ -33,7 +33,7 @@ public class PlayerStats : MonoBehaviour
     //Magic Power 
     public int MagicPower = 10;
     public int Heal = 10;
-    private int _allocationStats = 5;
+    public int _allocationStats = 5;
     public int AllocationStats
     {
         get => _allocationStats;
@@ -53,6 +53,7 @@ public class PlayerStats : MonoBehaviour
             Destroy(gameObject);
         }
         GetPlayerPrefs();
+        // SetPlayerPrefs();
     }
     // void LoadPlayerData()
     // {
