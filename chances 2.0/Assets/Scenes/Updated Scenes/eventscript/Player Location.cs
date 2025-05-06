@@ -50,6 +50,8 @@ public class PlayerLocation : MonoBehaviour
         player8.gameObject.SetActive(false);
         player9.gameObject.SetActive(false);
         player10.gameObject.SetActive(false);
+        player11.gameObject.SetActive(false);
+        player12.gameObject.SetActive(false);
 
         switch (location)
         {

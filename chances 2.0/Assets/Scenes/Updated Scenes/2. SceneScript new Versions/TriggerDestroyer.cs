@@ -24,4 +24,11 @@ public class TriggerDestroyer : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void destory()
+    {
+        PlayerPrefs.SetInt(objectID, 1); // Mark as destroyed
+        PlayerPrefs.Save();              // Save to disk
+        Destroy(gameObject);
+    }
 }
