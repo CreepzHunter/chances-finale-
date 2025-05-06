@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gamemaster : MonoBehaviour
 {
@@ -57,4 +58,5 @@ public class gamemaster : MonoBehaviour
             player.transform.position = lastcheckpointpos;
         }
     }
+
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EventBlocker : MonoBehaviour
 {
@@ -17,6 +18,14 @@ public class EventBlocker : MonoBehaviour
     public Image checkmark3;
     public Image checkmark4;
     public Image checkmark5;
+
+    public TextMeshProUGUI task0;
+    public TextMeshProUGUI task1;
+    public TextMeshProUGUI task2;
+    public TextMeshProUGUI task3;
+    public TextMeshProUGUI task4;
+    public TextMeshProUGUI task5;
+    public TextMeshProUGUI task6;
 
     public int EventOccur = 0;
 
@@ -52,17 +61,19 @@ public class EventBlocker : MonoBehaviour
                 checkmark3.gameObject.SetActive(false);
                 checkmark4.gameObject.SetActive(false);
                 checkmark5.gameObject.SetActive(false);
+                task0.gameObject.SetActive(true);
                 break;
             
             case 1:
                 FirstPath.gameObject.SetActive(false);
-                
+                task1.gameObject.SetActive(true);
                 break;
             
             case 2:
                 FirstPath.gameObject.SetActive(false);
                 SecondPath.gameObject.SetActive(false);
                 checkmark1.gameObject.SetActive(true);
+                task2.gameObject.SetActive(true);
                 break;
             
             case 3:
@@ -71,6 +82,7 @@ public class EventBlocker : MonoBehaviour
                 ThirdPath.gameObject.SetActive(false);
                 checkmark1.gameObject.SetActive(true);
                 checkmark2.gameObject.SetActive(true);
+                task3.gameObject.SetActive(true);
                 break;
 
             case 4:
@@ -81,6 +93,7 @@ public class EventBlocker : MonoBehaviour
                 checkmark1.gameObject.SetActive(true);
                 checkmark2.gameObject.SetActive(true);
                 checkmark3.gameObject.SetActive(true);
+                task4.gameObject.SetActive(true);
                 break;
             
             case 5:
@@ -93,6 +106,7 @@ public class EventBlocker : MonoBehaviour
                 checkmark2.gameObject.SetActive(true);
                 checkmark3.gameObject.SetActive(true);
                 checkmark4.gameObject.SetActive(true);
+                task5.gameObject.SetActive(true);
                 break;
 
             case 6:
@@ -107,6 +121,7 @@ public class EventBlocker : MonoBehaviour
                 checkmark3.gameObject.SetActive(true);
                 checkmark4.gameObject.SetActive(true);
                 checkmark5.gameObject.SetActive(true);
+                task6.gameObject.SetActive(true);
                 break;
         }
     }

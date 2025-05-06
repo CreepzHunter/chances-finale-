@@ -15,6 +15,8 @@ public class PlayerLocation : MonoBehaviour
     public Image player8;
     public Image player9;
     public Image player10;
+    public Image player11;
+    public Image player12;
 
     public string CurrentLocation;
 
@@ -80,6 +82,12 @@ public class PlayerLocation : MonoBehaviour
                 break;
             case "Mountain":
                 player10.gameObject.SetActive(true);
+                break;
+            case "Road3":
+                player11.gameObject.SetActive(true);
+                break;
+            case "RoadToMnt":
+                player12.gameObject.SetActive(true);
                 break;
         }
     }
