@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43975493, g: 0.4881794, b: 0.5683984, a: 1}
+  m_IndirectSpecularColor: {r: 0.43975514, g: 0.48817998, b: 0.5683994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23887,7 +23887,7 @@ RectTransform:
   m_Father: {fileID: 1341440430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.7921524, y: -0.6747198}
   m_SizeDelta: {x: 7.25962, y: -5.77942}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -43174,8 +43174,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 826082588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.66, y: -0.0000009536743}
   m_SizeDelta: {x: 8.31563, y: -12.84131}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -52031,8 +52031,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8318778378026341260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.66, y: -0.0000009536743}
   m_SizeDelta: {x: 8.31563, y: -12.84131}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -54559,7 +54559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &3054741695470095097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54731,7 +54731,7 @@ RectTransform:
   m_Father: {fileID: 4582233751979259610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.7921524, y: -0.6747198}
   m_SizeDelta: {x: 7.25962, y: -5.77942}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -55187,7 +55187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3682119004729343220
 GameObject:
   m_ObjectHideFlags: 0

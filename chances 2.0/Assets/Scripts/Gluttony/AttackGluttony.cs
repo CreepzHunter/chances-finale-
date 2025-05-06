@@ -29,22 +29,29 @@ public class AttackGluttony : MonoBehaviour
         if (eHealth.health <= 0)
         {
             hasLoaded = true;
-            PlayerPrefs.Save();
+            Reward();
             PostBattle();
         }
-        if (PlayerStats.Instance.PHealth == 0)
+        if (PlayerStats.Instance.PHealth <= 0)
         {
 
+            PlayerStats.Instance.PHealth = PlayerStats.Instance.MaxPHealth;
+            PlayerStats.Instance.PlayerLife--;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+            PlayerPrefs.SetInt("PlayerLife", PlayerStats.Instance.PlayerLife);
+
             PlayerPrefs.Save();
-            PostBattle();
+
+            Invoke("LoadOverWorld", 1.06f);
 
         }
     }
-    private void DemoWorld()
+    private void LoadOverWorld()
     {
-        SceneManager.LoadScene(17);
+        SceneManager.LoadScene(1);
     }
-    private void PostBattle()
+
+    private void Reward()
     {
         PlayerStats.Instance.Money += 60;
         PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
@@ -52,6 +59,10 @@ public class AttackGluttony : MonoBehaviour
         PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
 
         PlayerPrefs.Save();
+    }
+    private void PostBattle()
+    {
+
         SceneManager.LoadScene(32);
     }
     public void OnClickAttack()

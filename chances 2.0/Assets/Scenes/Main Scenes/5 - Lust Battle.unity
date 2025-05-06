@@ -601,7 +601,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1765310346}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efa2fdf507be2f947bf84baece46279e, type: 3}
   m_Name: 
@@ -4484,7 +4484,7 @@ MonoBehaviour:
   gameLife: {fileID: 140345434}
   beatScroller: {fileID: 1065158913}
   gameover: {fileID: 996627553}
-  blink: {fileID: 0}
+  blink: {fileID: 707973094}
 --- !u!114 &707973094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9710,7 +9710,6 @@ GameObject:
   - component: {fileID: 1663513775}
   - component: {fileID: 1663513774}
   - component: {fileID: 1663513773}
-  - component: {fileID: 1663513778}
   m_Layer: 5
   m_Name: Skill
   m_TagString: Untagged
@@ -9788,7 +9787,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSwitch: {fileID: 371858614}
   cockroachLife: {fileID: 0}
-  startBlinking: {fileID: 1663513778}
   gameManagerSloth: {fileID: 0}
   gameManagerEnvyNew: {fileID: 0}
   gameFlowManagerLust: {fileID: 707973093}
@@ -9875,20 +9873,6 @@ RectTransform:
   m_AnchoredPosition: {x: 12, y: -326}
   m_SizeDelta: {x: 108.87, y: 34.7369}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1663513778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663513772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87b12b26b5e08948af48bbc1e7fb289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boss:
-  - {fileID: 0}
 --- !u!1 &1674298553
 GameObject:
   m_ObjectHideFlags: 0
@@ -10200,6 +10184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3584540402981879693, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
+      propertyPath: _pSkill
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7166717609713391790, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

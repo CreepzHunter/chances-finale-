@@ -57,8 +57,9 @@ public class TimeCode : MonoBehaviour
                 if (skillOption.shield == false)
                 {
 
-                    PlayerStats.Instance.PHealth -= 10;
+                    PlayerStats.Instance.PHealth -= rndm;
                     PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+
                 }
                 else if (skillOption.shield == true)
                 {
@@ -80,6 +81,8 @@ public class TimeCode : MonoBehaviour
                 {
                     PlayerStats.Instance.PHealth -= rndm;
                     PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+
+                    gameManagerSloth.PlayerBlinkAnim();
                 }
                 else if (skillOption.shield == true)
                 {
@@ -109,7 +112,7 @@ public class TimeCode : MonoBehaviour
             }
             if (gameManagerWrath != null)
             {
-                PlayerStats.Instance.PHealth -= rndm;
+                PlayerStats.Instance.PHealth -= rndm + 5;
                 PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
                 gameManagerWrath.ReturnAll();
             }

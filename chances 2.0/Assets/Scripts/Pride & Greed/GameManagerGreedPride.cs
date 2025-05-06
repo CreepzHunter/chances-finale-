@@ -14,6 +14,7 @@ public class GameManagerGreedPride : MonoBehaviour
     public TimeCode timeCode;
     public ObjectSpawner2D objectSpawner;
 
+    public StartBlinkingAnim blink;
 
     [SerializeField] private GameObject playerLife;
     [SerializeField] private GameObject senemyLife;
@@ -31,7 +32,7 @@ public class GameManagerGreedPride : MonoBehaviour
 
     public void Update()
     {
-        if (GreedLife.health == 0)
+        if (GreedLife.health <= 0)
         {
             enemyAnimations[0].SetActive(false);
             enemyAnimations[3].SetActive(false);
@@ -42,20 +43,23 @@ public class GameManagerGreedPride : MonoBehaviour
 
         }
         //player dead
-        if (PlayerStats.Instance.PHealth == 0)
+        if (PlayerStats.Instance.PHealth <= 0)
         {
             gameover.SetActive(true);
-            Invoke("PostBattle", 1.06f);
+
+            PlayerStats.Instance.PHealth = PlayerStats.Instance.MaxPHealth;
+            PlayerStats.Instance.PlayerLife--;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+            PlayerPrefs.SetInt("PlayerLife", PlayerStats.Instance.PlayerLife);
+
+            PlayerPrefs.Save();
+
+            Invoke("LoadOverWorld", 1.06f);
 
         }
 
     }
 
-    private void DemoWorld()
-    {
-        //SceneManager Heree!
-
-    }
     private void PostBattle()
     {
         PlayerStats.Instance.Money += 80;
@@ -119,6 +123,9 @@ public class GameManagerGreedPride : MonoBehaviour
 
             GreedLife.TakeDamage(totalDamage);
 
+            Invoke("WaitBlink", 2f);
+
+
             Invoke("ReturnAll", 1f);
         }
         else if (number == 1)
@@ -160,10 +167,17 @@ public class GameManagerGreedPride : MonoBehaviour
 
         GreedLife.TakeDamage(totalDamage);
 
+        Invoke("WaitBlink", 1f);
+    }
+
+    private void WaitBlink()
+    {
+        blink.StartBlinking(0);
+        blink.StartBlinking(1);
     }
     public void PlayerTakeDamage()
     {
-        int damage = Random.Range(10, 20);
+        int damage = Random.Range(10, 25);
         if (skillOption.shield == false)//immune damage if shielded
         {
             PlayerStats.Instance.PHealth -= damage;
@@ -173,6 +187,9 @@ public class GameManagerGreedPride : MonoBehaviour
         {
             skillOption.shield = false;
         }
+
+        blink.StartBlinking(2);
+
     }
 
 

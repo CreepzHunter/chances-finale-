@@ -46,21 +46,41 @@ public class GameManagerSloth : MonoBehaviour
         InitialLoc();
     }
 
+
     void Update()
     {
 
         if (slothLife.health <= 0 && !hasDied)
         {
+            hasDied = true;
+
             slothIdle.SetActive(false);
             slothDead.SetActive(true);
             // Invoke("LoadOverWorld", 0.8f);
 
 
-            Invoke("PostBattle", 1.06f);
             PlayerPrefs.Save();
+            Invoke("PostBattle", 1.06f);
 
         }
-        if (cockroachLife.health == 0)
+
+        //player dead
+        if (PlayerStats.Instance.PHealth <= 0)
+        {
+            gameover.SetActive(true);
+
+
+            PlayerStats.Instance.PHealth = PlayerStats.Instance.MaxPHealth;
+            PlayerStats.Instance.PlayerLife--;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+            PlayerPrefs.SetInt("PlayerLife", PlayerStats.Instance.PlayerLife);
+
+            PlayerPrefs.Save();
+
+            Invoke("LoadOverWorld", 1.06f);
+        }
+
+        if (cockroachLife.health <= 0)
         {
             ckIdleenmy.ToList().ForEach(ck =>
             {
@@ -73,17 +93,6 @@ public class GameManagerSloth : MonoBehaviour
             });
             BtnsToShow[4].SetActive(false);
         }
-        //player dead
-        if (healthSystemPlayer.health == 0)
-        {
-            gameover.SetActive(true);
-            // Invoke("LoadOverWorld", 1.06f);sss
-
-            Invoke("PostBattle", 1.06f);
-            PlayerPrefs.Save();
-
-        }
-
     }
 
     private void DemoWorld()
@@ -176,7 +185,7 @@ public class GameManagerSloth : MonoBehaviour
                         skillOption.attack = false;
                     }
 
-                    slothLife.TakeDamage(Random.Range(totalDamage, totalDamage + 10));
+                    slothLife.TakeDamage(totalDamage);
 
                     //***
                     Invoke("DisableVidAttackAnim", 3f);
@@ -199,6 +208,11 @@ public class GameManagerSloth : MonoBehaviour
         Invoke("ReturnAll", 1f);
 
 
+    }
+
+    public void PlayerBlinkAnim()
+    {
+        startBlinkingAnim.StartBlinking(3);
     }
 
     #region Basics
@@ -383,11 +397,11 @@ public class GameManagerSloth : MonoBehaviour
         }
         else if (healthPercent > 0f)
         {
-            Box[2].SetActive(true);
-
+            timeCode.initialCountdownDuration = 50f;
             slothGameplay[2].SetActive(true);
             timeCodeGO.SetActive(true);
-            timeCode.initialCountdownDuration = 50f;
+            Box[2].SetActive(true);
+
         }
 
 

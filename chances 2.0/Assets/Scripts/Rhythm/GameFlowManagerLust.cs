@@ -47,7 +47,7 @@ public class GameFlowManagerLust : MonoBehaviour
 
     void Update()
     {
-        if (lustLife.health == 0)
+        if (lustLife.health <= 0)
         {
             //dead here
             lustIdle.SetActive(false);
@@ -55,25 +55,25 @@ public class GameFlowManagerLust : MonoBehaviour
 
             // Invoke("LoadOverWorld", 0.8f);
             Invoke("PostBattle", 1.06f);
-            PlayerPrefs.Save();
 
         }
         //player dead
-        if (PlayerStats.Instance.PHealth == 0)
+        if (PlayerStats.Instance.PHealth <= 0)
         {
             gameover.SetActive(true);
 
-            // Invoke("LoadOverWorld", 1.06f);
-            Invoke("PostBattle", 1.06f);
+            PlayerStats.Instance.PHealth = PlayerStats.Instance.MaxPHealth;
+            PlayerStats.Instance.PlayerLife--;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+            PlayerPrefs.SetInt("PlayerLife", PlayerStats.Instance.PlayerLife);
+
+            Invoke("LoadOverWorld", 1.06f);
             PlayerPrefs.Save();
 
         }
 
     }
-    private void DemoWorld()
-    {
-        SceneManager.LoadScene(17);
-    }
+
     private void LoadOverWorld()
     {
         SceneManager.LoadScene(1);
@@ -107,7 +107,7 @@ public class GameFlowManagerLust : MonoBehaviour
             int attackpower = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
 
             lustLife.TakeDamage(attackpower);
-            blink.StartBlinking(0);
+            Invoke("WaitBlink", 2f);
 
             Invoke("ReturnAll", 4f);
         }
@@ -179,8 +179,7 @@ public class GameFlowManagerLust : MonoBehaviour
         }
 
         lustLife.TakeDamage(totalDamage);
-        blink.StartBlinking(0);
-
+        Invoke("WaitBlink", 2f);
 
         if (beatScroller.musicAnalyzer1GO.activeSelf)
         {
@@ -198,6 +197,11 @@ public class GameFlowManagerLust : MonoBehaviour
 
         Invoke("ReturnAll", 1f);
     }
+    private void WaitBlink()
+    {
+        blink.StartBlinking(0);
+
+    }
 
     public void LoseLevel()
     {
@@ -209,7 +213,7 @@ public class GameFlowManagerLust : MonoBehaviour
         gameManagerRhythm.currMultiplier = 1;
 
 
-        int random0to10 = Random.Range(10, 20);
+        int random0to10 = Random.Range(15, 30);
 
         PlayerStats.Instance.PHealth -= random0to10;
         PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
@@ -229,12 +233,17 @@ public class GameFlowManagerLust : MonoBehaviour
             skillOption.shield = false;
         }
 
+        Invoke("WaitBlink1", 2f);
 
         Invoke("ReturnAll", 1f);
     }
 
 
+    private void WaitBlink1()
+    {
+        blink.StartBlinking(1);
 
+    }
 
     #region Basics
     public void ReturnAll()

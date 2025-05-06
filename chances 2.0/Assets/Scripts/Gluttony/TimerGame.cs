@@ -11,6 +11,7 @@ public class TimerGame : MonoBehaviour
     [SerializeField] private HealthSystem healthSystem;
     [SerializeField] private AttackGluttony attackGluttony;
     [SerializeField] private StartBlinkingAnim blink;
+    [SerializeField] private SkillOption skillOption;
     [SerializeField] private int health;
 
     public float spawnTimer = 10f;
@@ -20,6 +21,7 @@ public class TimerGame : MonoBehaviour
 
     void OnEnable()
     {
+        hasEnded = false;
         currentTime = spawnTimer;
     }
 
@@ -39,17 +41,28 @@ public class TimerGame : MonoBehaviour
 
                 if (health > 0)
                 {
-                    int rnd = Random.Range(20, 30);
+
+                    Debug.Log("Anak ka ng Teteng");
+                    // damage enemy
+
+                    int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+                    if (skillOption != null && skillOption.attack == true)
+                    {
+                        totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+                        skillOption.attack = false;
+                    }
+
+                    healthSystem.TakeDamage(totalDamage);
+
+                    blink.StartBlinking(0);
                     attackGluttony.ReturnAll();
 
-                    healthSystem.TakeDamage(rnd);
-                    blink.StartBlinking(0);
                 }
                 else
                 {
                     // dmg player
-                    int rnd = Random.Range(10, 20);
-                    // healthSystemPlayer.TakeDamage(rnd);
+                    int rnd = Random.Range(10, 25);
                     PlayerStats.Instance.PHealth -= rnd;
                     PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
 

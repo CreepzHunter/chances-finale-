@@ -59,8 +59,7 @@ public class Finish : MonoBehaviour
         slothCharacter.SetActive(false);
         // slothLifeBar.SetActive(false);
         gameManager.slothAttack.SetActive(false);
-        startBlinkingAnim.StartBlinking(0);
-
+        gameManager.PlayerBlinkAnim();
         // Reset game statea
         gameManager.check = false;
         cameraController.FightScene();

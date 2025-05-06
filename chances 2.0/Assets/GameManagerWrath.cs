@@ -31,7 +31,7 @@ public class GameManagerWrath : MonoBehaviour
 
     public void Update()
     {
-        if (wrathLife.health == 0)
+        if (wrathLife.health <= 0)
         {
             enemyAnimations[0].SetActive(false);
             enemyAnimations[2].SetActive(true);
@@ -39,10 +39,17 @@ public class GameManagerWrath : MonoBehaviour
             Invoke("PostBattle", 0.8f);
         }
         //player dead
-        if (PlayerStats.Instance.PHealth == 0)
+        if (PlayerStats.Instance.PHealth <= 0)
         {
             gameover.SetActive(true);
-            Invoke("PostBattle", 1.06f);
+
+            PlayerStats.Instance.PHealth = PlayerStats.Instance.MaxPHealth;
+            PlayerStats.Instance.PlayerLife--;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+            PlayerPrefs.SetInt("PlayerLife", PlayerStats.Instance.PlayerLife);
+
+
+            Invoke("LoadOverWorld", 1.06f);
         }
 
     }
@@ -58,9 +65,8 @@ public class GameManagerWrath : MonoBehaviour
         SceneManager.LoadScene(35);
 
     }
-    private void DemoWorld()
+    private void LoadOverWorld()
     {
-        PlayerPrefs.Save();
 
         SceneManager.LoadScene(1);
     }

@@ -35,6 +35,8 @@ public class Enemy : MonoBehaviour
     public GameObject[] key;
     public GameObject[] doorClose;
     public GameObject[] doorOpen;
+    public GameObject[] box;
+    public Transform[] boxLoc;
 
     public GameObject doorB;
     public GameObject doorC;
@@ -67,6 +69,7 @@ public class Enemy : MonoBehaviour
             key[0].SetActive(true);
             doorClose[0].SetActive(true);
             doorOpen[0].SetActive(false);
+
             playerMovement1.transform.localPosition = initialStartLocation1;
         }
         else if (gameplay[1].activeSelf)
@@ -75,6 +78,7 @@ public class Enemy : MonoBehaviour
             doorB.SetActive(true);
             doorClose[1].SetActive(true);
             doorOpen[1].SetActive(false);
+
             playerMovement2.transform.localPosition = initialStartLocation2;
         }
         else if (gameplay[2].activeSelf)
@@ -82,6 +86,8 @@ public class Enemy : MonoBehaviour
             key[2].SetActive(true);
             doorClose[2].SetActive(true);
             doorOpen[2].SetActive(false);
+
+
             playerMovement3.transform.localPosition = initialStartLocation3;
         }
     }
@@ -148,6 +154,8 @@ public class Enemy : MonoBehaviour
                     doorClose[0].SetActive(true);
                     doorOpen[0].SetActive(false);
                     playerMovement1.transform.localPosition = initialStartLocation1;
+
+
                 }
                 else if (gameplay[1].activeSelf)
                 {
@@ -156,6 +164,8 @@ public class Enemy : MonoBehaviour
                     doorClose[1].SetActive(true);
                     doorOpen[1].SetActive(false);
                     playerMovement2.transform.localPosition = initialStartLocation2;
+
+
                 }
                 else if (gameplay[2].activeSelf)
                 {
@@ -163,6 +173,7 @@ public class Enemy : MonoBehaviour
                     doorClose[2].SetActive(true);
                     doorOpen[2].SetActive(false);
                     playerMovement3.transform.localPosition = initialStartLocation3;
+
                 }
             }
         }

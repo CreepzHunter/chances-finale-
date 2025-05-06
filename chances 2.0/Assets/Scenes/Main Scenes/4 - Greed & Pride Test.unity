@@ -2722,6 +2722,7 @@ GameObject:
   - component: {fileID: 656989137}
   - component: {fileID: 656989145}
   - component: {fileID: 656989143}
+  - component: {fileID: 656989146}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -2874,6 +2875,7 @@ MonoBehaviour:
   skillOption: {fileID: 7060427112453994671}
   timeCode: {fileID: 412286290}
   objectSpawner: {fileID: 1335489713}
+  blink: {fileID: 656989146}
   playerLife: {fileID: 193692308}
   senemyLife: {fileID: 707218186}
   skillOptionContainer: {fileID: 228190574}
@@ -2903,6 +2905,22 @@ MonoBehaviour:
   - {fileID: 193692308}
   - {fileID: 707218186}
   gameover: {fileID: 574672807}
+--- !u!114 &656989146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656989136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87b12b26b5e08948af48bbc1e7fb289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss:
+  - {fileID: 331440863}
+  - {fileID: 1170505651}
+  - {fileID: 1004068932}
 --- !u!1 &675069917
 GameObject:
   m_ObjectHideFlags: 0

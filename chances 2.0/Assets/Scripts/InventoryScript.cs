@@ -34,7 +34,7 @@ public class InventoryScript : MonoBehaviour
 
     public void UseSmallBottle()
     {
-        if (ItemStats.Instance.smallBottle > 0)
+        if (ItemStats.Instance.smallBottle > 0 && PlayerStats.Instance.PSkill != 3)
         {
             ItemStats.Instance.smallBottle--;
             PlayerPrefs.SetInt("SmallBottle", ItemStats.Instance.smallBottle);
@@ -45,7 +45,7 @@ public class InventoryScript : MonoBehaviour
 
     public void UseLargeBottle()
     {
-        if (ItemStats.Instance.largeBottle > 0)
+        if (ItemStats.Instance.largeBottle > 0 && PlayerStats.Instance.PSkill != 3)
         {
             ItemStats.Instance.largeBottle--;
             PlayerPrefs.SetInt("LargeBottle", ItemStats.Instance.largeBottle);
@@ -56,7 +56,7 @@ public class InventoryScript : MonoBehaviour
 
     public void UseSmallMedkit()
     {
-        if (ItemStats.Instance.smallMedkit > 0)
+        if (ItemStats.Instance.smallMedkit > 0 && (PlayerStats.Instance.PHealth != PlayerStats.Instance.MaxPHealth))
         {
             ItemStats.Instance.smallMedkit--;
             PlayerPrefs.SetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
@@ -67,7 +67,7 @@ public class InventoryScript : MonoBehaviour
 
     public void UseLargeMedkit()
     {
-        if (ItemStats.Instance.largeMedkit > 0)
+        if (ItemStats.Instance.largeMedkit > 0 && (PlayerStats.Instance.PHealth != PlayerStats.Instance.MaxPHealth))
         {
             ItemStats.Instance.largeMedkit--;
             PlayerPrefs.SetInt("LargeMedkit", ItemStats.Instance.largeMedkit);

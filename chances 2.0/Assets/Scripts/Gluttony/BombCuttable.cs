@@ -20,13 +20,7 @@ public class BombCuttable : MonoBehaviour
     {
         if (other.gameObject.tag == "Cut")
         {
-            // deduct life and skill
 
-            if (PlayerStats.Instance.PSkill > 0)
-            {
-                PlayerStats.Instance.PSkill--;
-                PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
-            }
             mAnimator.SetTrigger("Boom");
 
             int rnd = Random.Range(30, 40);

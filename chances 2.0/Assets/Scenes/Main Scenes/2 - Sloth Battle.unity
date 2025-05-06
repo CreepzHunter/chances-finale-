@@ -1051,7 +1051,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a5b4ccff02629cf47b3c957fdc9f2dfe, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.59
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2138,8 +2138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 189650617}
-  health: 100
-  maxHealth: 200
+  health: 150
+  maxHealth: 150
 --- !u!1 &211013115
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,7 +2662,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSwitch: {fileID: 2061924513}
   cockroachLife: {fileID: 612147115}
-  startBlinking: {fileID: 266689933}
   gameManagerSloth: {fileID: 639300196}
   gameManagerEnvyNew: {fileID: 0}
   gameFlowManagerLust: {fileID: 0}
@@ -4290,12 +4289,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3584540402981879693, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
+      propertyPath: _pSkill
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584540402981879693, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
       propertyPath: MagicPower
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3584540402981879693, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
       propertyPath: AttackPower
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7166717609713391790, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4679,6 +4682,16 @@ MonoBehaviour:
   - {fileID: 853063354}
   - {fileID: 1925490229}
   - {fileID: 895820122}
+  box:
+  - {fileID: 1723194472}
+  - {fileID: 1134448670}
+  - {fileID: 172689409}
+  - {fileID: 1328977229}
+  boxLoc:
+  - {fileID: 1558075559}
+  - {fileID: 880096596}
+  - {fileID: 682116713}
+  - {fileID: 361190070}
   doorB: {fileID: 1447573301}
   doorC: {fileID: 1447573301}
   isDead: 0
@@ -5113,6 +5126,7 @@ MonoBehaviour:
   - {fileID: 580945502}
   - {fileID: 768712805}
   - {fileID: 2086590080}
+  - {fileID: 1904374331}
 --- !u!1 &640084931
 GameObject:
   m_ObjectHideFlags: 0

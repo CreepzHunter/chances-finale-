@@ -206,7 +206,7 @@ public class Item : MonoBehaviour
 
     void UseSmallBottle()
     {
-        if (ItemStats.Instance.smallBottle > 0)
+        if (ItemStats.Instance.smallBottle > 0 && PlayerStats.Instance.PSkill != 3)
         {
             PlayerStats.Instance.PSkill++;
             PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
@@ -221,7 +221,7 @@ public class Item : MonoBehaviour
 
     void UseMidBottle()
     {
-        if (ItemStats.Instance.largeBottle > 0)
+        if (ItemStats.Instance.largeBottle > 0 && PlayerStats.Instance.PSkill != 3)
         {
             PlayerStats.Instance.PSkill += 2;
             PlayerPrefs.SetInt("PSkill", PlayerStats.Instance.PSkill);
@@ -235,7 +235,7 @@ public class Item : MonoBehaviour
 
     void EatChocolate()
     {
-        if (ItemStats.Instance.smallMedkit > 0)
+        if (ItemStats.Instance.smallMedkit > 0 && (PlayerStats.Instance.PHealth != PlayerStats.Instance.MaxPHealth))
         {
             PlayerStats.Instance.PHealth += 15;
             PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
@@ -249,7 +249,7 @@ public class Item : MonoBehaviour
 
     void UseMedkit()
     {
-        if (ItemStats.Instance.largeMedkit > 0)
+        if (ItemStats.Instance.largeMedkit > 0 && (PlayerStats.Instance.PHealth != PlayerStats.Instance.MaxPHealth))
         {
             PlayerStats.Instance.PHealth += 40;
             PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);

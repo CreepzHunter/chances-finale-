@@ -11,6 +11,12 @@ public class GameplayHealth : MonoBehaviour
     public AttackGluttony attackGluttony;
     [SerializeField] private StartBlinkingAnim blink;
     [SerializeField] private GameObject game;
+
+
+    public int damagePerSecond = 3;
+    private float damageTimer = 0f;
+
+
     void Start()
     {
         if (pHealth == null)
@@ -19,6 +25,16 @@ public class GameplayHealth : MonoBehaviour
     public void Update()
     {
         healthBar.fillAmount = health / 100f;
+
+        if (health > 0)
+        {
+            damageTimer += Time.deltaTime;
+            if (damageTimer >= 1f)
+            {
+                TakeDamage(damagePerSecond);
+                damageTimer = 0f;
+            }
+        }
     }
     void OnEnable()
     {
@@ -27,9 +43,12 @@ public class GameplayHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        health -= damage;
+        health = Mathf.Clamp(health, 0, 100);
+
         if (health <= 0)
         {
-            PlayerStats.Instance.PHealth -= Random.Range(20, 35);
+            PlayerStats.Instance.PHealth -= Random.Range(10, 25);
             PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
             //disable game
             game.SetActive(false);
@@ -38,8 +57,6 @@ public class GameplayHealth : MonoBehaviour
 
         }
 
-        health -= damage;
-        health = Mathf.Clamp(health, 0, 100);
 
     }
 

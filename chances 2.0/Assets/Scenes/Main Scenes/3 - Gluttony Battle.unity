@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 977273867}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.57481873, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641335, b: 0.5748198, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 294412728}
   health: 100
-  maxHealth: 200
+  maxHealth: 150
 --- !u!1 &323544443
 GameObject:
   m_ObjectHideFlags: 0
@@ -6529,6 +6529,7 @@ MonoBehaviour:
   healthSystem: {fileID: 294412730}
   attackGluttony: {fileID: 656989145}
   blink: {fileID: 656989146}
+  skillOption: {fileID: 7060427112453994671}
   health: 0
   spawnTimer: 10
 --- !u!1 &571061660
@@ -8764,7 +8765,8 @@ PrefabInstance:
       propertyPath: allocationStats
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8333017926920777941, guid: d4cd4a71b18ad554ba4727bc959ce364, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8965,6 +8967,7 @@ MonoBehaviour:
   attackGluttony: {fileID: 656989145}
   blink: {fileID: 656989146}
   game: {fileID: 323544443}
+  damagePerSecond: 5
 --- !u!1 &1171307144
 GameObject:
   m_ObjectHideFlags: 0

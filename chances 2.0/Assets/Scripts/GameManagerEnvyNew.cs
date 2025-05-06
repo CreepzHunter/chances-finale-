@@ -45,20 +45,25 @@ public class GameManagerEnvyNew : MonoBehaviour
             hasDied = true;
             EnvyDone();
 
-
+            Reward();
             // Invoke("LoadOverWorld", 0.8f);
             Invoke("PostBattle", 1.06f);
 
         }
 
-        //player ded
+        //player dead
         if (PlayerStats.Instance.PHealth == 0)
         {
             gameover.SetActive(true);
 
-            // Invoke("LoadOverWorld", 1.06f);
-            Invoke("PostBattle", 1.06f);
 
+
+            PlayerStats.Instance.PHealth = PlayerStats.Instance.MaxPHealth;
+            PlayerStats.Instance.PlayerLife--;
+            PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
+            PlayerPrefs.SetInt("PlayerLife", PlayerStats.Instance.PlayerLife);
+            PlayerPrefs.Save();
+            Invoke("LoadOverWorld", 1.06f);
 
         }
     }
@@ -74,13 +79,16 @@ public class GameManagerEnvyNew : MonoBehaviour
     }
     private void PostBattle()
     {
+
+
+        SceneManager.LoadScene(30);
+    }
+    private void Reward()
+    {
         PlayerStats.Instance.Money += 20;
         PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
         PlayerStats.Instance.AllocationStats++;
         PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
-
-        PlayerPrefs.Save();
-        SceneManager.LoadScene(30);
     }
     public void EnvyDone()
     {

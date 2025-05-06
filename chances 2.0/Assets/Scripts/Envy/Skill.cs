@@ -9,7 +9,6 @@ public class Skill : MonoBehaviour
     #region Dependencies
     public CameraSwitch cameraSwitch;
     public HealthSystem cockroachLife;
-    public StartBlinkingAnim startBlinking;
     public GameManagerSloth gameManagerSloth;
     public GameManagerEnvyNew gameManagerEnvyNew;
     public GameFlowManagerLust gameFlowManagerLust;

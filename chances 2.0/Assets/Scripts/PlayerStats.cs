@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour
         set => _playerLife = Mathf.Clamp(value, 0, 3);
     }
     //Skill
-    public int _pSkill = 0;
+    public int _pSkill = 3;
     public int PSkill
     {
         get => _pSkill;
