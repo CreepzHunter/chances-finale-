@@ -60,6 +60,10 @@ public class GameManagerWrath : MonoBehaviour
         PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
         PlayerStats.Instance.AllocationStats += 3;
         PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+        ItemStats.Instance.largeBottle++;
+        PlayerPrefs.SetInt("LargeBottle", ItemStats.Instance.largeBottle);
+        ItemStats.Instance.largeMedkit++;
+        PlayerPrefs.SetInt("LargeMedkit", ItemStats.Instance.largeMedkit);
 
         PlayerPrefs.Save();
         SceneManager.LoadScene(35);

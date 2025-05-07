@@ -109,6 +109,9 @@ public class GameManagerSloth : MonoBehaviour
         PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
         PlayerStats.Instance.AllocationStats += 2;
         PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+        ItemStats.Instance.smallMedkit++;
+        PlayerPrefs.SetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
+
 
         PlayerPrefs.Save();
         SceneManager.LoadScene(31);

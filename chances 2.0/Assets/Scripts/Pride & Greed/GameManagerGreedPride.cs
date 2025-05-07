@@ -66,6 +66,8 @@ public class GameManagerGreedPride : MonoBehaviour
         PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
         PlayerStats.Instance.AllocationStats += 1;
         PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+        ItemStats.Instance.largeMedkit++;
+        PlayerPrefs.SetInt("LargeMedkit", ItemStats.Instance.largeMedkit);
 
         PlayerPrefs.Save();
         SceneManager.LoadScene(33);

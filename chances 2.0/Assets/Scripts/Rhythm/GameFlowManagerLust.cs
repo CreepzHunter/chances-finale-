@@ -84,7 +84,10 @@ public class GameFlowManagerLust : MonoBehaviour
         PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
         PlayerStats.Instance.AllocationStats += 2;
         PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
-
+        ItemStats.Instance.smallBottle++;
+        PlayerPrefs.SetInt("SmallBottle", ItemStats.Instance.smallBottle);
+        ItemStats.Instance.smallMedkit++;
+        PlayerPrefs.SetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
         PlayerPrefs.Save();
         SceneManager.LoadScene(34);
     }

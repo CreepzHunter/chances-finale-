@@ -57,6 +57,8 @@ public class AttackGluttony : MonoBehaviour
         PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
         PlayerStats.Instance.AllocationStats += 1;
         PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+        ItemStats.Instance.largeBottle++;
+        PlayerPrefs.SetInt("LargeBottle", ItemStats.Instance.largeBottle);
 
         PlayerPrefs.Save();
     }

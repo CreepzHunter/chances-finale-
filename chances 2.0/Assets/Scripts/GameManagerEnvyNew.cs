@@ -52,7 +52,7 @@ public class GameManagerEnvyNew : MonoBehaviour
         }
 
         //player dead
-        if (PlayerStats.Instance.PHealth == 0)
+        if (PlayerStats.Instance.PHealth <= 0)
         {
             gameover.SetActive(true);
 
@@ -62,6 +62,7 @@ public class GameManagerEnvyNew : MonoBehaviour
             PlayerStats.Instance.PlayerLife--;
             PlayerPrefs.SetInt("PHealth", PlayerStats.Instance.PHealth);
             PlayerPrefs.SetInt("PlayerLife", PlayerStats.Instance.PlayerLife);
+
             PlayerPrefs.Save();
             Invoke("LoadOverWorld", 1.06f);
 
@@ -79,8 +80,6 @@ public class GameManagerEnvyNew : MonoBehaviour
     }
     private void PostBattle()
     {
-
-
         SceneManager.LoadScene(30);
     }
     private void Reward()
@@ -89,6 +88,10 @@ public class GameManagerEnvyNew : MonoBehaviour
         PlayerPrefs.SetInt("Money", PlayerStats.Instance.Money);
         PlayerStats.Instance.AllocationStats++;
         PlayerPrefs.SetInt("AllocationStats", PlayerStats.Instance.AllocationStats);
+        ItemStats.Instance.smallBottle++;
+        PlayerPrefs.SetInt("SmallBottle", ItemStats.Instance.smallBottle);
+        PlayerPrefs.Save();
+
     }
     public void EnvyDone()
     {
