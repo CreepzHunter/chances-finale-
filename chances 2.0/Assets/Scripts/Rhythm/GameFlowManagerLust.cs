@@ -89,6 +89,7 @@ public class GameFlowManagerLust : MonoBehaviour
         ItemStats.Instance.smallMedkit++;
         PlayerPrefs.SetInt("SmallMedkit", ItemStats.Instance.smallMedkit);
         PlayerPrefs.Save();
+
         SceneManager.LoadScene(34);
     }
     public void StartGame()

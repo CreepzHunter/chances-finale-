@@ -100,12 +100,22 @@ public class GameManagerWrath : MonoBehaviour
         if (number == 0)
         {
             // damage enemy
-            int attackpower = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+            int attackpower = PlayerPrefs.GetInt("AttackPower",
+             PlayerStats.Instance.AttackPower);
 
             wrathLife.TakeDamage(attackpower);
+
+
+            int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+
+            if (skillOption != null && skillOption.attack == true)
+            {
+                totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+                skillOption.attack = false;
+            }
+
+            wrathLife.TakeDamage(totalDamage);
             blink.StartBlinking(1);
-
-
             Invoke("ReturnAll", 1f);
         }
         else if (number == 1)
