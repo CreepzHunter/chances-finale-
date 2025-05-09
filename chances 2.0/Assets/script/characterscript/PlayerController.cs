@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat(lastVertical, movement.z);
         }
 
-    //dialogueplayer
+    //camera angle changer
         if(Input.GetKeyDown(KeyCode.Space))
         {
             if(CameraSwitcher.IsActiveCamera(overworldCam))
