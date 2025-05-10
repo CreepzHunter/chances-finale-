@@ -30,7 +30,7 @@ public class AttackGluttony : MonoBehaviour
         {
             hasLoaded = true;
             Reward();
-            PostBattle();
+            Invoke("PostBattle", 1.06f);
         }
         if (PlayerStats.Instance.PHealth <= 0)
         {

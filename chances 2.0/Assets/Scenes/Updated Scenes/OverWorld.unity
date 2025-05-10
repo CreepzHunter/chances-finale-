@@ -1825,6 +1825,7 @@ GameObject:
   - component: {fileID: 47351774}
   - component: {fileID: 47351773}
   - component: {fileID: 47351772}
+  - component: {fileID: 47351775}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -1922,6 +1923,49 @@ MonoBehaviour:
   NodeID: 1
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Icon: {fileID: 21300000, guid: 87880f42c8455b84ea46871c65d5cbf8, type: 3}
+  Audio: {fileID: 0}
+--- !u!114 &47351775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47351769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 636337193}
+        m_TargetAssemblyTypeName: TriggerDestroyer, Assembly-CSharp
+        m_MethodName: destory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 636337188}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  NodeID: 4
+  TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!1 &47530731
 GameObject:
@@ -10671,7 +10715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":294.5,"yPos":93},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"WHERE
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":202.4,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"WHERE
     COULD HAVE MOM BE?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -10882,11 +10926,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 4
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-175.5,"yPos":62},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"EZEKIEL!
-    YOU CAME EARLY THAN EXPECTED","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-179,"yPos":180},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"HOW''S
-    YOUR MOM?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":87,"yPos":111},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"SHE
-    TOLD ME TO GO CAME HERE EARLY AND THAT SHE''LL CATCH UP LATER AFTER GROCERIES","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"EZEKIEL","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":302,"yPos":230},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"OH,
+  CurrentIDCounter: 5
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":191.200012,"yPos":299},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[3],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-318.400146,"yPos":6.799988},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"EZEKIEL!
+    YOU CAME EARLY THAN EXPECTED","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-321.900146,"yPos":124.799988},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"HOW''S
+    YOUR MOM?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-55.89991,"yPos":55.7999878},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"SHE
+    TOLD ME TO GO CAME HERE EARLY AND THAT SHE''LL CATCH UP LATER AFTER GROCERIES","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"EZEKIEL","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":160.70047,"yPos":174},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"OH,
     THEN WE SHOULD HEAD INSIDE SO WE CAN FIND OUR SITS EARLY AND PREPARE OURSELVES","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -10897,11 +10941,36 @@ MonoBehaviour:
   - {fileID: 47351774}
   - {fileID: 47351773}
   - {fileID: 47351772}
+  - {fileID: 47351775}
   ContinueFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   EndConversationFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 636337193}
+        m_TargetAssemblyTypeName: TriggerDestroyer, Assembly-CSharp
+        m_MethodName: destory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 636337188}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &393538057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17645,7 +17714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ec3dd21b901594f8fd7b40bf3776e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectID: 11
+  objectID: 12
 --- !u!1 &640800593
 GameObject:
   m_ObjectHideFlags: 0
@@ -26946,6 +27015,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 636337188}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 7
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Icon: {fileID: 0}
@@ -29486,6 +29567,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 495983618}
     m_Modifications:
+    - target: {fileID: 509115377682723740, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 509115377682723740, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 509115377682723740, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 509115377682723740, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -196.83336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914716886623841226, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914716886623841226, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914716886623841226, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914716886623841226, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -263.1667
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877980980260872078, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877980980260872078, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877980980260872078, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877980980260872078, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -339.50006
+      objectReference: {fileID: 0}
     - target: {fileID: 3014597030593627576, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -29569,6 +29698,66 @@ PrefabInstance:
     - target: {fileID: 3129075703143159521, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
       propertyPath: m_Name
       value: __CheatCOde
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585636443054988979, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136233791839383822, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136233791839383822, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136233791839383822, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136233791839383822, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -130.50002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498025252816350199, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498025252816350199, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584529648158765315, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584529648158765315, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584529648158765315, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584529648158765315, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -64.16667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661826681374683201, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661826681374683201, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661826681374683201, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661826681374683201, guid: b588e317409febd4a847aa18ff86fe1d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -425.83337
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36884,10 +37073,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 8
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":371,"yPos":336},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[5],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":-175.5,"yPos":29},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"EZEKIEL!
-    YOU CAME EARLY THAN EXPECTED","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-134,"yPos":195},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"HOW''S
-    YOUR MOM?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":118,"yPos":96},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"SHE
-    TOLD ME TO GO CAME HERE EARLY AND THAT SHE''LL CATCH UP LATER AFTER GROCERIES","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":355,"yPos":209},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"OH,
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":293.700562,"yPos":297.800018},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[5],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":-260.000916,"yPos":-0.3999939},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"EZEKIEL!
+    YOU CAME EARLY THAN EXPECTED","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-218.500336,"yPos":165.6},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"HOW''S
+    YOUR MOM?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":33.500946,"yPos":66.6000061},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"SHE
+    TOLD ME TO GO CAME HERE EARLY AND THAT SHE''LL CATCH UP LATER AFTER GROCERIES","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Ezekiel","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":270.500854,"yPos":179.6},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"OH,
     THEN WE SHOULD HEAD INSIDE SO WE CAN FIND OUR SITS EARLY AND PREPARE OURSELVES","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Ezekiel
@@ -36903,19 +37092,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 636337193}
-        m_TargetAssemblyTypeName: TriggerDestroyer, Assembly-CSharp
-        m_MethodName: destory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!23 &1429674987
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48550,7 +48727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":302.5,"yPos":240},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":96.79996,"yPos":-2},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     CAN''T WAIT TO SEE MY SON ON STAGE WITH HIS TOGA AND ACHIEVEMENTS","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
