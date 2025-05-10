@@ -31,6 +31,7 @@ public class GameManagerWrath : MonoBehaviour
 
     public void Update()
     {
+        //enemy dead
         if (wrathLife.health <= 0)
         {
             enemyAnimations[0].SetActive(false);
@@ -51,7 +52,6 @@ public class GameManagerWrath : MonoBehaviour
 
             Invoke("LoadOverWorld", 1.06f);
         }
-
     }
     private void PostBattle()
     {
@@ -99,18 +99,13 @@ public class GameManagerWrath : MonoBehaviour
 
         if (number == 0)
         {
-            // damage enemy
-            int attackpower = PlayerPrefs.GetInt("AttackPower",
-             PlayerStats.Instance.AttackPower);
-
-            wrathLife.TakeDamage(attackpower);
-
-
-            int totalDamage = PlayerPrefs.GetInt("AttackPower", PlayerStats.Instance.AttackPower);
+            int totalDamage = PlayerPrefs.GetInt("AttackPower",
+            PlayerStats.Instance.AttackPower);
 
             if (skillOption != null && skillOption.attack == true)
             {
-                totalDamage += PlayerPrefs.GetInt("MagicPower", PlayerStats.Instance.MagicPower);
+                totalDamage += PlayerPrefs.GetInt("MagicPower",
+                PlayerStats.Instance.MagicPower);
                 skillOption.attack = false;
             }
 
@@ -118,6 +113,7 @@ public class GameManagerWrath : MonoBehaviour
             blink.StartBlinking(1);
             Invoke("ReturnAll", 1f);
         }
+
         else if (number == 1)
         {
             ReturnAnimation();
